@@ -17,6 +17,13 @@
     <div class="cursor-dot"></div>
     <div class="cursor-outline"></div>
 
+    <!-- Loading Screen -->
+    <div id="loader" class="loader-screen">
+        <img src="./logo.png" alt="Kraften Logo" class="loader-logo">
+        <div class="loader-brand">KRAFTEN</div>
+        <div class="loader-line"></div>
+    </div>
+
     <!-- Glass Header -->
     <header id="main-header" class="glass-header scrolled">
         <div class="header-container">
@@ -34,6 +41,7 @@
             <div class="header-actions">
                 <button id="lang-toggle" class="btn-lang">EN</button>
                 <a href="./index.html#contact" class="btn-primary" data-i18n="navContactBtn">İLETİŞİME GEÇİN</a>
+                <a href="javascript:void(0)" id="btn-header-catalog-blog" class="btn-outline-dark btn-sm" style="border-color: rgba(255,255,255,0.3); color: #fff; padding: 10px 18px; font-size: 0.75rem;" data-i18n="btnCatalog"><i class="fas fa-file-pdf"></i> E-Katalog (PDF)</a>
             </div>
         </div>
     </header>
@@ -104,6 +112,12 @@
             &copy; 2026 Kraften Ambalaj. Tüm hakları saklıdır.
         </div>
     </footer>
+
+    <!-- FLOATING WHATSAPP WIDGET -->
+    <a href="https://wa.me/905300000000?text=Merhaba,%20Kraften%20Ambalaj%20kurumsal%20ürünleri%20ve%20fiyat%20teklifi%20hakkında%20bilgi%20almak%20istiyorum." target="_blank" rel="noopener" class="whatsapp-widget">
+        <div class="wa-icon"><i class="fab fa-whatsapp"></i></div>
+        <div class="wa-text" data-i18n="waWidgetText">Hızlı Teklif & WhatsApp</div>
+    </a>
 
     <script type="module" src="./js/blog.js"></script>
 </body>
