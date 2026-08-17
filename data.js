@@ -13,8 +13,8 @@ export const initialProducts = [
       descEn: "550 cc Salad Bowl offers an eco-friendly and hygienic packaging solution with 99% recyclable structure.",
       category: "white",
       volume: "550 CC",
-      imgMain: "./images/550-white-kraften.jpg",
-      imgSub: "./images/550-white-kraften.jpg",
+      imgMain: "https://degisimpack.com/images/product/550-cc-salad-container-2.jpg",
+      imgSub: "https://degisimpack.com/images/product/550-cc-salad-container-3.jpg",
       specs: {
         topDiameter: "150 mm",
         bottomDiameter: "128 mm",
@@ -49,8 +49,8 @@ export const initialProducts = [
       descEn: "750 cc Salad Bowl ideal for medium portions. Made of food-certified paperboard, resists liquids.",
       category: "white",
       volume: "750 CC",
-      imgMain: "./images/750-white-kraften.jpg",
-      imgSub: "./images/750-white-kraften.jpg",
+      imgMain: "https://degisimpack.com/images/product/750-cc-salad-container-2.jpg",
+      imgSub: "https://degisimpack.com/images/product/750-cc-salad-container-3.jpg",
       specs: {
         topDiameter: "150 mm",
         bottomDiameter: "128 mm",
