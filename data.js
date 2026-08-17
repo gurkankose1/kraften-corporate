@@ -160,17 +160,30 @@ export const certificates = [
   
 export const blogs = [
     {
-      "id": "autonews-top-pfas-free-food-packaging-companies",
-      "titleTr": "Gıda Ambalajı Trendleri: Top PFAS-Free Food Packaging Companies, CAGR 6.54% - Fortune Business Insights",
-      "titleEn": "Food Packaging Insights: Top PFAS-Free Food Packaging Companies, CAGR 6.54% - Fortune Business Insights",
+      "id": "autonews-sustainable-food-packaging-in-2045-the",
+      "titleTr": "2045 Geleceğin Sürdürülebilir Gıda Ambalajı Trendleri ve İnovasyonlar",
+      "titleEn": "Sustainable Food Packaging in 2045: The Shape of Things to Come",
       "date": "17 Ağustos 2026",
       "author": "Kraften Ar-Ge",
       "category": "trendler",
-      "img": "https://degisimpack.com/images/blogs/blog1.jpg",
-      "summaryTr": "Top PFAS-Free Food Packaging Companies, CAGR 6.54% - Fortune Business Insights konusundaki en yeni küresel ambalaj regülasyonları ve sürdürülebilir gıda ambalajının avantajları.",
-      "summaryEn": "Latest global packaging regulations on Top PFAS-Free Food Packaging Companies, CAGR 6.54% - Fortune Business Insights and advantages of sustainable food containers.",
-      "contentTr": "Küresel gıda ambalajı sektöründe Top PFAS-Free Food Packaging Companies, CAGR 6.54% - Fortune Business Insights konusu hızla ön plana çıkmaktadır. Restoranların ve gıda üreticilerinin doğa dostu ambalajlara yönelimi, hem çevre sağlığını korumakta hem de markaların müşteri memnuniyetini yükseltmektedir.\n\nKraften Ambalaj olarak, gıda temasına %100 uygun sertifikalı karton kaselerimiz ve yenilikçi AR-GE çözümlerimizle işletmelerin sürdürülebilirlik dönüşümüne öncülük ediyoruz.",
-      "contentEn": "In the global food packaging sector, Top PFAS-Free Food Packaging Companies, CAGR 6.54% - Fortune Business Insights is rapidly coming to the forefront. The shift of restaurants towards eco-friendly packaging protects the environment while boosting customer trust.\n\nAt Kraften Packaging, we lead the sustainability transformation of businesses through our certified paperboard containers."
+      "img": "https://degisimpack.com/images/blogs/blog2.jpg",
+      "summaryTr": "Smithers küresel ambalaj raporuna göre 2045 yılına kadar gıda ambalajı sektörünü şekillendirecek sıfır atık ve sürdürülebilir karton kaplama teknolojileri.",
+      "summaryEn": "Global packaging insights on zero-waste and sustainable paperboard container technologies shaping the future of food service.",
+      "contentTr": "Küresel gıda ambalajı sektöründe 2045 vizyonu ve sürdürülebilir ambalaj teknolojileri konusu hızla ön plana çıkmaktadır. Restoranların ve gıda üreticilerinin doğa dostu ambalajlara yönelimi, hem çevre sağlığını korumakta hem de markaların müşteri memnuniyetini yükseltmektedir.\n\nSon dönemde yayınlanan uluslararası regülasyonlar ve tüketici beklentileri, plastik türevli ambalajların yerine geri dönüştürülebilir ve gıdaya uygun sertifikalı kağıt ham maddelerinin geçmesini zorunlu kılmaktadır. Bu dönüşüm sadece çevresel sorumluluk değil, aynı zamanda işletmeler için stratejik bir marka yatırımıdır.\n\nKraften Ambalaj olarak, gıda temasına %100 uygun sertifikalı karton kaselerimiz ve yenilikçi AR-GE çözümlerimizle işletmelerin bu sürdürülebilirlik dönüşümüne öncülük ediyoruz.",
+      "contentEn": "In the global food packaging sector, sustainable food packaging is rapidly coming to the forefront. The shift of restaurants towards eco-friendly packaging protects the environment while boosting customer trust.\n\nRecent environmental regulations and consumer demands necessitate replacing plastic food containers with recyclable paperboard raw materials. This transition is not only an environmental duty but also a strategic brand investment.\n\nAt Kraften Packaging, we lead the sustainability transformation of businesses through our certified paperboard containers."
+},
+    {
+      "id": "autonews-top-pfas-free-food-packaging-companies",
+      "titleTr": "Zararlı Kimyasal İçermeyen (PFAS-Free) Gıda Ambalajlarında Küresel Büyüme",
+      "titleEn": "Top PFAS-Free Food Packaging Companies & Global Market Growth",
+      "date": "17 Ağustos 2026",
+      "author": "Kraften Ar-Ge",
+      "category": "hijyen",
+      "img": "https://degisimpack.com/images/blogs/blog4.jpg",
+      "summaryTr": "Fortune Business Insights araştırmasına göre gıda ile temasa uygun, zararlı kimyasal barındırmayan kağıt kapların pazar payı yıllık %6.54 büyüyor.",
+      "summaryEn": "Research on food-contact safe, chemical-free paper containers growing rapidly worldwide.",
+      "contentTr": "Küresel gıda güvenliği standartlarında PFAS ve zararlı kaplama kimyasallarından arındırılmış ambalaj çözümleri ön plana çıkmaktadır. Restoranların ve gıda üreticilerinin doğa dostu ve insan sağlığına %100 zararsız ambalajlara yönelimi, markaların müşteri güvenini katlamaktadır.\n\nKraften Ambalaj olarak, gıda temasına %100 uygun ISO 22000 ve FSC sertifikalı karton kaselerimiz ve yenilikçi AR-GE çözümlerimizle işletmelerin sürdürülebilirlik dönüşümüne öncülük ediyoruz.",
+      "contentEn": "In the global food packaging sector, chemical-free food-contact safe packaging is rapidly coming to the forefront."
 },
     {
       id: "cevre-dostu-geri-donusum",
