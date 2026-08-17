@@ -13,8 +13,8 @@ export const initialProducts = [
       descEn: "550 cc Salad Bowl offers an eco-friendly and hygienic packaging solution with 99% recyclable structure.",
       category: "white",
       volume: "550 CC",
-      imgMain: "550-kraften-white.jpg",
-      imgSub: "https://degisimpack.com/images/product/550-cc-salad-container-3.jpg",
+      imgMain: "./images/550-white-kraften.jpg",
+      imgSub: "./images/550-white-kraften.jpg",
       specs: {
         topDiameter: "150 mm",
         bottomDiameter: "128 mm",
