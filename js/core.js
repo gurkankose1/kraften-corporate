@@ -178,15 +178,7 @@ class CorporateApp {
             });
         }
 
-        // E-Catalog Download Buttons
-        const catalogBtns = [document.getElementById('btn-header-catalog'), document.getElementById('btn-hero-catalog')];
-        catalogBtns.forEach(btn => {
-            if (btn) {
-                btn.addEventListener('click', () => {
-                    alert("Kraften Ambalaj 2026 Ürün Kataloğu indiriliyor. İletişim temsilcimiz sizinle ilgilenecektir.");
-                });
-            }
-        });
+
 
         // Modal Outside Click
         document.querySelectorAll('.modal-overlay').forEach(overlay => {
