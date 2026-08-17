@@ -14,6 +14,20 @@ RSS_FEEDS = [
     "https://news.google.com/rss/search?q=ambalaj+sekt%C3%B6r%C3%BC+g%C4%B1da&hl=tr&gl=TR&ceid=TR:tr"
 ]
 
+# Image pool for articles to prevent identical images
+IMAGE_POOL = [
+    "https://degisimpack.com/images/blogs/blog1.jpg",
+    "https://degisimpack.com/images/blogs/blog2.jpg",
+    "https://degisimpack.com/images/blogs/blog4.jpg",
+    "https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?auto=format&fit=crop&w=800&q=80",
+    "https://images.unsplash.com/photo-1610557892470-55d9e80c0bce?auto=format&fit=crop&w=800&q=80",
+    "https://images.unsplash.com/photo-1530587191325-3db32d826c18?auto=format&fit=crop&w=800&q=80",
+    "https://images.unsplash.com/photo-1589939705384-5185137a7f0f?auto=format&fit=crop&w=800&q=80",
+    "https://images.unsplash.com/photo-1607613009820-a29f7bb81c04?auto=format&fit=crop&w=800&q=80",
+    "https://images.unsplash.com/photo-1532996122724-e3c354a0b15b?auto=format&fit=crop&w=800&q=80",
+    "https://images.unsplash.com/photo-1509099836639-18ba1795216d?auto=format&fit=crop&w=800&q=80"
+]
+
 DATA_JS_PATH = os.path.join(os.path.dirname(__file__), "..", "data.js")
 
 def clean_html(raw_html):
@@ -34,6 +48,13 @@ def slugify(text):
 
 def fetch_latest_rss_item():
     headers = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64)'}
+    
+    # Read existing content to check existing IDs
+    existing_content = ""
+    if os.path.exists(DATA_JS_PATH):
+        with open(DATA_JS_PATH, "r", encoding="utf-8") as f:
+            existing_content = f.read()
+
     for url in RSS_FEEDS:
         try:
             req = urllib.request.Request(url, headers=headers)
@@ -48,7 +69,10 @@ def fetch_latest_rss_item():
                     if title_elem is not None and title_elem.text:
                         title = clean_html(title_elem.text)
                         desc = clean_html(desc_elem.text) if desc_elem is not None and desc_elem.text else title
-                        if len(title) > 15:
+                        slug = slugify(title[:40])
+                        
+                        # Only return if not already in data.js
+                        if f"autonews-{slug}" not in existing_content and slug not in existing_content:
                             return title, desc
         except Exception as e:
             print(f"Error fetching feed {url}: {e}")
@@ -102,17 +126,37 @@ def fallback_article_generator(title, desc):
     for en, tr in months_tr.items():
         today_str = today_str.replace(en, tr)
 
+    # Pick image based on title hash for variety
+    img_idx = abs(hash(title)) % len(IMAGE_POOL)
+    selected_img = IMAGE_POOL[img_idx]
+
+    # Clean title for Turkish display
+    clean_tr_title = title
+    tr_replacements = {
+        "Sustainable food packaging": "Sürdürülebilir Gıda Ambalajı",
+        "food packaging": "Gıda Ambalajı",
+        "packaging": "Ambalaj",
+        "sustainable": "Sürdürülebilir",
+        "containers": "Karton Kaplar",
+        "companies": "Şirketler ve Trendler",
+        "regulations": "Regülasyonlar",
+        "market": "Pazar Analizi",
+        "PFAS-Free": "Zararlı Kimyasal İçermeyen"
+    }
+    for k, v in tr_replacements.items():
+        clean_tr_title = re.sub(re.escape(k), v, clean_tr_title, flags=re.IGNORECASE)
+
     return {
         "id": f"autonews-{slug}",
-        "titleTr": f"Gıda Ambalajı Trendleri: {title}",
+        "titleTr": f"Gıda Ambalajında Son Gelişmeler: {clean_tr_title}",
         "titleEn": f"Food Packaging Insights: {title}",
         "date": today_str,
         "author": "Kraften Ar-Ge",
         "category": "trendler",
-        "img": "https://degisimpack.com/images/blogs/blog1.jpg",
-        "summaryTr": f"{title} konusundaki en yeni küresel ambalaj regülasyonları ve sürdürülebilir gıda ambalajının avantajları.",
-        "summaryEn": f"Latest global packaging regulations on {title} and advantages of sustainable food containers.",
-        "contentTr": f"Küresel gıda ambalajı sektöründe {title} konusu hızla ön plana çıkmaktadır. Restoranların ve gıda üreticilerinin doğa dostu ambalajlara yönelimi, hem çevre sağlığını korumakta hem de markaların müşteri memnuniyetini yükseltmektedir.\n\nSon dönemde yayınlanan regülasyonlar ve tüketici beklentileri, plastik türevli ambalajların yerine geri dönüştürülebilir kağıt ham maddelerinin geçmesini zorunlu kılmaktadır. Bu dönüşüm sadece çevresel sorumluluk değil, aynı zamanda işletmeler için stratejik bir marka yatırımıdır.\n\nKraften Ambalaj olarak, gıda temasına %100 uygun sertifikalı karton kaselerimiz ve yenilikçi AR-GE çözümlerimizle işletmelerin bu sürdürülebilirlik dönüşümüne öncülük ediyoruz.",
+        "img": selected_img,
+        "summaryTr": f"{clean_tr_title} konusundaki en yeni küresel gıda ambalajı regülasyonları ve sürdürülebilir karton kaselerin avantajları.",
+        "summaryEn": f"Latest global packaging regulations on {title} and advantages of sustainable paperboard containers.",
+        "contentTr": f"Küresel gıda ambalajı sektöründe {clean_tr_title} konusu hızla ön plana çıkmaktadır. Restoranların ve gıda üreticilerinin doğa dostu ambalajlara yönelimi, hem çevre sağlığını korumakta hem de markaların müşteri memnuniyetini yükseltmektedir.\n\nSon dönemde yayınlanan uluslararası regülasyonlar ve tüketici beklentileri, plastik türevli ambalajların yerine geri dönüştürülebilir ve gıdaya uygun sertifikalı kağıt ham maddelerinin geçmesini zorunlu kılmaktadır. Bu dönüşüm sadece çevresel sorumluluk değil, aynı zamanda işletmeler için stratejik bir marka yatırımıdır.\n\nKraften Ambalaj olarak, gıda temasına %100 uygun sertifikalı karton kaselerimiz ve yenilikçi AR-GE çözümlerimizle işletmelerin bu sürdürülebilirlik dönüşümüne öncülük ediyoruz.",
         "contentEn": f"In the global food packaging sector, {title} is rapidly coming to the forefront. The shift of restaurants towards eco-friendly packaging protects the environment while boosting customer trust.\n\nRecent environmental regulations and consumer demands necessitate replacing plastic food containers with recyclable paperboard raw materials. This transition is not only an environmental duty but also a strategic brand investment.\n\nAt Kraften Packaging, we lead the sustainability transformation of businesses through our certified paperboard containers."
     }
 
@@ -127,7 +171,11 @@ def append_to_data_js(new_article):
 
     new_article["date"] = new_article.get("date", datetime.datetime.now().strftime("%d Ağustos %Y"))
     new_article["author"] = new_article.get("author", "Kraften Ar-Ge")
-    new_article["img"] = new_article.get("img", "https://degisimpack.com/images/blogs/blog1.jpg")
+    
+    # Ensure image from pool if not set
+    if "img" not in new_article or not new_article["img"]:
+        img_idx = abs(hash(new_article.get("titleTr", ""))) % len(IMAGE_POOL)
+        new_article["img"] = IMAGE_POOL[img_idx]
 
     article_json = json.dumps(new_article, ensure_ascii=False, indent=6)
 
