@@ -56,12 +56,16 @@ def fetch_latest_rss_item():
 
 def generate_article_with_gemini(title, desc, api_key):
     prompt = f"""
-Sektörel gıda ambalaj firması "Kraften Ambalaj" için aşağıdaki haber konusundan %100 özgün, ilgi çekici ve SEO uyumlu bir blog makalesi üret.
+Sektörel gıda ambalaj firması "Kraften Ambalaj" için aşağıdaki haber konusundan %100 özgün, 300-400 kelimelik, ilgi çekici ve Google SEO uyumlu zengin bir blog makalesi üret.
 
 Haber Başlığı: {title}
 Haber Detayı: {desc}
 
-Çıktıyı SADECE geçerli bir JSON nesnesi olarak ver (markdown veya kod bloğu olmadan):
+Kuralları takip et:
+1. Makale en az 3-4 paragraftan oluşmalı.
+2. Sektörel terimler, çevre standartları (FSC, ISO 22000, gıda teması) ve Kraften Ambalaj vurgusu içermeli.
+3. Çıktıyı SADECE geçerli bir JSON nesnesi olarak ver (markdown veya kod bloğu olmadan):
+
 {{
   "id": "slug-formatinda-id",
   "category": "surdurulebilirlik veya trendler veya hijyen",
@@ -69,8 +73,8 @@ Haber Detayı: {desc}
   "titleEn": "English Title (Original & Corporate)",
   "summaryTr": "Türkçe 2 cümlelik özet.",
   "summaryEn": "English 2 sentence summary.",
-  "contentTr": "Türkçe 2 paragraf detaylı kurumsal makale metni. Kraften Ambalaj vurgusu içersin.",
-  "contentEn": "English 2 paragraph detailed corporate article content."
+  "contentTr": "Türkçe 3-4 paragraf detaylı, profesyonel kurumsal makale metni. Paragraflar arasında n\\n olsun.",
+  "contentEn": "English 3-4 paragraph detailed, professional corporate article content."
 }}
 """
     url = f"https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key={api_key}"
@@ -108,8 +112,8 @@ def fallback_article_generator(title, desc):
         "img": "https://degisimpack.com/images/blogs/blog1.jpg",
         "summaryTr": f"{title} konusundaki en yeni küresel ambalaj regülasyonları ve sürdürülebilir gıda ambalajının avantajları.",
         "summaryEn": f"Latest global packaging regulations on {title} and advantages of sustainable food containers.",
-        "contentTr": f"Küresel gıda ambalajı sektöründe {title} konusu hızla ön plana çıkmaktadır. Restoranların ve gıda üreticilerinin doğa dostu ambalajlara yönelimi, hem çevre sağlığını korumakta hem de markaların müşteri memnuniyetini yükseltmektedir.\n\nKraften Ambalaj olarak, gıda temasına %100 uygun sertifikalı karton kaselerimiz ve yenilikçi AR-GE çözümlerimizle işletmelerin sürdürülebilirlik dönüşümüne öncülük ediyoruz.",
-        "contentEn": f"In the global food packaging sector, {title} is rapidly coming to the forefront. The shift of restaurants towards eco-friendly packaging protects the environment while boosting customer trust.\n\nAt Kraften Packaging, we lead the sustainability transformation of businesses through our certified paperboard containers."
+        "contentTr": f"Küresel gıda ambalajı sektöründe {title} konusu hızla ön plana çıkmaktadır. Restoranların ve gıda üreticilerinin doğa dostu ambalajlara yönelimi, hem çevre sağlığını korumakta hem de markaların müşteri memnuniyetini yükseltmektedir.\n\nSon dönemde yayınlanan regülasyonlar ve tüketici beklentileri, plastik türevli ambalajların yerine geri dönüştürülebilir kağıt ham maddelerinin geçmesini zorunlu kılmaktadır. Bu dönüşüm sadece çevresel sorumluluk değil, aynı zamanda işletmeler için stratejik bir marka yatırımıdır.\n\nKraften Ambalaj olarak, gıda temasına %100 uygun sertifikalı karton kaselerimiz ve yenilikçi AR-GE çözümlerimizle işletmelerin bu sürdürülebilirlik dönüşümüne öncülük ediyoruz.",
+        "contentEn": f"In the global food packaging sector, {title} is rapidly coming to the forefront. The shift of restaurants towards eco-friendly packaging protects the environment while boosting customer trust.\n\nRecent environmental regulations and consumer demands necessitate replacing plastic food containers with recyclable paperboard raw materials. This transition is not only an environmental duty but also a strategic brand investment.\n\nAt Kraften Packaging, we lead the sustainability transformation of businesses through our certified paperboard containers."
     }
 
 def append_to_data_js(new_article):
