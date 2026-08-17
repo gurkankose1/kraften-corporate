@@ -1,0 +1,31 @@
+name: Daily Kraften News Generator
+
+on:
+  schedule:
+    # Runs every day at 03:00 UTC
+    - cron: '0 3 * * *'
+  workflow_dispatch: # Allows manual trigger from GitHub UI
+
+jobs:
+  fetch-and-publish:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Fetch and Generate News Article
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+        run: python scripts/fetch_news.py
+
+      - name: Commit and Push Changes
+        run: |
+          git config --global user.name "Kraften News Bot"
+          git config --global user.email "bot@kraftenambalaj.com"
+          git add data.js
+          git diff --quiet && git diff --staged --quiet || (git commit -m "auto: publish daily packaging news article [skip ci]" && git push)
