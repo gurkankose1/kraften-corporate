@@ -61,36 +61,23 @@ class CorporateApp {
         window.addEventListener('mousemove', (e) => {
             dot.style.left = `${e.clientX}px`;
             dot.style.top = `${e.clientY}px`;
-            setTimeout(() => {
-                outline.style.left = `${e.clientX}px`;
-                outline.style.top = `${e.clientY}px`;
-            }, 50);
+            outline.style.left = `${e.clientX}px`;
+            outline.style.top = `${e.clientY}px`;
         });
 
-        this.bindCursorHover();
-    }
-    
-    bindCursorHover() {
-        const outline = document.querySelector('.cursor-outline');
-        if(!outline) return;
-        document.querySelectorAll('a, button, .corp-card, .blog-card, .cert-card, .modal-thumb').forEach(el => {
-            // Remove old listeners to avoid duplicates
-            const newEl = el.cloneNode(true);
-            el.parentNode.replaceChild(newEl, el);
-            
-            newEl.addEventListener('mouseenter', () => {
-                outline.style.transform = 'translate(-50%, -50%) scale(1.5)';
-                outline.style.backgroundColor = 'rgba(194, 150, 104, 0.1)';
-            });
-            newEl.addEventListener('mouseleave', () => {
-                outline.style.transform = 'translate(-50%, -50%) scale(1)';
+        // Global Event Delegation for hover effects anywhere (including inside modals)
+        document.addEventListener('mouseover', (e) => {
+            const isClickable = e.target.closest('a, button, .btn-close, .corp-card, .blog-card, .cert-card, .modal-thumb, input, select');
+            if (isClickable) {
+                outline.style.transform = 'translate3d(-50%, -50%, 0) scale(1.5)';
+                outline.style.backgroundColor = 'rgba(194, 150, 104, 0.25)';
+                outline.style.borderColor = '#C29668';
+            } else {
+                outline.style.transform = 'translate3d(-50%, -50%, 0) scale(1)';
                 outline.style.backgroundColor = 'transparent';
-            });
+                outline.style.borderColor = '#0A1A12';
+            }
         });
-        
-        // Re-attach specific click listeners if we cloned them
-        // Actually, replacing node kills all my listeners. A better way:
-        // just add event listeners directly in render functions. I'll just skip global replacement.
     }
 
     initHeader() {
@@ -160,6 +147,47 @@ class CorporateApp {
             window.location.hash = ''; // removes hash, triggers close
         });
         
+        // Sample Request Modal
+        const sampleModal = document.getElementById('sample-modal');
+        const openSampleBtn = document.getElementById('btn-hero-sample');
+        const closeSampleBtn = document.getElementById('close-sample-modal');
+        const sampleForm = document.getElementById('sample-form');
+
+        if (openSampleBtn && sampleModal) {
+            openSampleBtn.addEventListener('click', () => sampleModal.classList.remove('hidden'));
+        }
+        if (closeSampleBtn && sampleModal) {
+            closeSampleBtn.addEventListener('click', () => sampleModal.classList.add('hidden'));
+        }
+        if (sampleForm) {
+            sampleForm.addEventListener('submit', (e) => {
+                e.preventDefault();
+                const company = document.getElementById('sample-company').value;
+                const name = document.getElementById('sample-name').value;
+                const phone = document.getElementById('sample-phone').value;
+                const product = document.getElementById('sample-product').value;
+                const address = document.getElementById('sample-address').value;
+
+                const message = `*KRAFTEN AMBALAJ - ÜCRETSİZ NUMUNE TALEBİ*\n\n🏢 *Firma:* ${company}\n👤 *Yetkili:* ${name}\n📞 *Telefon:* ${phone}\n📦 *Ürün:* ${product}\n📍 *Adres:* ${address}`;
+                const waUrl = `https://wa.me/905300000000?text=${encodeURIComponent(message)}`;
+                
+                alert("Numune talebiniz başarıyla oluşturuldu! WhatsApp ile müşteri temsilcimize aktarılıyor.");
+                window.open(waUrl, '_blank');
+                sampleModal.classList.add('hidden');
+                sampleForm.reset();
+            });
+        }
+
+        // E-Catalog Download Buttons
+        const catalogBtns = [document.getElementById('btn-header-catalog'), document.getElementById('btn-hero-catalog')];
+        catalogBtns.forEach(btn => {
+            if (btn) {
+                btn.addEventListener('click', () => {
+                    alert("Kraften Ambalaj 2026 Ürün Kataloğu indiriliyor. İletişim temsilcimiz sizinle ilgilenecektir.");
+                });
+            }
+        });
+
         // Modal Outside Click
         document.querySelectorAll('.modal-overlay').forEach(overlay => {
             overlay.addEventListener('click', (e) => {
