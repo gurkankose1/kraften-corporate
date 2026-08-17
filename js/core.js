@@ -169,7 +169,7 @@ class CorporateApp {
                 const address = document.getElementById('sample-address').value;
 
                 const message = `*KRAFTEN AMBALAJ - ÜCRETSİZ NUMUNE TALEBİ*\n\n🏢 *Firma:* ${company}\n👤 *Yetkili:* ${name}\n📞 *Telefon:* ${phone}\n📦 *Ürün:* ${product}\n📍 *Adres:* ${address}`;
-                const waUrl = `https://wa.me/905300000000?text=${encodeURIComponent(message)}`;
+                const waUrl = `https://wa.me/905415019478?text=${encodeURIComponent(message)}`;
                 
                 alert("Numune talebiniz başarıyla oluşturuldu! WhatsApp ile müşteri temsilcimize aktarılıyor.");
                 window.open(waUrl, '_blank');
