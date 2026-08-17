@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kraften Ambalaj | Corporate</title>
+    <!-- Modern Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;800&family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" href="./logo.png" type="image/png">
+    <link rel="stylesheet" href="./css/main.css?v=6">
+</head>
+<body>
+    <!-- Custom Cursor -->
+    <div class="cursor-dot"></div>
+    <div class="cursor-outline"></div>
+    <script>
+        // Skip custom cursor on touch/mobile devices
+        if ('ontouchstart' in window || navigator.maxTouchPoints > 0 || window.innerWidth < 900) {
+            document.querySelector('.cursor-dot').style.display = 'none';
+            document.querySelector('.cursor-outline').style.display = 'none';
+        }
+    </script>
+
+    <!-- Loading Screen -->
+    <div id="loader" class="loader-screen">
+        <div class="loader-brand">KRAFTEN</div>
+        <div class="loader-line"></div>
+    </div>
+
+    <!-- Glass Header -->
+    <header id="main-header" class="glass-header">
+        <div class="header-container">
+            <div class="logo">
+                <img src="./logo.png" alt="Kraften Logo" class="logo-img">
+                <span class="logo-text">KRAFTEN</span>
+            </div>
+            <nav class="nav-links">
+                <a href="#vision" class="nav-link" data-i18n="navVision">VİZYON</a>
+                <a href="#products" class="nav-link" data-i18n="navProducts">ENDÜSTRİYEL ÇÖZÜMLER</a>
+                <a href="#certificates" class="nav-link" data-i18n="navCertificates">SERTİFİKALAR</a>
+                <a href="#blog" class="nav-link" data-i18n="navBlog">BLOG</a>
+                <a href="#sustainability" class="nav-link" data-i18n="navSustainability">SÜRDÜRÜLEBİLİRLİK</a>
+            </nav>
+            <div class="header-actions">
+                <button id="lang-toggle" class="btn-lang">EN</button>
+                <a href="#contact" class="btn-primary" data-i18n="navContactBtn">İLETİŞİME GEÇİN</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Cinematic Hero -->
+        <section id="hero" class="hero-section">
+            <div class="hero-bg-overlay"></div>
+            <div class="hero-content reveal-up">
+                <div class="hero-subtitle tracking-widest" data-i18n="heroSubtitle">GLOBAL PACKAGING INDUSTRY</div>
+                <h1 class="hero-title" data-i18n="heroTitle">Mükemmelliği<br>Yeniden Tanımlıyoruz.</h1>
+                <p class="hero-desc" data-i18n="heroDesc">
+                    Uluslararası gıda güvenliği standartlarında, doğadan ilham alan inovatif ambalaj çözümleri.
+                </p>
+                <div class="hero-cta">
+                    <a href="#products" class="btn-solid" data-i18n="heroBtn">Çözümleri Keşfedin</a>
+                </div>
+            </div>
+            <div class="hero-graphic reveal-up" style="transition-delay: 0.3s;">
+                <img src="./hero-transparent.png" alt="Hero Graphic">
+            </div>
+            <div class="scroll-indicator">
+                <div class="mouse"></div>
+            </div>
+        </section>
+
+        <!-- Vision / Numbers -->
+        <section id="vision" class="vision-section section-padding">
+            <div class="vision-container">
+                <div class="vision-text reveal-up">
+                    <h2 class="section-heading" data-i18n="visionHeading">Geleceği Şekillendiriyoruz</h2>
+                    <p class="section-body" data-i18n="visionBody">Kraften Ambalaj olarak, sadece ambalaj üretmiyor; çevre dostu ve %99 geri dönüştürülebilir ham maddelerle endüstriyel ekosistemi yeniden inşa ediyoruz. Kalite, hijyen ve prestij bizim DNA'mızda var.</p>
+                </div>
+                <div class="vision-stats">
+                    <div class="stat-item reveal-up" style="transition-delay: 0.1s;">
+                        <div class="stat-number">%99</div>
+                        <div class="stat-label" data-i18n="statEco">Geri Dönüştürülebilir</div>
+                    </div>
+                    <div class="stat-item reveal-up" style="transition-delay: 0.2s;">
+                        <div class="stat-number">ISO</div>
+                        <div class="stat-label" data-i18n="statIso">22000 Standartları</div>
+                    </div>
+                    <div class="stat-item reveal-up" style="transition-delay: 0.3s;">
+                        <div class="stat-number">FSC</div>
+                        <div class="stat-label" data-i18n="statFsc">Sertifikalı Üretim</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Asymmetrical Product Showcase with Filters -->
+        <section id="products" class="products-section section-padding">
+            <div class="container">
+                <div class="section-header reveal-up">
+                    <div class="sub-heading" data-i18n="prodSub">PREMIUM GIDA KAPLARI</div>
+                    <h2 class="section-heading" data-i18n="prodHeading">Endüstriyel Ürün Gamı</h2>
+                </div>
+                
+                <!-- Filters -->
+                <div id="category-filters" class="category-filters reveal-up" style="transition-delay: 0.2s;">
+                    <!-- Categories injected via JS -->
+                </div>
+
+                <div id="product-grid" class="corporate-product-grid">
+                    <!-- Products injected via JS -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Certificates Section -->
+        <section id="certificates" class="certificates-section section-padding">
+            <div class="container">
+                <div class="section-header text-center reveal-up">
+                    <h2 class="section-heading" data-i18n="certTitle">Uluslararası Akreditasyon</h2>
+                    <p class="section-body" data-i18n="certSub">Dağıtımını üstlendiğimiz tüm gıda ambalajları FSC ve gıda temasına uygundur.</p>
+                </div>
+                <div id="certificates-grid" class="certificates-grid">
+                    <!-- Certs injected via JS -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Blog Section -->
+        <section id="blog" class="blog-section section-padding">
+            <div class="container">
+                <div class="section-header reveal-up" style="display: flex; justify-content: space-between; align-items: flex-end; flex-wrap: wrap; gap: 20px; margin-bottom: 20px;">
+                    <h2 class="section-heading" data-i18n="blogTitle" style="margin-bottom: 0;">Sektörel Haberler & Makaleler</h2>
+                    <a href="./blog.html" class="btn-outline-dark" data-i18n="blogViewAll">Tüm Haberleri İncele →</a>
+                </div>
+                <div id="blog-grid" class="blog-grid">
+                    <!-- Blogs injected via JS -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Sustainability Dark Section -->
+        <section id="sustainability" class="sustainability-section">
+            <div class="sustain-content reveal-up">
+                <h2 class="serif-title" data-i18n="susTitle">Sıfır Karbon İzi Hedefi.</h2>
+                <p data-i18n="susDesc">Üretim hatlarımızdan son tüketiciye kadar her adımda doğayı korumaya yeminliyiz. Plastik tüketimini azaltan yenilikçi Ar-Ge yatırımlarımızla sektörde öncüyüz.</p>
+                <a href="#" class="btn-outline-light mt-4" data-i18n="susBtn">Sürdürülebilirlik Raporu</a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Corporate Footer -->
+    <footer class="corporate-footer">
+        <div class="footer-container">
+            <div class="footer-brand">
+                <img src="./logo.png" alt="Kraften" class="footer-logo">
+                <div class="footer-desc" data-i18n="footerDesc">
+                    Yenilikçi ve sürdürülebilir ambalaj çözümleri.
+                </div>
+            </div>
+
+            <div class="footer-links">
+                <h4>İletişim</h4>
+                <p>info@kraftenambalaj.com</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            &copy; 2026 Kraften Ambalaj. Tüm hakları saklıdır.
+        </div>
+    </footer>
+
+    <!-- PRODUCT DETAILS MODAL -->
+    <div id="product-modal" class="modal-overlay hidden">
+        <div class="modal-content corporate-modal">
+            <button id="close-modal" class="btn-close"><i class="fas fa-times"></i></button>
+            <div class="modal-grid">
+                <div class="modal-gallery">
+                    <img id="modal-img-main" src="" alt="Main Image" class="modal-main-img">
+                    <div id="modal-thumbnails" class="modal-thumbnails"></div>
+                </div>
+                <div class="modal-info">
+                    <h2 id="modal-title" class="modal-title"></h2>
+                    <p id="modal-desc" class="modal-desc"></p>
+                    
+                    <h3 class="spec-title" data-i18n="specTitle">Teknik Özellikler</h3>
+                    <ul class="spec-list">
+                        <li><span data-i18n="volume">Hacim</span> <span id="modal-volume" class="spec-val"></span></li>
+                        <li><span data-i18n="topDiameter">Ağız Çapı</span> <span id="modal-top-diameter" class="spec-val"></span></li>
+                        <li><span data-i18n="bottomDiameter">Taban Çapı</span> <span id="modal-bottom-diameter" class="spec-val"></span></li>
+                        <li><span data-i18n="height">Yükseklik</span> <span id="modal-height" class="spec-val"></span></li>
+                        <li><span data-i18n="boxQty">Koli İçi Adet</span> <span id="modal-box-qty" class="spec-val"></span></li>
+                        <li><span data-i18n="boxDimensions">Koli Ölçüsü</span> <span id="modal-box-dimensions" class="spec-val"></span></li>
+                    </ul>
+                    
+                    <a id="modal-whatsapp-btn" href="#" target="_blank" class="btn-whatsapp">
+                        <i class="fab fa-whatsapp"></i> <span data-i18n="btnWhatsappQuote">WhatsApp ile Sipariş & Teklif Al</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- BLOG ARTICLE READER MODAL -->
+    <div id="blog-modal" class="modal-overlay hidden">
+        <div class="modal-content corporate-modal" style="max-width: 800px;">
+            <button id="close-blog-modal" class="btn-close"><i class="fas fa-times"></i></button>
+            <div class="blog-modal-body">
+                <img id="blog-modal-img" src="" alt="Blog Cover" style="width: 100%; aspect-ratio: 16/9; object-fit: cover; border-radius: 8px; margin-bottom: 20px;">
+                <div id="blog-modal-meta" style="font-size: 0.85rem; color: var(--color-accent); font-weight: 600; margin-bottom: 12px; text-transform: uppercase;"></div>
+                <h2 id="blog-modal-title" style="font-family: var(--font-serif); font-size: 2rem; color: var(--color-primary); margin-bottom: 20px; line-height: 1.2;"></h2>
+                <div id="blog-modal-content" style="color: var(--color-text); font-size: 1.05rem; line-height: 1.8; white-space: pre-line;"></div>
+            </div>
+        </div>
+    </div>
+    <div id="admin-modal" class="modal-overlay hidden">
+        <div class="modal-content corporate-modal admin-modal-content">
+            <button id="close-admin" class="btn-close"><i class="fas fa-times"></i></button>
+            <h2 class="serif-title" style="color: var(--color-primary);" data-i18n="adminTitle">Kraften - Üst Düzey Yönetim Paneli</h2>
+            
+            <div class="admin-grid">
+                <!-- Add Category -->
+                <div class="admin-panel-section">
+                    <h3 data-i18n="adminAddCategory">Yeni Kategori Ekle</h3>
+                    <input type="text" id="cat-id" placeholder="ID (örn: salata)" class="admin-input">
+                    <input type="text" id="cat-tr" placeholder="Kategori Adı (TR)" class="admin-input" data-i18n="adminCategoryNameTr">
+                    <input type="text" id="cat-en" placeholder="Kategori Adı (EN)" class="admin-input" data-i18n="adminCategoryNameEn">
+                    <button id="btn-save-cat" class="btn-solid" data-i18n="adminSave">Kaydet</button>
+                </div>
+
+                <!-- Add Product -->
+                <div class="admin-panel-section">
+                    <h3 data-i18n="adminAddProduct">Yeni Ürün Ekle</h3>
+                    <input type="text" id="prod-id" placeholder="ID (örn: prod-1)" class="admin-input">
+                    <input type="text" id="prod-title-tr" placeholder="Ürün Başlığı (TR)" class="admin-input" data-i18n="adminProductTitleTr">
+                    <input type="text" id="prod-title-en" placeholder="Ürün Başlığı (EN)" class="admin-input" data-i18n="adminProductTitleEn">
+                    <select id="prod-category" class="admin-input"></select>
+                    <input type="text" id="prod-volume" placeholder="Hacim" class="admin-input" data-i18n="adminVolume">
+                    <input type="text" id="prod-img" placeholder="Görsel URL" class="admin-input" data-i18n="adminImage">
+                    <button id="btn-save-prod" class="btn-solid" data-i18n="adminSave">Kaydet & Yayınla</button>
+                </div>
+            </div>
+            <button id="btn-reset-data" class="btn-outline-dark mt-4" data-i18n="adminResetData">Varsayılana Sıfırla</button>
+        </div>
+    </div>
+
+    <!-- Use module to load data and core logic -->
+    <script type="module" src="./js/core.js"></script>
+</body>
+</html>
