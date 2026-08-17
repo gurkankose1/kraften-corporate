@@ -9,9 +9,53 @@ class BlogPageApp {
     }
 
     init() {
+        this.initLoader();
+        this.initCursor();
         this.bindEvents();
         this.renderArticles();
         this.applyTranslations();
+    }
+
+    initLoader() {
+        const loader = document.getElementById('loader');
+        if (!loader) return;
+        const hideLoader = () => {
+            setTimeout(() => {
+                loader.classList.add('hidden');
+            }, 500);
+        };
+        if (document.readyState === 'complete') {
+            hideLoader();
+        } else {
+            window.addEventListener('load', hideLoader);
+        }
+    }
+
+    initCursor() {
+        if ('ontouchstart' in window || navigator.maxTouchPoints > 0 || window.innerWidth < 900) return;
+        const dot = document.querySelector('.cursor-dot');
+        const outline = document.querySelector('.cursor-outline');
+        if(!dot || !outline) return;
+
+        window.addEventListener('mousemove', (e) => {
+            dot.style.left = `${e.clientX}px`;
+            dot.style.top = `${e.clientY}px`;
+            outline.style.left = `${e.clientX}px`;
+            outline.style.top = `${e.clientY}px`;
+        });
+
+        document.addEventListener('mouseover', (e) => {
+            const isClickable = e.target.closest('a, button, .btn-close, .corp-card, .blog-card, .cert-card, .modal-thumb, input, select');
+            if (isClickable) {
+                outline.style.transform = 'translate3d(-50%, -50%, 0) scale(1.5)';
+                outline.style.backgroundColor = 'rgba(194, 150, 104, 0.25)';
+                outline.style.borderColor = '#C29668';
+            } else {
+                outline.style.transform = 'translate3d(-50%, -50%, 0) scale(1)';
+                outline.style.backgroundColor = 'transparent';
+                outline.style.borderColor = '#0A1A12';
+            }
+        });
     }
 
     bindEvents() {
