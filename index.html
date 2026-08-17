@@ -26,6 +26,7 @@
 
     <!-- Loading Screen -->
     <div id="loader" class="loader-screen">
+        <img src="./logo.png" alt="Kraften Logo" class="loader-logo">
         <div class="loader-brand">KRAFTEN</div>
         <div class="loader-line"></div>
     </div>
@@ -47,6 +48,7 @@
             <div class="header-actions">
                 <button id="lang-toggle" class="btn-lang">EN</button>
                 <a href="#contact" class="btn-primary" data-i18n="navContactBtn">İLETİŞİME GEÇİN</a>
+                <a href="javascript:void(0)" id="btn-header-catalog" class="btn-outline-dark btn-sm" style="border-color: rgba(255,255,255,0.3); color: #fff; padding: 10px 18px; font-size: 0.75rem;" data-i18n="btnCatalog"><i class="fas fa-file-pdf"></i> E-Katalog (PDF)</a>
             </div>
         </div>
     </header>
@@ -61,8 +63,10 @@
                 <p class="hero-desc" data-i18n="heroDesc">
                     Uluslararası gıda güvenliği standartlarında, doğadan ilham alan inovatif ambalaj çözümleri.
                 </p>
-                <div class="hero-cta">
+                <div class="hero-cta" style="display: flex; gap: 15px; flex-wrap: wrap; align-items: center;">
                     <a href="#products" class="btn-solid" data-i18n="heroBtn">Çözümleri Keşfedin</a>
+                    <button id="btn-hero-sample" class="btn-outline-light" data-i18n="btnSample"><i class="fas fa-box-open"></i> Ücretsiz Numune İsteyin</button>
+                    <a href="javascript:void(0)" id="btn-hero-catalog" class="btn-outline-light" style="border-color: var(--color-accent); color: var(--color-accent);" data-i18n="btnCatalog"><i class="fas fa-file-pdf"></i> E-Katalog (PDF)</a>
                 </div>
             </div>
             <div class="hero-graphic reveal-up" style="transition-delay: 0.3s;">
@@ -92,6 +96,10 @@
                     <div class="stat-item reveal-up" style="transition-delay: 0.3s;">
                         <div class="stat-number">FSC</div>
                         <div class="stat-label" data-i18n="statFsc">Sertifikalı Üretim</div>
+                    </div>
+                    <div class="stat-item reveal-up" style="transition-delay: 0.4s;">
+                        <div class="stat-number">30+</div>
+                        <div class="stat-label" data-i18n="statExport">Ülkeye İhracat</div>
                     </div>
                 </div>
             </div>
@@ -248,5 +256,53 @@
 
     <!-- Use module to load data and core logic -->
     <script type="module" src="./js/core.js"></script>
+    <!-- FREE SAMPLE REQUEST MODAL -->
+    <div id="sample-modal" class="modal-overlay hidden">
+        <div class="modal-content corporate-modal" style="max-width: 600px;">
+            <button id="close-sample-modal" class="btn-close"><i class="fas fa-times"></i></button>
+            <div class="modal-header">
+                <h2 class="modal-title" data-i18n="sampleModalTitle">Kurumsal Ücretsiz Numune Talebi</h2>
+                <p style="color: var(--color-text-light); font-size: 0.9rem; margin-top: 5px;" data-i18n="sampleModalDesc">İşletmeniz için kağıt gramajı ve gıda temasına uygun ürün numunelerimizi adresinize gönderelim.</p>
+            </div>
+            <form id="sample-form" style="margin-top: 20px;">
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px;">
+                    <div>
+                        <label style="font-size: 0.85rem; font-weight: 600;" data-i18n="sampleCompany">Firma / İşletme Adı *</label>
+                        <input type="text" id="sample-company" required class="admin-input" placeholder="Örn: ABC Restoran A.Ş.">
+                    </div>
+                    <div>
+                        <label style="font-size: 0.85rem; font-weight: 600;" data-i18n="sampleName">Yetkili Adı Soyadı *</label>
+                        <input type="text" id="sample-name" required class="admin-input" placeholder="Örn: Ahmet Yılmaz">
+                    </div>
+                </div>
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin-top: 10px;">
+                    <div>
+                        <label style="font-size: 0.85rem; font-weight: 600;" data-i18n="samplePhone">Telefon / WhatsApp *</label>
+                        <input type="tel" id="sample-phone" required class="admin-input" placeholder="05XX XXX XX XX">
+                    </div>
+                    <div>
+                        <label style="font-size: 0.85rem; font-weight: 600;" data-i18n="sampleProduct">İlgilendiğiniz Ürün Grubu</label>
+                        <select id="sample-product" class="admin-input">
+                            <option value="550 CC - 750 CC Karton Kaseler">550 CC & 750 CC Salata/Çorba Kaseleri</option>
+                            <option value="32 OZ - 38 OZ Büyük Boy Kaseler">32 OZ & 38 OZ Sıcak Yemek Kaseleri</option>
+                            <option value="Özel Logolu Baskılı Kaseler">Özel Logolu Baskılı Kaplar</option>
+                            <option value="Tüm Ürün Serisi">Tüm Ürün Serisi Numune Kiti</option>
+                        </select>
+                    </div>
+                </div>
+                <div style="margin-top: 10px;">
+                    <label style="font-size: 0.85rem; font-weight: 600;" data-i18n="sampleAddress">Teslimat Adresi *</label>
+                    <textarea id="sample-address" required class="admin-input" rows="3" placeholder="Numunelerin kargolanacağı tam adres..."></textarea>
+                </div>
+                <button type="submit" class="btn-solid" style="width: 100%; margin-top: 15px; background: var(--color-primary); color: #fff;" data-i18n="btnSubmitSample">Numune Talebini Gönder</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- FLOATING WHATSAPP WIDGET -->
+    <a href="https://wa.me/905300000000?text=Merhaba,%20Kraften%20Ambalaj%20kurumsal%20ürünleri%20ve%20fiyat%20teklifi%20hakkında%20bilgi%20almak%20istiyorum." target="_blank" rel="noopener" class="whatsapp-widget">
+        <div class="wa-icon"><i class="fab fa-whatsapp"></i></div>
+        <div class="wa-text" data-i18n="waWidgetText">Hızlı Teklif & WhatsApp</div>
+    </a>
 </body>
 </html>
