@@ -49,8 +49,8 @@ export const initialProducts = [
       descEn: "750 cc Salad Bowl ideal for medium portions. Made of food-certified paperboard, resists liquids.",
       category: "white",
       volume: "750 CC",
-      imgMain: "750-kraften-white.jpg",
-      imgSub: "https://degisimpack.com/images/product/750-cc-salad-container-3.jpg",
+      imgMain: "./images/750-white-kraften.jpg",
+      imgSub: "./images/750-white-kraften.jpg",
       specs: {
         topDiameter: "150 mm",
         bottomDiameter: "128 mm",
