@@ -269,7 +269,7 @@ class CorporateApp {
             
             card.innerHTML = `
                 <div class="corp-img-wrapper">
-                    <img src="${imgSrc}" alt="${title}" class="corp-img">
+                    <img src="${imgSrc}" alt="${title}" class="corp-img" loading="lazy" decoding="async">
                 </div>
                 <h3 class="corp-title">${title}</h3>
                 <p class="corp-desc">${desc}</p>
@@ -378,7 +378,7 @@ class CorporateApp {
             card.style.transitionDelay = `${(i % 3) * 0.1}s`;
             card.innerHTML = `
                 <div class="blog-img-wrapper">
-                    <img src="${blog.img}" alt="${title}" class="blog-img">
+                    <img src="${blog.img}" alt="${title}" class="blog-img" loading="lazy" decoding="async">
                 </div>
                 <div class="blog-meta">${blog.date} | ${blog.author}</div>
                 <h3 class="blog-title">${title}</h3>
