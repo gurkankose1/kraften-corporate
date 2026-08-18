@@ -3,7 +3,7 @@
     --color-bg: #F8F5F0; /* Soft Kraft Tone instead of FAFAFA */
     --color-bg-alt: #F0EAE1; /* Slightly darker kraft for contrast */
     --color-text: #2C2621;
-    --color-text-light: #6B7280;
+    --color-text-light: #4B5563; /* Improved contrast for accessibility */
     
     --color-primary: #0A1A12; /* Deep dark green */
     --color-primary-light: #1B422D;
