@@ -5,8 +5,8 @@ class CorporateApp {
         this.lang = 'tr';
         
         // Load data from localStorage or use initial data
-        const savedProducts = localStorage.getItem('kraften_products_corp');
-        this.products = savedProducts ? JSON.parse(savedProducts) : [...initialProducts];
+        // Always load compressed local WebP products from data.js
+        this.products = [...initialProducts];
         
         const savedCats = localStorage.getItem('kraften_categories_corp');
         this.categories = savedCats ? JSON.parse(savedCats) : [...categories];
@@ -354,7 +354,7 @@ class CorporateApp {
             card.className = 'cert-card reveal-up';
             card.style.transitionDelay = `${(i % 4) * 0.1}s`;
             card.innerHTML = `
-                <img src="${cert.img}" alt="${title}" class="cert-img">
+                <img src="${cert.img}" alt="${title}" class="cert-img" loading="lazy" decoding="async">
                 <div class="cert-title">${title}</div>
             `;
             grid.appendChild(card);
