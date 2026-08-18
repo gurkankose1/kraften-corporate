@@ -13,8 +13,8 @@ export const initialProducts = [
       descEn: "550 cc Salad Bowl offers an eco-friendly and hygienic packaging solution with 99% recyclable structure.",
       category: "white",
       volume: "550 CC",
-      imgMain: "https://degisimpack.com/images/product/550-cc-salad-container-2.jpg",
-      imgSub: "https://degisimpack.com/images/product/550-cc-salad-container-3.jpg",
+      imgMain: "./images/prods/550_white_main.webp",
+      imgSub: "./images/prods/550_white_sub.webp",
       specs: {
         topDiameter: "150 mm",
         bottomDiameter: "128 mm",
@@ -31,8 +31,8 @@ export const initialProducts = [
       descEn: "550 cc Kraft Salad Bowl providing premium presentation with natural kraft texture. High quality and eco-friendly.",
       category: "kraft",
       volume: "550 CC",
-      imgMain: "https://degisimpack.com/images/product/550-cc-salad-kraft-container-2.jpg",
-      imgSub: "https://degisimpack.com/images/product/550-cc-salad-kraft-container-3.jpg",
+      imgMain: "./images/prods/550_kraft_main.webp",
+      imgSub: "./images/prods/550_kraft_sub.webp",
       specs: {
         topDiameter: "150 mm",
         bottomDiameter: "128 mm",
@@ -49,8 +49,8 @@ export const initialProducts = [
       descEn: "750 cc Salad Bowl ideal for medium portions. Made of food-certified paperboard, resists liquids.",
       category: "white",
       volume: "750 CC",
-      imgMain: "https://degisimpack.com/images/product/750-cc-salad-container-2.jpg",
-      imgSub: "https://degisimpack.com/images/product/750-cc-salad-container-3.jpg",
+      imgMain: "./images/prods/750_white_main.webp",
+      imgSub: "./images/prods/750_white_sub.webp",
       specs: {
         topDiameter: "150 mm",
         bottomDiameter: "128 mm",
@@ -67,8 +67,8 @@ export const initialProducts = [
       descEn: "750 cc Natural Kraft Salad Bowl. Specially designed for eco-conscious businesses. Elegant and leak-proof.",
       category: "kraft",
       volume: "750 CC",
-      imgMain: "https://degisimpack.com/images/product/750-cc-kraft-salad-container-1.jpg",
-      imgSub: "https://degisimpack.com/images/product/750-cc-kraft-salad-container-2.jpg",
+      imgMain: "./images/prods/750_kraft_main.webp",
+      imgSub: "./images/prods/750_kraft_sub.webp",
       specs: {
         topDiameter: "150 mm",
         bottomDiameter: "128 mm",
@@ -85,8 +85,8 @@ export const initialProducts = [
       descEn: "32 OZ Salad Bowl, perfect white aesthetic design for large portion salads and hot meals.",
       category: "white",
       volume: "32 OZ",
-      imgMain: "https://degisimpack.com/images/product/32-oz-salad-container-1.jpg",
-      imgSub: "https://degisimpack.com/images/product/32-oz-salad-container-2.jpg",
+      imgMain: "./images/prods/32oz_white_main.webp",
+      imgSub: "./images/prods/32oz_white_sub.webp",
       specs: {
         topDiameter: "185 mm",
         bottomDiameter: "160 mm",
@@ -103,8 +103,8 @@ export const initialProducts = [
       descEn: "32 OZ Natural Kraft Salad Bowl provides extra durability thanks to its high-grammage food paperboard.",
       category: "kraft",
       volume: "32 OZ",
-      imgMain: "https://degisimpack.com/images/product/32-oz-kraft-salad-container-1.jpg",
-      imgSub: "https://degisimpack.com/images/product/32-oz-kraft-salad-container-2.jpg",
+      imgMain: "./images/prods/32oz_kraft_main.webp",
+      imgSub: "./images/prods/32oz_kraft_sub.webp",
       specs: {
         topDiameter: "185 mm",
         bottomDiameter: "160 mm",
@@ -121,8 +121,8 @@ export const initialProducts = [
       descEn: "38 OZ our largest volume white bowl model. Leak-proof solution for catering and large portion takeaways.",
       category: "white",
       volume: "38 OZ",
-      imgMain: "https://degisimpack.com/images/product/38-oz-salad-container-1.jpg",
-      imgSub: "https://degisimpack.com/images/product/38-oz-salad-container-2.jpg",
+      imgMain: "./images/prods/38oz_white_main.webp",
+      imgSub: "./images/prods/38oz_white_sub.webp",
       specs: {
         topDiameter: "185 mm",
         bottomDiameter: "160 mm",
@@ -139,8 +139,8 @@ export const initialProducts = [
       descEn: "38 OZ Kraft Salad Bowl, the number one choice of luxury restaurants with its large capacity and natural look.",
       category: "kraft",
       volume: "38 OZ",
-      imgMain: "https://degisimpack.com/images/product/38-oz-kraft-salad-container-1.jpg",
-      imgSub: "https://degisimpack.com/images/product/38-oz-kraft-salad-container-2.jpg",
+      imgMain: "./images/prods/38oz_kraft_main.webp",
+      imgSub: "./images/prods/38oz_kraft_sub.webp",
       specs: {
         topDiameter: "185 mm",
         bottomDiameter: "160 mm",
@@ -152,10 +152,10 @@ export const initialProducts = [
   ];
   
 export const certificates = [
-    { id: "cert1", titleTr: "ISO 22000 Gıda Güvenliği", titleEn: "ISO 22000 Food Safety", img: "https://degisimpack.com/images/certificate/1.jpg" },
-    { id: "cert2", titleTr: "FSC Orman Yönetimi", titleEn: "FSC Forest Management", img: "https://degisimpack.com/images/certificate/2.jpg" },
-    { id: "cert3", titleTr: "ISO 9001 Kalite Yönetimi", titleEn: "ISO 9001 Quality Management", img: "https://degisimpack.com/images/certificate/3.jpg" },
-    { id: "cert4", titleTr: "Helal Sertifikası", titleEn: "Halal Certificate", img: "https://degisimpack.com/images/certificate/4.jpg" }
+    { id: "cert1", titleTr: "ISO 22000 Gıda Güvenliği", titleEn: "ISO 22000 Food Safety", img: "./images/certs/cert1.webp" },
+    { id: "cert2", titleTr: "FSC Orman Yönetimi", titleEn: "FSC Forest Management", img: "./images/certs/cert2.webp" },
+    { id: "cert3", titleTr: "ISO 9001 Kalite Yönetimi", titleEn: "ISO 9001 Quality Management", img: "./images/certs/cert3.webp" },
+    { id: "cert4", titleTr: "Helal Sertifikası", titleEn: "Halal Certificate", img: "./images/certs/cert4.webp" }
   ];
   
 export const blogs = [
