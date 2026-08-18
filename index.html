@@ -56,12 +56,20 @@
       ]
     }
     </script>
-    <!-- Modern Fonts -->
+    <!-- Resource Preconnects -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+    <link rel="preload" as="image" href="./logo.png">
+    
+    <!-- Modern Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;800&family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Non-blocking FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
+    
     <link rel="icon" href="./logo.png" type="image/png">
-    <link rel="stylesheet" href="./css/main.css?v=7">
+    <link rel="stylesheet" href="./css/main.css?v=8">
 </head>
 <body>
     <!-- Custom Cursor -->
@@ -97,7 +105,7 @@
                 <a href="#sustainability" class="nav-link" data-i18n="navSustainability">SÜRDÜRÜLEBİLİRLİK</a>
             </nav>
             <div class="header-actions">
-                <button id="lang-toggle" class="btn-lang">EN</button>
+                <button id="lang-toggle" class="btn-lang" aria-label="Language Toggle / Dil Değiştir">EN</button>
                 <a href="#contact" class="btn-primary" data-i18n="navContactBtn">İLETİŞİME GEÇİN</a>
                 <a href="./kraften_2026_katalog.pdf" target="_blank" rel="noopener" id="btn-header-catalog" class="btn-outline-dark btn-sm" style="border-color: rgba(255,255,255,0.3); color: #fff; padding: 10px 18px; font-size: 0.75rem;" data-i18n="btnCatalog"><i class="fas fa-file-pdf"></i> E-Katalog (PDF)</a>
             </div>
