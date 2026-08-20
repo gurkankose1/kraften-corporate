@@ -160,19 +160,6 @@ export const certificates = [
   
 export const blogs = [
     {
-      "id": "autonews-zomato-unveils-tool-to-help-restaurants",
-      "titleTr": "Gıda Ambalajında Son Gelişmeler: Zomato unveils tool to help restaurants choose Sürdürülebilir Ambalaj - Ambalaj Gateway",
-      "titleEn": "Food Packaging Insights: Zomato unveils tool to help restaurants choose sustainable packaging - Packaging Gateway",
-      "date": "20 Ağustos 2026",
-      "author": "Kraften Ar-Ge",
-      "category": "trendler",
-      "img": "https://images.unsplash.com/photo-1589939705384-5185137a7f0f?auto=format&fit=crop&w=800&q=80",
-      "summaryTr": "Zomato unveils tool to help restaurants choose Sürdürülebilir Ambalaj - Ambalaj Gateway konusundaki en yeni küresel gıda ambalajı regülasyonları ve sürdürülebilir karton kaselerin avantajları.",
-      "summaryEn": "Latest global packaging regulations on Zomato unveils tool to help restaurants choose sustainable packaging - Packaging Gateway and advantages of sustainable paperboard containers.",
-      "contentTr": "Küresel gıda ambalajı sektöründe Zomato unveils tool to help restaurants choose Sürdürülebilir Ambalaj - Ambalaj Gateway konusu hızla ön plana çıkmaktadır. Restoranların ve gıda üreticilerinin doğa dostu ambalajlara yönelimi, hem çevre sağlığını korumakta hem de markaların müşteri memnuniyetini yükseltmektedir.\n\nSon dönemde yayınlanan uluslararası regülasyonlar ve tüketici beklentileri, plastik türevli ambalajların yerine geri dönüştürülebilir ve gıdaya uygun sertifikalı kağıt ham maddelerinin geçmesini zorunlu kılmaktadır. Bu dönüşüm sadece çevresel sorumluluk değil, aynı zamanda işletmeler için stratejik bir marka yatırımıdır.\n\nKraften Ambalaj olarak, gıda temasına %100 uygun sertifikalı karton kaselerimiz ve yenilikçi AR-GE çözümlerimizle işletmelerin bu sürdürülebilirlik dönüşümüne öncülük ediyoruz.",
-      "contentEn": "In the global food packaging sector, Zomato unveils tool to help restaurants choose sustainable packaging - Packaging Gateway is rapidly coming to the forefront. The shift of restaurants towards eco-friendly packaging protects the environment while boosting customer trust.\n\nRecent environmental regulations and consumer demands necessitate replacing plastic food containers with recyclable paperboard raw materials. This transition is not only an environmental duty but also a strategic brand investment.\n\nAt Kraften Packaging, we lead the sustainability transformation of businesses through our certified paperboard containers."
-},
-    {
       "id": "autonews-sustainable-food-packaging-company-with",
       "titleTr": "Gıda Ambalajında Son Gelişmeler: Sürdürülebilir Gıda Ambalajı Company With Indian Roots to Invest $5M Gainesville - Global Atlanta",
       "titleEn": "Food Packaging Insights: Sustainable Food Packaging Company With Indian Roots to Invest $5M Gainesville - Global Atlanta",
