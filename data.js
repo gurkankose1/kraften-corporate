@@ -160,6 +160,19 @@ export const certificates = [
   
 export const blogs = [
     {
+      "id": "autonews-sustainable-food-packaging-company-with",
+      "titleTr": "Gıda Ambalajında Son Gelişmeler: Sürdürülebilir Gıda Ambalajı Company With Indian Roots to Invest $5M Gainesville - Global Atlanta",
+      "titleEn": "Food Packaging Insights: Sustainable Food Packaging Company With Indian Roots to Invest $5M Gainesville - Global Atlanta",
+      "date": "20 Ağustos 2026",
+      "author": "Kraften Ar-Ge",
+      "category": "trendler",
+      "img": "https://images.unsplash.com/photo-1589939705384-5185137a7f0f?auto=format&fit=crop&w=800&q=80",
+      "summaryTr": "Sürdürülebilir Gıda Ambalajı Company With Indian Roots to Invest $5M Gainesville - Global Atlanta konusundaki en yeni küresel gıda ambalajı regülasyonları ve sürdürülebilir karton kaselerin avantajları.",
+      "summaryEn": "Latest global packaging regulations on Sustainable Food Packaging Company With Indian Roots to Invest $5M Gainesville - Global Atlanta and advantages of sustainable paperboard containers.",
+      "contentTr": "Küresel gıda ambalajı sektöründe Sürdürülebilir Gıda Ambalajı Company With Indian Roots to Invest $5M Gainesville - Global Atlanta konusu hızla ön plana çıkmaktadır. Restoranların ve gıda üreticilerinin doğa dostu ambalajlara yönelimi, hem çevre sağlığını korumakta hem de markaların müşteri memnuniyetini yükseltmektedir.\n\nSon dönemde yayınlanan uluslararası regülasyonlar ve tüketici beklentileri, plastik türevli ambalajların yerine geri dönüştürülebilir ve gıdaya uygun sertifikalı kağıt ham maddelerinin geçmesini zorunlu kılmaktadır. Bu dönüşüm sadece çevresel sorumluluk değil, aynı zamanda işletmeler için stratejik bir marka yatırımıdır.\n\nKraften Ambalaj olarak, gıda temasına %100 uygun sertifikalı karton kaselerimiz ve yenilikçi AR-GE çözümlerimizle işletmelerin bu sürdürülebilirlik dönüşümüne öncülük ediyoruz.",
+      "contentEn": "In the global food packaging sector, Sustainable Food Packaging Company With Indian Roots to Invest $5M Gainesville - Global Atlanta is rapidly coming to the forefront. The shift of restaurants towards eco-friendly packaging protects the environment while boosting customer trust.\n\nRecent environmental regulations and consumer demands necessitate replacing plastic food containers with recyclable paperboard raw materials. This transition is not only an environmental duty but also a strategic brand investment.\n\nAt Kraften Packaging, we lead the sustainability transformation of businesses through our certified paperboard containers."
+},
+    {
       "id": "autonews-sustainable-food-packaging-in-2045-the",
       "titleTr": "2045 Geleceğin Sürdürülebilir Gıda Ambalajı Trendleri ve İnovasyonlar",
       "titleEn": "Sustainable Food Packaging in 2045: The Shape of Things to Come",
