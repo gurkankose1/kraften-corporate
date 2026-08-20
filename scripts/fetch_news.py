@@ -160,7 +160,21 @@ def fallback_article_generator(title, desc):
         "contentEn": f"In the global food packaging sector, {title} is rapidly coming to the forefront. The shift of restaurants towards eco-friendly packaging protects the environment while boosting customer trust.\n\nRecent environmental regulations and consumer demands necessitate replacing plastic food containers with recyclable paperboard raw materials. This transition is not only an environmental duty but also a strategic brand investment.\n\nAt Kraften Packaging, we lead the sustainability transformation of businesses through our certified paperboard containers."
     }
 
+def inject_seo_internal_links(article):
+    content_tr = article.get("contentTr", "")
+    links_map = [
+        (r'\b(kraft salata kasesi|kraft salata kabı)\b', r'<a href="./kraft-salata-kasesi.html" style="color: var(--color-accent); font-weight: bold;">\1</a>'),
+        (r'\b(bowl kase|poké bowl)\b', r'<a href="./bowl-kase.html" style="color: var(--color-accent); font-weight: bold;">\1</a>'),
+        (r'\b(toptan karton kase|karton kase)\b', r'<a href="./toptan-karton-kase.html" style="color: var(--color-accent); font-weight: bold;">\1</a>'),
+        (r'\b(sızdırmaz gıda kabı|sızdırmaz kap)\b', r'<a href="./sizdirmaz-gida-kabi.html" style="color: var(--color-accent); font-weight: bold;">\1</a>')
+    ]
+    for pattern, replacement in links_map:
+        content_tr = re.sub(pattern, replacement, content_tr, count=1, flags=re.IGNORECASE)
+    article["contentTr"] = content_tr
+    return article
+
 def append_to_data_js(new_article):
+    new_article = inject_seo_internal_links(new_article)
     with open(DATA_JS_PATH, "r", encoding="utf-8") as f:
         content = f.read()
 
