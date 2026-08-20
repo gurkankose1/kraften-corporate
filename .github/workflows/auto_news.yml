@@ -6,12 +6,18 @@ on:
     - cron: '0 3 * * *'
   workflow_dispatch: # Allows manual trigger from GitHub UI
 
+permissions:
+  contents: write
+
 jobs:
   fetch-and-publish:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          persist-credentials: true
 
       - name: Set up Python
         uses: actions/setup-python@v5
@@ -25,7 +31,7 @@ jobs:
 
       - name: Commit and Push Changes
         run: |
-          git config --global user.name "Kraften News Bot"
-          git config --global user.email "bot@kraftenambalaj.com"
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
           git add data.js
-          git diff --quiet && git diff --staged --quiet || (git commit -m "auto: publish daily packaging news article [skip ci]" && git push)
+          git diff --staged --quiet || (git commit -m "auto: publish daily packaging news article [skip ci]" && git push https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git HEAD:${{ github.ref_name }})
