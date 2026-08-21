@@ -160,6 +160,19 @@ export const certificates = [
   
 export const blogs = [
     {
+      "id": "autonews-infographic-packaging-facilities-lead",
+      "titleTr": "Gıda Ambalajında Son Gelişmeler: Infographic: Ambalaj, facilities lead 41 pet food Şirketler ve Trendler’ sustainability initiatives - PetfoodIndustry",
+      "titleEn": "Food Packaging Insights: Infographic: Packaging, facilities lead 41 pet food companies’ sustainability initiatives - PetfoodIndustry",
+      "date": "21 Ağustos 2026",
+      "author": "Kraften Ar-Ge",
+      "category": "trendler",
+      "img": "https://images.unsplash.com/photo-1509099836639-18ba1795216d?auto=format&fit=crop&w=800&q=80",
+      "summaryTr": "Infographic: Ambalaj, facilities lead 41 pet food Şirketler ve Trendler’ sustainability initiatives - PetfoodIndustry konusundaki en yeni küresel gıda ambalajı regülasyonları ve sürdürülebilir karton kaselerin avantajları.",
+      "summaryEn": "Latest global packaging regulations on Infographic: Packaging, facilities lead 41 pet food companies’ sustainability initiatives - PetfoodIndustry and advantages of sustainable paperboard containers.",
+      "contentTr": "Küresel gıda ambalajı sektöründe Infographic: Ambalaj, facilities lead 41 pet food Şirketler ve Trendler’ sustainability initiatives - PetfoodIndustry konusu hızla ön plana çıkmaktadır. Restoranların ve gıda üreticilerinin doğa dostu ambalajlara yönelimi, hem çevre sağlığını korumakta hem de markaların müşteri memnuniyetini yükseltmektedir.\n\nSon dönemde yayınlanan uluslararası regülasyonlar ve tüketici beklentileri, plastik türevli ambalajların yerine geri dönüştürülebilir ve gıdaya uygun sertifikalı kağıt ham maddelerinin geçmesini zorunlu kılmaktadır. Bu dönüşüm sadece çevresel sorumluluk değil, aynı zamanda işletmeler için stratejik bir marka yatırımıdır.\n\nKraften Ambalaj olarak, gıda temasına %100 uygun sertifikalı karton kaselerimiz ve yenilikçi AR-GE çözümlerimizle işletmelerin bu sürdürülebilirlik dönüşümüne öncülük ediyoruz.",
+      "contentEn": "In the global food packaging sector, Infographic: Packaging, facilities lead 41 pet food companies’ sustainability initiatives - PetfoodIndustry is rapidly coming to the forefront. The shift of restaurants towards eco-friendly packaging protects the environment while boosting customer trust.\n\nRecent environmental regulations and consumer demands necessitate replacing plastic food containers with recyclable paperboard raw materials. This transition is not only an environmental duty but also a strategic brand investment.\n\nAt Kraften Packaging, we lead the sustainability transformation of businesses through our certified paperboard containers."
+},
+    {
       "id": "autonews-sustainable-food-packaging-company-with",
       "titleTr": "Gıda Ambalajında Son Gelişmeler: Sürdürülebilir Gıda Ambalajı Company With Indian Roots to Invest $5M Gainesville - Global Atlanta",
       "titleEn": "Food Packaging Insights: Sustainable Food Packaging Company With Indian Roots to Invest $5M Gainesville - Global Atlanta",
