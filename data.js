@@ -160,6 +160,19 @@ export const certificates = [
   
 export const blogs = [
     {
+      "id": "autonews-ahlstrom-launches-new-food-packaging-pap",
+      "titleTr": "Gıda Ambalajında Son Gelişmeler: Ahlstrom launches new Gıda Ambalajı papers - PULPAPERnews.com",
+      "titleEn": "Food Packaging Insights: Ahlstrom launches new food packaging papers - PULPAPERnews.com",
+      "date": "27 Ağustos 2026",
+      "author": "Kraften Ar-Ge",
+      "category": "trendler",
+      "img": "https://degisimpack.com/images/blogs/blog2.jpg",
+      "summaryTr": "Ahlstrom launches new Gıda Ambalajı papers - PULPAPERnews.com konusundaki en yeni küresel gıda ambalajı regülasyonları ve sürdürülebilir karton kaselerin avantajları.",
+      "summaryEn": "Latest global packaging regulations on Ahlstrom launches new food packaging papers - PULPAPERnews.com and advantages of sustainable paperboard containers.",
+      "contentTr": "Küresel gıda ambalajı sektöründe Ahlstrom launches new Gıda Ambalajı papers - PULPAPERnews.com konusu hızla ön plana çıkmaktadır. Restoranların ve gıda üreticilerinin doğa dostu ambalajlara yönelimi, hem çevre sağlığını korumakta hem de markaların müşteri memnuniyetini yükseltmektedir.\n\nSon dönemde yayınlanan uluslararası regülasyonlar ve tüketici beklentileri, plastik türevli ambalajların yerine geri dönüştürülebilir ve gıdaya uygun sertifikalı kağıt ham maddelerinin geçmesini zorunlu kılmaktadır. Bu dönüşüm sadece çevresel sorumluluk değil, aynı zamanda işletmeler için stratejik bir marka yatırımıdır.\n\nKraften Ambalaj olarak, gıda temasına %100 uygun sertifikalı karton kaselerimiz ve yenilikçi AR-GE çözümlerimizle işletmelerin bu sürdürülebilirlik dönüşümüne öncülük ediyoruz.",
+      "contentEn": "In the global food packaging sector, Ahlstrom launches new food packaging papers - PULPAPERnews.com is rapidly coming to the forefront. The shift of restaurants towards eco-friendly packaging protects the environment while boosting customer trust.\n\nRecent environmental regulations and consumer demands necessitate replacing plastic food containers with recyclable paperboard raw materials. This transition is not only an environmental duty but also a strategic brand investment.\n\nAt Kraften Packaging, we lead the sustainability transformation of businesses through our certified paperboard containers."
+},
+    {
       "id": "autonews-wepsea-2026-to-spotlight-indonesias-sus",
       "titleTr": "Gıda Ambalajında Son Gelişmeler: WEPSEA 2026 to Spotlight Indonesia's Sürdürülebilir Gıda Ambalajı Pazar Analizi with Pulp Molding Forum Connecting Brands and the Ambalaj Supply Chain - PR Newswire",
       "titleEn": "Food Packaging Insights: WEPSEA 2026 to Spotlight Indonesia's Sustainable Food Packaging Market with Pulp Molding Forum Connecting Brands and the Packaging Supply Chain - PR Newswire",
