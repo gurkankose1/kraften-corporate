@@ -160,6 +160,19 @@ export const certificates = [
   
 export const blogs = [
     {
+      "id": "autonews-transforming-polyamide-microplastics-int",
+      "titleTr": "Gıda Ambalajında Son Gelişmeler: Transforming polyamide microplastics into light-emitting carbon quantum dots for UV-blocking Gıda Ambalajı - Phys.org",
+      "titleEn": "Food Packaging Insights: Transforming polyamide microplastics into light-emitting carbon quantum dots for UV-blocking food packaging - Phys.org",
+      "date": "29 Ağustos 2026",
+      "author": "Kraften Ar-Ge",
+      "category": "trendler",
+      "img": "https://images.unsplash.com/photo-1610557892470-55d9e80c0bce?auto=format&fit=crop&w=800&q=80",
+      "summaryTr": "Transforming polyamide microplastics into light-emitting carbon quantum dots for UV-blocking Gıda Ambalajı - Phys.org konusundaki en yeni küresel gıda ambalajı regülasyonları ve sürdürülebilir karton kaselerin avantajları.",
+      "summaryEn": "Latest global packaging regulations on Transforming polyamide microplastics into light-emitting carbon quantum dots for UV-blocking food packaging - Phys.org and advantages of sustainable paperboard containers.",
+      "contentTr": "Küresel gıda ambalajı sektöründe Transforming polyamide microplastics into light-emitting carbon quantum dots for UV-blocking Gıda Ambalajı - Phys.org konusu hızla ön plana çıkmaktadır. Restoranların ve gıda üreticilerinin doğa dostu ambalajlara yönelimi, hem çevre sağlığını korumakta hem de markaların müşteri memnuniyetini yükseltmektedir.\n\nSon dönemde yayınlanan uluslararası regülasyonlar ve tüketici beklentileri, plastik türevli ambalajların yerine geri dönüştürülebilir ve gıdaya uygun sertifikalı kağıt ham maddelerinin geçmesini zorunlu kılmaktadır. Bu dönüşüm sadece çevresel sorumluluk değil, aynı zamanda işletmeler için stratejik bir marka yatırımıdır.\n\nKraften Ambalaj olarak, gıda temasına %100 uygun sertifikalı karton kaselerimiz ve yenilikçi AR-GE çözümlerimizle işletmelerin bu sürdürülebilirlik dönüşümüne öncülük ediyoruz.",
+      "contentEn": "In the global food packaging sector, Transforming polyamide microplastics into light-emitting carbon quantum dots for UV-blocking food packaging - Phys.org is rapidly coming to the forefront. The shift of restaurants towards eco-friendly packaging protects the environment while boosting customer trust.\n\nRecent environmental regulations and consumer demands necessitate replacing plastic food containers with recyclable paperboard raw materials. This transition is not only an environmental duty but also a strategic brand investment.\n\nAt Kraften Packaging, we lead the sustainability transformation of businesses through our certified paperboard containers."
+},
+    {
       "id": "autonews-alliedflex-smartsolve-collaborate-to-ad",
       "titleTr": "Gıda Ambalajında Son Gelişmeler: ALLIEDFLEX, SmartSolve collaborate to advance Sürdürülebilir flexible Ambalaj - Ambalaj Strategies",
       "titleEn": "Food Packaging Insights: ALLIEDFLEX, SmartSolve collaborate to advance sustainable flexible packaging - Packaging Strategies",
