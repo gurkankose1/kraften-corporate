@@ -160,6 +160,19 @@ export const certificates = [
   
 export const blogs = [
     {
+      "id": "autonews-coconut-based-bioplastic-targets-food-pa",
+      "titleTr": "Gıda Ambalajında Son Gelişmeler: Coconut-based bioplastic targets Gıda Ambalajı waste - Ambalaj Insights",
+      "titleEn": "Food Packaging Insights: Coconut-based bioplastic targets food packaging waste - Packaging Insights",
+      "date": "31 Ağustos 2026",
+      "author": "Kraften Ar-Ge",
+      "category": "trendler",
+      "img": "https://images.unsplash.com/photo-1532996122724-e3c354a0b15b?auto=format&fit=crop&w=800&q=80",
+      "summaryTr": "Coconut-based bioplastic targets Gıda Ambalajı waste - Ambalaj Insights konusundaki en yeni küresel gıda ambalajı regülasyonları ve sürdürülebilir karton kaselerin avantajları.",
+      "summaryEn": "Latest global packaging regulations on Coconut-based bioplastic targets food packaging waste - Packaging Insights and advantages of sustainable paperboard containers.",
+      "contentTr": "Küresel gıda ambalajı sektöründe Coconut-based bioplastic targets Gıda Ambalajı waste - Ambalaj Insights konusu hızla ön plana çıkmaktadır. Restoranların ve gıda üreticilerinin doğa dostu ambalajlara yönelimi, hem çevre sağlığını korumakta hem de markaların müşteri memnuniyetini yükseltmektedir.\n\nSon dönemde yayınlanan uluslararası regülasyonlar ve tüketici beklentileri, plastik türevli ambalajların yerine geri dönüştürülebilir ve gıdaya uygun sertifikalı kağıt ham maddelerinin geçmesini zorunlu kılmaktadır. Bu dönüşüm sadece çevresel sorumluluk değil, aynı zamanda işletmeler için stratejik bir marka yatırımıdır.\n\nKraften Ambalaj olarak, gıda temasına %100 uygun sertifikalı karton kaselerimiz ve yenilikçi AR-GE çözümlerimizle işletmelerin bu sürdürülebilirlik dönüşümüne öncülük ediyoruz.",
+      "contentEn": "In the global food packaging sector, Coconut-based bioplastic targets food packaging waste - Packaging Insights is rapidly coming to the forefront. The shift of restaurants towards eco-friendly packaging protects the environment while boosting customer trust.\n\nRecent environmental regulations and consumer demands necessitate replacing plastic food containers with recyclable paperboard raw materials. This transition is not only an environmental duty but also a strategic brand investment.\n\nAt Kraften Packaging, we lead the sustainability transformation of businesses through our certified paperboard containers."
+},
+    {
       "id": "autonews-uga-lab-turns-jellyfish-into-sustainable",
       "titleTr": "Gıda Ambalajında Son Gelişmeler: UGA Lab turns jellyfish into Sürdürülebilir food products - WUGA",
       "titleEn": "Food Packaging Insights: UGA Lab turns jellyfish into sustainable food products - WUGA",
