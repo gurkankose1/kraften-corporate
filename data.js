@@ -160,6 +160,19 @@ export const certificates = [
   
 export const blogs = [
     {
+      "id": "autonews-u-yee-pack-builds-momentum-in-sustainabl",
+      "titleTr": "Gıda Ambalajında Son Gelişmeler: U-YEE PACK Builds Momentum in Sürdürülebilir Dining as a Global Leading Manufacturer of Eco-Friendly Tableware - The National Law Review",
+      "titleEn": "Food Packaging Insights: U-YEE PACK Builds Momentum in Sustainable Dining as a Global Leading Manufacturer of Eco-Friendly Tableware - The National Law Review",
+      "date": "02 Eylül 2026",
+      "author": "Kraften Ar-Ge",
+      "category": "trendler",
+      "img": "https://images.unsplash.com/photo-1509099836639-18ba1795216d?auto=format&fit=crop&w=800&q=80",
+      "summaryTr": "U-YEE PACK Builds Momentum in Sürdürülebilir Dining as a Global Leading Manufacturer of Eco-Friendly Tableware - The National Law Review konusundaki en yeni küresel gıda ambalajı regülasyonları ve sürdürülebilir karton kaselerin avantajları.",
+      "summaryEn": "Latest global packaging regulations on U-YEE PACK Builds Momentum in Sustainable Dining as a Global Leading Manufacturer of Eco-Friendly Tableware - The National Law Review and advantages of sustainable paperboard containers.",
+      "contentTr": "Küresel gıda ambalajı sektöründe U-YEE PACK Builds Momentum in Sürdürülebilir Dining as a Global Leading Manufacturer of Eco-Friendly Tableware - The National Law Review konusu hızla ön plana çıkmaktadır. Restoranların ve gıda üreticilerinin doğa dostu ambalajlara yönelimi, hem çevre sağlığını korumakta hem de markaların müşteri memnuniyetini yükseltmektedir.\n\nSon dönemde yayınlanan uluslararası regülasyonlar ve tüketici beklentileri, plastik türevli ambalajların yerine geri dönüştürülebilir ve gıdaya uygun sertifikalı kağıt ham maddelerinin geçmesini zorunlu kılmaktadır. Bu dönüşüm sadece çevresel sorumluluk değil, aynı zamanda işletmeler için stratejik bir marka yatırımıdır.\n\nKraften Ambalaj olarak, gıda temasına %100 uygun sertifikalı karton kaselerimiz ve yenilikçi AR-GE çözümlerimizle işletmelerin bu sürdürülebilirlik dönüşümüne öncülük ediyoruz.",
+      "contentEn": "In the global food packaging sector, U-YEE PACK Builds Momentum in Sustainable Dining as a Global Leading Manufacturer of Eco-Friendly Tableware - The National Law Review is rapidly coming to the forefront. The shift of restaurants towards eco-friendly packaging protects the environment while boosting customer trust.\n\nRecent environmental regulations and consumer demands necessitate replacing plastic food containers with recyclable paperboard raw materials. This transition is not only an environmental duty but also a strategic brand investment.\n\nAt Kraften Packaging, we lead the sustainability transformation of businesses through our certified paperboard containers."
+},
+    {
       "id": "autonews-biopolymer-based-food-packaging-perform",
       "titleTr": "Gıda Ambalajında Son Gelişmeler: Biopolymer-based Gıda Ambalajı: performance, environmental impact, and pathways toward a Sürdürülebilir future - Frontiers",
       "titleEn": "Food Packaging Insights: Biopolymer-based food packaging: performance, environmental impact, and pathways toward a sustainable future - Frontiers",
