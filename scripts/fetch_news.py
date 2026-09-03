@@ -130,34 +130,25 @@ def fallback_article_generator(title, desc):
     img_idx = abs(hash(title)) % len(IMAGE_POOL)
     selected_img = IMAGE_POOL[img_idx]
 
-    # Clean title for Turkish display
-    clean_tr_title = title
-    tr_replacements = {
-        "Sustainable food packaging": "Sürdürülebilir Gıda Ambalajı",
-        "food packaging": "Gıda Ambalajı",
-        "packaging": "Ambalaj",
-        "sustainable": "Sürdürülebilir",
-        "containers": "Karton Kaplar",
-        "companies": "Şirketler ve Trendler",
-        "regulations": "Regülasyonlar",
-        "market": "Pazar Analizi",
-        "PFAS-Free": "Zararlı Kimyasal İçermeyen"
-    }
-    for k, v in tr_replacements.items():
-        clean_tr_title = re.sub(re.escape(k), v, clean_tr_title, flags=re.IGNORECASE)
+    # Clean title from source site suffix like "- Issuewire.com" or "- Global Atlanta"
+    clean_title = re.sub(r'\s*-\s*[A-Za-z0-9\.]+$', '', title).strip()
 
     return {
         "id": f"autonews-{slug}",
-        "titleTr": f"Gıda Ambalajında Son Gelişmeler: {clean_tr_title}",
-        "titleEn": f"Food Packaging Insights: {title}",
+        "titleTr": "Küresel Gıda Ambalajı ve Sürdürülebilir Karton Kap Trendleri",
+        "titleEn": f"Food Packaging Insights: {clean_title}",
+        "titleDe": f"Trends bei Lebensmittelverpackungen: {clean_title}",
+        "titleFr": f"Tendances de l'Emballage Alimentaire : {clean_title}",
         "date": today_str,
         "author": "Kraften Ar-Ge",
         "category": "trendler",
         "img": selected_img,
-        "summaryTr": f"{clean_tr_title} konusundaki en yeni küresel gıda ambalajı regülasyonları ve sürdürülebilir karton kaselerin avantajları.",
-        "summaryEn": f"Latest global packaging regulations on {title} and advantages of sustainable paperboard containers.",
-        "contentTr": f"Küresel gıda ambalajı sektöründe {clean_tr_title} konusu hızla ön plana çıkmaktadır. Restoranların ve gıda üreticilerinin doğa dostu ambalajlara yönelimi, hem çevre sağlığını korumakta hem de markaların müşteri memnuniyetini yükseltmektedir.\n\nSon dönemde yayınlanan uluslararası regülasyonlar ve tüketici beklentileri, plastik türevli ambalajların yerine geri dönüştürülebilir ve gıdaya uygun sertifikalı kağıt ham maddelerinin geçmesini zorunlu kılmaktadır. Bu dönüşüm sadece çevresel sorumluluk değil, aynı zamanda işletmeler için stratejik bir marka yatırımıdır.\n\nKraften Ambalaj olarak, gıda temasına %100 uygun sertifikalı karton kaselerimiz ve yenilikçi AR-GE çözümlerimizle işletmelerin bu sürdürülebilirlik dönüşümüne öncülük ediyoruz.",
-        "contentEn": f"In the global food packaging sector, {title} is rapidly coming to the forefront. The shift of restaurants towards eco-friendly packaging protects the environment while boosting customer trust.\n\nRecent environmental regulations and consumer demands necessitate replacing plastic food containers with recyclable paperboard raw materials. This transition is not only an environmental duty but also a strategic brand investment.\n\nAt Kraften Packaging, we lead the sustainability transformation of businesses through our certified paperboard containers."
+        "summaryTr": "Gıda sektöründe çevre dostu karton kase ve sızdırmaz ambalaj çözümlerindeki en yeni uluslararası gelişmeler.",
+        "summaryEn": f"Latest global food packaging insights and developments on {clean_title}.",
+        "summaryDe": f"Neueste globale Erkenntnisse und Entwicklungen im Bereich Lebensmittelverpackungen.",
+        "summaryFr": "Dernières informations et développements mondiaux sur l'emballage alimentaire.",
+        "contentTr": "Küresel gıda ambalajı sektöründe doğa dostu ve sürdürülebilir kap çözümleri hızla ön plana çıkmaktadır. Restoranların ve gıda üreticilerinin kağıt ham maddeli kaplara yönelimi hem çevreyi korumakta hem de marka güvenilirliğini artırmaktadır.\n\nSon dönemde yürürlüğe giren uluslararası çevre regülasyonları, tek kullanımlık plastiklerin yerine geri dönüştürülebilir ve gıdaya uygun sertifikalı karton kapların kullanılmasını şart koşmaktadır.\n\nKraften Ambalaj olarak, gıda temasına %100 uygun sertifikalı karton kaselerimiz ve sızdırmaz kaplarımızla işletmelerin bu sürdürülebilirlik dönüşümüne öncülük ediyoruz.",
+        "contentEn": f"In the global food packaging sector, sustainable container solutions are rapidly coming to the forefront. The transition of restaurants towards eco-friendly paperboard containers protects the environment while boosting customer trust.\n\nRecent environmental regulations necessitate replacing single-use plastics with certified, recyclable paperboard raw materials.\n\nAt Kraften Packaging, we lead this sustainability transformation with 100% food-contact certified paper bowls and leak-proof containers."
     }
 
 def inject_seo_internal_links(article):
