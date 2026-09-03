@@ -71,11 +71,11 @@ class BlogPageApp {
     }
 
     bindEvents() {
-        const langBtn = document.getElementById('lang-toggle');
-        if (langBtn) {
-            langBtn.addEventListener('click', () => {
-                this.lang = this.lang === 'tr' ? 'en' : 'tr';
-                langBtn.textContent = this.lang === 'tr' ? 'EN' : 'TR';
+        const langSelect = document.getElementById('lang-select');
+        if (langSelect) {
+            langSelect.value = this.lang;
+            langSelect.addEventListener('change', (e) => {
+                this.lang = e.target.value;
                 this.applyTranslations();
                 this.renderArticles();
             });
