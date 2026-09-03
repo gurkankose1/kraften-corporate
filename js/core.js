@@ -109,12 +109,12 @@ class CorporateApp {
     }
 
     bindEvents() {
-        // Lang Toggle
-        const langToggle = document.getElementById('lang-toggle');
-        if(langToggle) {
-            langToggle.addEventListener('click', () => {
-                this.lang = this.lang === 'tr' ? 'en' : 'tr';
-                langToggle.textContent = this.lang === 'tr' ? 'EN' : 'TR';
+        // Lang Select (TR | EN | DE | FR)
+        const langSelect = document.getElementById('lang-select');
+        if (langSelect) {
+            langSelect.value = this.lang;
+            langSelect.addEventListener('change', (e) => {
+                this.lang = e.target.value;
                 this.applyTranslations();
                 this.renderCategories();
                 this.renderProducts();
