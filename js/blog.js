@@ -156,7 +156,10 @@ class BlogPageApp {
         document.getElementById('blog-modal-img').src = blog.img;
         document.getElementById('blog-modal-title').textContent = title;
         document.getElementById('blog-modal-meta').textContent = `${blog.date} | ${blog.author}`;
-        document.getElementById('blog-modal-content').textContent = content;
+        
+        const badgeBox = `\n\n<div style="margin-top: 30px; padding: 20px; background: #F9FAFB; border-radius: 8px; border: 1px solid #E5E7EB; text-align: center;">\n  <p style="font-size: 0.95rem; color: var(--color-primary); font-weight: 600; margin-bottom: 12px;">Google Aramalarında & AI Yanıtlarında Kraften Ambalaj Makalelerini Öne Çıkarın:</p>\n  <a class="ksr-dugme" href="https://www.google.com/preferences/source?q=kraftenambalaj.com" target="_blank" rel="noopener"><span class="ksr-yildiz"></span><span class="ksr-degis"><span class="ksr-durgun">Google'da Tercih Edilen Kaynak ekle</span><span class="ksr-ustte">Daha fazlası için kraftenambalaj.com</span></span><span class="ksr-guven"><span class="ksr-g"></span></span></a>\n</div>`;
+        
+        document.getElementById('blog-modal-content').innerHTML = content.replace(/\n/g, '<br>') + badgeBox;
 
         modal.classList.remove('hidden');
     }
