@@ -71,13 +71,38 @@ class BlogPageApp {
     }
 
     bindEvents() {
-        const langSelect = document.getElementById('lang-select');
-        if (langSelect) {
-            langSelect.value = this.lang;
-            langSelect.addEventListener('change', (e) => {
-                this.lang = e.target.value;
-                this.applyTranslations();
-                this.renderArticles();
+        // Luxury Lang Switcher Dropdown (TR | EN | DE | FR)
+        const langMenuBtn = document.getElementById('lang-menu-btn');
+        const langDropdown = document.getElementById('lang-dropdown-menu');
+        const flagMap = { tr: '🇹🇷', en: '🇬🇧', de: '🇩🇪', fr: '🇫🇷' };
+
+        if (langMenuBtn && langDropdown) {
+            langMenuBtn.addEventListener('click', (e) => {
+                e.stopPropagation();
+                langDropdown.classList.toggle('hidden');
+            });
+
+            document.addEventListener('click', (e) => {
+                if (!e.target.closest('.lang-switcher-wrapper')) {
+                    langDropdown.classList.add('hidden');
+                }
+            });
+
+            langDropdown.querySelectorAll('.lang-option').forEach(opt => {
+                opt.addEventListener('click', () => {
+                    const targetLang = opt.dataset.lang;
+                    this.lang = targetLang;
+
+                    document.getElementById('current-lang-flag').textContent = flagMap[targetLang] || '🌐';
+                    document.getElementById('current-lang-code').textContent = targetLang.toUpperCase();
+
+                    langDropdown.querySelectorAll('.lang-option').forEach(o => o.classList.remove('active'));
+                    opt.classList.add('active');
+                    langDropdown.classList.add('hidden');
+
+                    this.applyTranslations();
+                    this.renderArticles();
+                });
             });
         }
 
