@@ -1,4 +1,10 @@
 {
+  "redirects": [
+    { "source": "/kraft-salata-kasesi.html", "destination": "/#products", "permanent": true },
+    { "source": "/bowl-kase.html", "destination": "/#products", "permanent": true },
+    { "source": "/toptan-karton-kase.html", "destination": "/#products", "permanent": true },
+    { "source": "/sizdirmaz-gida-kabi.html", "destination": "/#products", "permanent": true }
+  ],
   "headers": [
     {
       "source": "/(.*).(png|jpg|jpeg|gif|svg|ico|webp|pdf)",
