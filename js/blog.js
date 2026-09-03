@@ -146,6 +146,30 @@ class BlogPageApp {
         });
     }
 
+    getLocalized(obj, key) {
+        if (!obj) return '';
+        const capLang = this.lang.charAt(0).toUpperCase() + this.lang.slice(1);
+        return obj[key + capLang] || obj[key + 'En'] || obj[key + 'Tr'] || '';
+    }
+
+    t(key) {
+        return (translations[this.lang] && translations[this.lang][key]) || (translations['en'] && translations['en'][key]) || key;
+    }
+
+    applyTranslations() {
+        document.querySelectorAll('[data-i18n]').forEach(el => {
+            const key = el.getAttribute('data-i18n');
+            const dict = translations[this.lang] || translations['en'];
+            if (dict && dict[key]) {
+                if (el.tagName === 'INPUT' && el.hasAttribute('placeholder')) {
+                    el.setAttribute('placeholder', dict[key]);
+                } else {
+                    el.innerHTML = dict[key];
+                }
+            }
+        });
+    }
+
     renderArticles() {
         const grid = document.getElementById('blog-archive-grid');
         if (!grid) return;
@@ -153,20 +177,20 @@ class BlogPageApp {
 
         const filtered = blogs.filter(blog => {
             const matchesCategory = this.currentFilter === 'all' || blog.category === this.currentFilter;
-            const title = (this.lang === 'tr' ? blog.titleTr : blog.titleEn).toLowerCase();
-            const summary = (this.lang === 'tr' ? blog.summaryTr : blog.summaryEn).toLowerCase();
+            const title = this.getLocalized(blog, 'title').toLowerCase();
+            const summary = this.getLocalized(blog, 'summary').toLowerCase();
             const matchesSearch = !this.searchQuery || title.includes(this.searchQuery) || summary.includes(this.searchQuery);
             return matchesCategory && matchesSearch;
         });
 
         if (filtered.length === 0) {
-            grid.innerHTML = `<div style="grid-column: 1/-1; text-align: center; color: var(--color-text-light); padding: 40px;">Aradığınız kriterlere uygun haber bulunamadı.</div>`;
+            grid.innerHTML = `<div style="grid-column: 1/-1; text-align: center; color: var(--color-text-light); padding: 40px;">${this.t('noArticlesFound')}</div>`;
             return;
         }
 
         filtered.forEach((blog, i) => {
-            const title = this.lang === 'tr' ? blog.titleTr : blog.titleEn;
-            const summary = this.lang === 'tr' ? blog.summaryTr : blog.summaryEn;
+            const title = this.getLocalized(blog, 'title');
+            const summary = this.getLocalized(blog, 'summary');
 
             const card = document.createElement('div');
             card.className = 'blog-card reveal-up active';
@@ -178,7 +202,7 @@ class BlogPageApp {
                 <div class="blog-meta">${blog.date} | ${blog.author}</div>
                 <h3 class="blog-title">${title}</h3>
                 <p class="blog-summary">${summary}</p>
-                <div class="blog-read-more" style="color: var(--color-accent); font-weight: 600; margin-top: 12px; font-size: 0.9rem;">${this.lang === 'tr' ? 'Devamını Oku →' : 'Read More →'}</div>
+                <div class="blog-read-more" style="color: var(--color-accent); font-weight: 600; margin-top: 12px; font-size: 0.9rem;">${this.t('readMore')}</div>
             `;
             card.addEventListener('click', () => this.openBlogModal(blog, true));
             grid.appendChild(card);
@@ -189,8 +213,8 @@ class BlogPageApp {
         const modal = document.getElementById('blog-modal');
         if (!modal) return;
 
-        const title = this.lang === 'tr' ? blog.titleTr : blog.titleEn;
-        const content = this.lang === 'tr' ? blog.contentTr : blog.contentEn;
+        const title = this.getLocalized(blog, 'title');
+        const content = this.getLocalized(blog, 'content');
         const shareUrl = `https://www.kraftenambalaj.com/blog.html?article=${blog.id}`;
 
         if (updateHistory) {
@@ -203,18 +227,18 @@ class BlogPageApp {
         
         const shareBox = `
             <div style="margin-top: 25px; padding: 15px; background: #F3F4F6; border-radius: 8px; display: flex; gap: 12px; align-items: center; justify-content: space-between; flex-wrap: wrap;">
-                <span style="font-size: 0.9rem; font-weight: 600; color: var(--color-primary);"><i class="fas fa-share-alt" style="color: var(--color-accent); margin-right: 6px;"></i> Makaleyi Paylaş:</span>
+                <span style="font-size: 0.9rem; font-weight: 600; color: var(--color-primary);"><i class="fas fa-share-alt" style="color: var(--color-accent); margin-right: 6px;"></i> ${this.t('shareArticle')}</span>
                 <div style="display: flex; gap: 10px;">
                     <a href="https://api.whatsapp.com/send?text=${encodeURIComponent(title + ' - ' + shareUrl)}" target="_blank" rel="noopener nofollow" style="background: #25D366; color: #FFF; padding: 6px 14px; border-radius: 4px; font-size: 0.85rem; font-weight: 600; text-decoration: none;"><i class="fab fa-whatsapp"></i> WhatsApp</a>
-                    <button id="btn-copy-share-url" data-url="${shareUrl}" style="background: var(--color-primary); color: #FFF; border: none; padding: 6px 14px; border-radius: 4px; font-size: 0.85rem; font-weight: 600; cursor: pointer;"><i class="fas fa-link"></i> Linki Kopyala</button>
+                    <button id="btn-copy-share-url" data-url="${shareUrl}" style="background: var(--color-primary); color: #FFF; border: none; padding: 6px 14px; border-radius: 4px; font-size: 0.85rem; font-weight: 600; cursor: pointer;"><i class="fas fa-link"></i> ${this.t('copyLink')}</button>
                 </div>
             </div>
         `;
 
         const preferredSourceBadge = `
             <div style="margin-top: 20px; padding: 20px; background: #FFFDFB; border-radius: 8px; border: 1px solid rgba(194, 150, 104, 0.25); text-align: center;">
-                <p style="font-size: 0.95rem; color: var(--color-primary); font-weight: 600; margin-bottom: 12px;">Google Aramalarında & AI Yanıtlarında Kraften Ambalaj Makalelerini Öne Çıkarın:</p>
-                <a class="ksr-dugme" href="https://www.google.com/preferences/source?q=kraftenambalaj.com" target="_blank" rel="noopener nofollow"><span class="ksr-yildiz"></span><span class="ksr-degis"><span class="ksr-durgun">Google'da Tercih Edilen Kaynak ekle</span><span class="ksr-ustte">Daha fazlası için kraftenambalaj.com</span></span><span class="ksr-guven"><span class="ksr-g"></span></span></a>
+                <p style="font-size: 0.95rem; color: var(--color-primary); font-weight: 600; margin-bottom: 12px;">${this.t('googleBoostText')}</p>
+                <a class="ksr-dugme" href="https://www.google.com/preferences/source?q=kraftenambalaj.com" target="_blank" rel="noopener nofollow"><span class="ksr-yildiz"></span><span class="ksr-degis"><span class="ksr-durgun">${this.t('preferredSourceText')}</span><span class="ksr-ustte">${this.t('preferredSourceDesc')}</span></span><span class="ksr-guven"><span class="ksr-g"></span></span></a>
             </div>
         `;
         
@@ -224,9 +248,9 @@ class BlogPageApp {
         if (copyBtn) {
             copyBtn.addEventListener('click', () => {
                 navigator.clipboard.writeText(shareUrl).then(() => {
-                    copyBtn.innerHTML = `<i class="fas fa-check"></i> Kopyalandı!`;
+                    copyBtn.innerHTML = `<i class="fas fa-check"></i> ${this.t('linkCopied')}`;
                     setTimeout(() => {
-                        copyBtn.innerHTML = `<i class="fas fa-link"></i> Linki Kopyala`;
+                        copyBtn.innerHTML = `<i class="fas fa-link"></i> ${this.t('copyLink')}`;
                     }, 2000);
                 });
             });
