@@ -226,18 +226,25 @@ class CorporateApp {
         });
     }
 
+    getLocalized(obj, key) {
+        if (!obj) return '';
+        const capLang = this.lang.charAt(0).toUpperCase() + this.lang.slice(1);
+        return obj[key + capLang] || obj[key + 'En'] || obj[key + 'Tr'] || '';
+    }
+
     t(key) {
-        return translations[this.lang][key] || key;
+        return (translations[this.lang] && translations[this.lang][key]) || translations['en'][key] || key;
     }
 
     applyTranslations() {
         document.querySelectorAll('[data-i18n]').forEach(el => {
             const key = el.getAttribute('data-i18n');
-            if (translations[this.lang] && translations[this.lang][key]) {
+            const dict = translations[this.lang] || translations['en'];
+            if (dict && dict[key]) {
                 if(el.tagName === 'INPUT' && el.hasAttribute('placeholder')) {
-                    el.setAttribute('placeholder', translations[this.lang][key]);
+                    el.setAttribute('placeholder', dict[key]);
                 } else {
-                    el.innerHTML = translations[this.lang][key]; // HTML used for <br>
+                    el.innerHTML = dict[key];
                 }
             }
         });
@@ -250,13 +257,13 @@ class CorporateApp {
         filterContainer.innerHTML = '';
 
         this.categories.forEach(cat => {
-            const name = this.lang === 'tr' ? cat.nameTr : cat.nameEn;
+            const name = this.getLocalized(cat, 'name');
             const btn = document.createElement('button');
             btn.className = `filter-btn ${this.currentFilter === cat.id ? 'active' : ''}`;
             btn.textContent = name;
             btn.addEventListener('click', () => {
                 this.currentFilter = cat.id;
-                this.renderCategories(); // update active class
+                this.renderCategories();
                 this.renderProducts();
             });
             filterContainer.appendChild(btn);
@@ -266,7 +273,7 @@ class CorporateApp {
         const adminSelect = document.getElementById('prod-category');
         if(adminSelect) {
             adminSelect.innerHTML = this.categories.filter(c => c.id !== 'all').map(c => 
-                `<option value="${c.id}">${c.nameTr}</option>`
+                `<option value="${c.id}">${this.getLocalized(c, 'name')}</option>`
             ).join('');
         }
     }
@@ -282,8 +289,8 @@ class CorporateApp {
             : this.products.filter(p => p.category === this.currentFilter);
 
         filtered.forEach((prod, index) => {
-            const title = this.lang === 'tr' ? prod.titleTr : prod.titleEn;
-            const desc = this.lang === 'tr' ? prod.descTr : prod.descEn;
+            const title = this.getLocalized(prod, 'title');
+            const desc = this.getLocalized(prod, 'desc');
             const delay = (index % 3) * 0.1;
             const imgSrc = prod.imgMain.startsWith('http') ? prod.imgMain : `./${prod.imgMain}`;
             
@@ -305,7 +312,6 @@ class CorporateApp {
             
             card.addEventListener('click', () => this.openProductModal(prod));
             
-            // Re-bind cursor specifically
             card.addEventListener('mouseenter', () => {
                 document.querySelector('.cursor-outline').style.transform = 'translate(-50%, -50%) scale(1.5)';
             });
@@ -319,8 +325,8 @@ class CorporateApp {
     }
 
     openProductModal(prod) {
-        const title = this.lang === 'tr' ? prod.titleTr : prod.titleEn;
-        const desc = this.lang === 'tr' ? prod.descTr : prod.descEn;
+        const title = this.getLocalized(prod, 'title');
+        const desc = this.getLocalized(prod, 'desc');
         
         document.getElementById('modal-title').textContent = title;
         document.getElementById('modal-desc').textContent = desc;
