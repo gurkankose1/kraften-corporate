@@ -1,27 +1,171 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://www.kraftenambalaj.com/</loc>
-    <lastmod>2026-09-02</lastmod>
+    <lastmod>2026-09-09</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
+    <loc>https://www.kraftenambalaj.com/en/</loc>
+    <lastmod>2026-09-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.kraftenambalaj.com/de/</loc>
+    <lastmod>2026-09-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.kraftenambalaj.com/fr/</loc>
+    <lastmod>2026-09-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
     <loc>https://www.kraftenambalaj.com/blog.html</loc>
-    <lastmod>2026-09-02</lastmod>
+    <lastmod>2026-09-09</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.kraftenambalaj.com/kraften_2026_katalog.pdf</loc>
-    <lastmod>2026-09-02</lastmod>
+    <lastmod>2026-09-09</lastmod>
     <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.kraftenambalaj.com/kategoriler/kraft-kaseler.html</loc>
+    <lastmod>2026-09-09</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.kraftenambalaj.com/imza.html</loc>
-    <lastmod>2026-09-02</lastmod>
+    <loc>https://www.kraftenambalaj.com/kategoriler/beyaz-kaseler.html</loc>
+    <lastmod>2026-09-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.kraftenambalaj.com/urunler/550cc-beyaz-salata-kabi.html</loc>
+    <lastmod>2026-09-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+    <image:image><image:loc>https://www.kraftenambalaj.com/images/prods/550_white_main.webp</image:loc></image:image>
+  </url>
+  <url>
+    <loc>https://www.kraftenambalaj.com/urunler/550cc-kraft-salata-kabi.html</loc>
+    <lastmod>2026-09-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+    <image:image><image:loc>https://www.kraftenambalaj.com/images/prods/550_kraft_main.webp</image:loc></image:image>
+  </url>
+  <url>
+    <loc>https://www.kraftenambalaj.com/urunler/750cc-beyaz-salata-kabi.html</loc>
+    <lastmod>2026-09-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+    <image:image><image:loc>https://www.kraftenambalaj.com/images/prods/750_white_main.webp</image:loc></image:image>
+  </url>
+  <url>
+    <loc>https://www.kraftenambalaj.com/urunler/750cc-kraft-salata-kabi.html</loc>
+    <lastmod>2026-09-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+    <image:image><image:loc>https://www.kraftenambalaj.com/images/prods/750_kraft_main.webp</image:loc></image:image>
+  </url>
+  <url>
+    <loc>https://www.kraftenambalaj.com/urunler/32oz-beyaz-salata-kabi.html</loc>
+    <lastmod>2026-09-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+    <image:image><image:loc>https://www.kraftenambalaj.com/images/prods/32oz_white_main.webp</image:loc></image:image>
+  </url>
+  <url>
+    <loc>https://www.kraftenambalaj.com/urunler/32oz-kraft-salata-kabi.html</loc>
+    <lastmod>2026-09-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+    <image:image><image:loc>https://www.kraftenambalaj.com/images/prods/32oz_kraft_main.webp</image:loc></image:image>
+  </url>
+  <url>
+    <loc>https://www.kraftenambalaj.com/urunler/38oz-beyaz-salata-kabi.html</loc>
+    <lastmod>2026-09-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+    <image:image><image:loc>https://www.kraftenambalaj.com/images/prods/38oz_white_main.webp</image:loc></image:image>
+  </url>
+  <url>
+    <loc>https://www.kraftenambalaj.com/urunler/38oz-kraft-salata-kabi.html</loc>
+    <lastmod>2026-09-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+    <image:image><image:loc>https://www.kraftenambalaj.com/images/prods/38oz_kraft_main.webp</image:loc></image:image>
+  </url>
+  <url>
+    <loc>https://www.kraftenambalaj.com/blog/kuresel-gida-ambalaji-sektorunde-surdurulebilir-masaustu-urun-trendleri.html</loc>
+    <lastmod>2026-09-09</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
+    <priority>0.75</priority>
+    <image:image><image:loc>https://images.unsplash.com/photo-1509099836639-18ba1795216d?auto=format&fit=crop&w=800&q=80</image:loc></image:image>
+  </url>
+  <url>
+    <loc>https://www.kraftenambalaj.com/blog/surdurulebilir-ambalaj-sektorunde-kuresel-yatirim-ve-buyume-firsatlari.html</loc>
+    <lastmod>2026-09-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+    <image:image><image:loc>https://images.unsplash.com/photo-1589939705384-5185137a7f0f?auto=format&fit=crop&w=800&q=80</image:loc></image:image>
+  </url>
+  <url>
+    <loc>https://www.kraftenambalaj.com/blog/2045-gelecegin-surdurulebilir-gida-ambalaji-trendleri-ve-inovasyonlar.html</loc>
+    <lastmod>2026-09-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+    <image:image><image:loc>https://degisimpack.com/images/blogs/blog2.jpg</image:loc></image:image>
+  </url>
+  <url>
+    <loc>https://www.kraftenambalaj.com/blog/zararli-kimyasal-icermeyen-pfas-free-gida-ambalajlarinda-kuresel-buyume.html</loc>
+    <lastmod>2026-09-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+    <image:image><image:loc>https://degisimpack.com/images/blogs/blog4.jpg</image:loc></image:image>
+  </url>
+  <url>
+    <loc>https://www.kraftenambalaj.com/blog/cevre-dostu-geri-donusum-ve-kraft-ambalajin-gelecegi.html</loc>
+    <lastmod>2026-09-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+    <image:image><image:loc>https://degisimpack.com/images/blogs/blog1.jpg</image:loc></image:image>
+  </url>
+  <url>
+    <loc>https://www.kraftenambalaj.com/blog/hizli-biyolojik-cozunurluk-ile-dogayi-koru.html</loc>
+    <lastmod>2026-09-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+    <image:image><image:loc>https://degisimpack.com/images/blogs/blog2.jpg</image:loc></image:image>
+  </url>
+  <url>
+    <loc>https://www.kraftenambalaj.com/blog/gida-ambalajinda-uluslararasi-hijyen-standartlari.html</loc>
+    <lastmod>2026-09-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+    <image:image><image:loc>https://degisimpack.com/images/blogs/blog4.jpg</image:loc></image:image>
+  </url>
+  <url>
+    <loc>https://www.kraftenambalaj.com/blog/avrupa-birligi-tek-kullanimlik-plastik-yasagi-ve-ambalaj-sektoru.html</loc>
+    <lastmod>2026-09-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+    <image:image><image:loc>https://degisimpack.com/images/blogs/blog1.jpg</image:loc></image:image>
+  </url>
+  <url>
+    <loc>https://www.kraftenambalaj.com/blog/paket-serviste-sicaklik-ve-nem-dengesi-nasil-korunur.html</loc>
+    <lastmod>2026-09-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+    <image:image><image:loc>https://degisimpack.com/images/blogs/blog2.jpg</image:loc></image:image>
   </url>
 </urlset>
