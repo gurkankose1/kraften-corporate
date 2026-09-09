@@ -391,6 +391,36 @@ body {
     box-shadow: 0 0 12px var(--gold-glow);
 }
 
+/* ================= TRUST STRIP ACCREDITATIONS ================= */
+.trust-strip-sec {
+    background: rgba(200, 169, 110, 0.05);
+    border-top: 1px solid var(--border-glass);
+    border-bottom: 1px solid var(--border-glass);
+    padding: 16px 24px;
+    position: relative;
+    z-index: 5;
+}
+
+.trust-strip-inner {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.trust-strip-inner span {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--gold);
+    letter-spacing: 0.5px;
+}
+
 /* ================= EDITORIAL CATALOG COLLECTIONS ================= */
 .catalog-section {
     position: relative;
@@ -614,6 +644,107 @@ body {
     color: var(--gold);
 }
 
+/* ================= COMPACT PRODUCTION FACILITY STRIP ================= */
+.facility-sec {
+    position: relative;
+    z-index: 1;
+    padding: 90px 36px 70px;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.facility-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    align-items: center;
+    background: var(--bg-card);
+    border: 1px solid var(--border-glass);
+    border-radius: var(--radius-lg);
+    padding: 45px;
+    backdrop-filter: blur(14px);
+    transition: var(--transition);
+}
+
+.facility-grid:hover {
+    border-color: var(--border-glass-bright);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
+}
+
+.facility-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.facility-title {
+    font-family: var(--ff-serif);
+    font-size: 2.3rem;
+    font-weight: 800;
+    color: #FFF;
+    line-height: 1.25;
+    margin: 10px 0 16px;
+}
+
+.facility-desc {
+    color: var(--text-muted);
+    font-size: 1.02rem;
+    line-height: 1.65;
+    margin-bottom: 28px;
+}
+
+.facility-metrics-row {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+}
+
+.facility-metric-card {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid var(--border-glass);
+    border-radius: var(--radius-sm);
+    padding: 16px 12px;
+    text-align: center;
+    transition: var(--transition);
+}
+
+.facility-metric-card:hover {
+    background: rgba(200, 169, 110, 0.08);
+    border-color: var(--gold);
+}
+
+.facility-metric-val {
+    display: block;
+    font-family: var(--ff-serif);
+    font-size: 1.75rem;
+    font-weight: 800;
+    color: var(--gold-bright);
+    margin-bottom: 4px;
+}
+
+.facility-metric-lbl {
+    font-size: 0.76rem;
+    color: var(--text-muted);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.facility-img-card {
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    background: #000;
+    border: 1px solid var(--border-glass);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5);
+}
+
+.facility-img-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    min-height: 380px;
+}
+
 /* ================= GRAND FINALE SALES GATEWAY (SAYFANIN SONU) ================= */
 .sales-grand-section, .sales-hub-section {
     position: relative;
@@ -623,10 +754,25 @@ body {
     background: linear-gradient(180deg, rgba(8, 16, 12, 0.7) 0%, rgba(14, 26, 20, 0.98) 100%);
 }
 
-.sales-hub-header {
+.sales-hub-header, .sales-header {
     text-align: center;
     max-width: 850px;
-    margin: 0 auto 60px;
+    margin: 0 auto 50px;
+}
+
+.sales-title {
+    font-family: var(--ff-serif);
+    font-size: 2.8rem;
+    font-weight: 800;
+    color: #FFF;
+    margin-bottom: 15px;
+    line-height: 1.25;
+}
+
+.sales-desc {
+    color: var(--text-muted);
+    font-size: 1.05rem;
+    line-height: 1.65;
 }
 
 .dual-sales-grid {
@@ -785,6 +931,24 @@ body {
 }
 
 /* ================= RETAIL PRODUCT CARDS & LID TOGGLE ================= */
+.retail-shelf-sec {
+    margin-top: 70px;
+    border-top: 1px solid var(--border-glass);
+    padding-top: 50px;
+}
+
+.retail-shelf-header {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.retail-shelf-title {
+    font-family: var(--ff-serif);
+    font-size: 2.2rem;
+    font-weight: 800;
+    color: #FFF;
+}
+
 .retail-showcase-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
@@ -1257,6 +1421,26 @@ body {
     border-top: 1px solid var(--border-glass);
 }
 
+.bento-header {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 40px;
+}
+
+.bento-sec-title {
+    font-family: var(--ff-serif);
+    font-size: 2.2rem;
+    font-weight: 800;
+    color: #FFF;
+    margin-bottom: 12px;
+}
+
+.bento-sec-desc {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
 .bento-grid, .bento-grid-3 {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -1328,31 +1512,742 @@ body {
     gap: 12px;
 }
 
-/* ================= RESPONSIVE ================= */
+/* ================= MINIMAL CORPORATE FOOTER ================= */
+.site-footer {
+    border-top: 1px solid var(--border-glass);
+    padding: 60px 36px 35px;
+    background: #050B08;
+    text-align: center;
+    position: relative;
+    z-index: 2;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-logo {
+    height: 42px;
+    margin-bottom: 15px;
+}
+
+.footer-desc {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    max-width: 600px;
+    margin: 0 auto 20px;
+    line-height: 1.6;
+}
+
+.footer-contact-row {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    color: var(--gold);
+    font-size: 0.88rem;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+}
+
+.footer-contact-row span {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.footer-links-row {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    font-size: 0.82rem;
+    color: var(--text-muted);
+    margin-bottom: 20px;
+}
+
+.footer-links-row a {
+    color: var(--text-muted);
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+.footer-links-row a:hover {
+    color: var(--gold);
+}
+
+.footer-copy {
+    font-size: 0.8rem;
+    color: #555;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    padding-top: 20px;
+}
+
+/* ================= RESPONSIVE SYSTEM (MOBILE FIRST & TABLET) ================= */
+
+/* Tablet & Smaller Laptops (<= 1024px) */
 @media (max-width: 1024px) {
-    .catalog-spread, .catalog-spread.reverse {
-        grid-template-columns: 1fr;
-        gap: 30px;
+    .catalog-nav {
+        padding: 14px 24px;
     }
-    .catalog-spread.reverse .spread-img-box {
-        order: 1;
-    }
-    .catalog-spread.reverse .spread-info-box {
-        order: 2;
-    }
-    .factory-headline {
-        font-size: 2.6rem;
-    }
-    .factory-metrics-grid {
-        grid-template-columns: 1fr 1fr;
-    }
-    .dual-sales-grid {
-        grid-template-columns: 1fr;
-    }
+
     .nav-links-menu {
         display: none;
     }
-    .bento-grid-3 {
+
+    .catalog-spread, .catalog-spread.reverse {
         grid-template-columns: 1fr;
+        gap: 30px;
+        padding: 30px;
+    }
+
+    .catalog-spread.reverse .spread-img-box {
+        order: 1;
+    }
+
+    .catalog-spread.reverse .spread-info-box {
+        order: 2;
+    }
+
+    .facility-grid {
+        grid-template-columns: 1fr;
+        gap: 35px;
+        padding: 35px;
+    }
+
+    .dual-sales-grid {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    .bento-grid, .bento-grid-3 {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+
+    .slide-title {
+        font-size: 2.8rem;
     }
 }
+
+/* Tablets & Large Phones (<= 768px) */
+@media (max-width: 768px) {
+    /* Global Anti-Overflow & Mobile Rhythm */
+    html, body {
+        overflow-x: hidden !important;
+        width: 100% !important;
+        max-width: 100vw !important;
+        position: relative;
+    }
+
+    /* Ambient FX containment */
+    .ambient-fx {
+        display: none; /* Reduce mobile GPU load */
+    }
+
+    /* Top Navigation Bar */
+    .catalog-nav {
+        padding: 10px 14px;
+    }
+
+    .nav-container {
+        gap: 8px;
+    }
+
+    .nav-brand {
+        gap: 8px;
+    }
+
+    .nav-brand img {
+        height: 30px;
+    }
+
+    .nav-brand-title {
+        font-size: 1.05rem;
+        letter-spacing: 1px;
+    }
+
+    .nav-brand-sub {
+        display: none;
+    }
+
+    .nav-actions-wrap {
+        gap: 6px;
+    }
+
+    .btn-nav-action {
+        padding: 7px 11px;
+        font-size: 0.74rem;
+        gap: 5px;
+    }
+
+    .btn-nav-cart {
+        padding: 7px 10px;
+        font-size: 0.8rem;
+    }
+
+    .cart-count-badge {
+        font-size: 0.65rem;
+        padding: 2px 5px;
+        margin-left: 2px;
+    }
+
+    /* Hero Dynamic Sliding Carousel */
+    .hero-carousel-sec {
+        padding-top: 54px;
+    }
+
+    .hero-carousel {
+        min-height: 540px;
+        height: 82vh;
+        max-height: 660px;
+    }
+
+    .carousel-slide {
+        padding: 24px 18px 36px;
+        align-items: flex-end; /* Ground content towards the bottom */
+    }
+
+    .slide-overlay-gradient {
+        background: linear-gradient(180deg, rgba(8, 16, 12, 0.35) 0%, rgba(8, 16, 12, 0.72) 40%, rgba(8, 16, 12, 0.96) 90%);
+    }
+
+    .slide-content-wrap {
+        width: 100%;
+    }
+
+    .slide-tag {
+        font-size: 0.68rem;
+        letter-spacing: 1.2px;
+        padding: 5px 12px;
+        margin-bottom: 12px;
+        white-space: normal;
+        line-height: 1.3;
+    }
+
+    .slide-title {
+        font-size: 1.75rem;
+        line-height: 1.22;
+        margin-bottom: 12px;
+        letter-spacing: -0.2px;
+    }
+
+    .slide-desc {
+        font-size: 0.88rem;
+        line-height: 1.5;
+        margin-bottom: 20px;
+        color: var(--text-light);
+    }
+
+    .slide-btn-row {
+        flex-direction: column;
+        width: 100%;
+        gap: 10px;
+    }
+
+    .slide-btn-row .btn-spread-wholesale,
+    .slide-btn-row .btn-spread-retail {
+        width: 100%;
+        justify-content: center;
+        text-align: center;
+        padding: 12px 16px;
+        font-size: 0.86rem;
+    }
+
+    /* Hide desktop nav arrows on mobile; touch swipe & dots are used */
+    .carousel-nav-btn {
+        display: none !important;
+    }
+
+    .carousel-indicators {
+        bottom: 10px;
+        gap: 7px;
+    }
+
+    .indicator-dot {
+        width: 18px;
+        height: 4px;
+    }
+
+    .indicator-dot.active {
+        width: 32px;
+    }
+
+    /* Trust Strip Accreditations */
+    .trust-strip-sec {
+        padding: 14px 14px;
+    }
+
+    .trust-strip-inner {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 10px 12px;
+    }
+
+    .trust-strip-inner span {
+        font-size: 0.74rem;
+        gap: 6px;
+        line-height: 1.35;
+    }
+
+    .trust-strip-inner span:last-child {
+        grid-column: 1 / -1;
+        justify-content: center;
+    }
+
+    /* Editorial Catalog Lookbook */
+    .catalog-section {
+        padding: 45px 14px 20px;
+    }
+
+    .catalog-header {
+        margin-bottom: 30px;
+    }
+
+    .catalog-eyebrow {
+        font-size: 0.72rem;
+        letter-spacing: 1.8px;
+        margin-bottom: 8px;
+    }
+
+    .catalog-title {
+        font-size: 1.6rem;
+        line-height: 1.25;
+        margin-bottom: 10px;
+    }
+
+    .catalog-desc {
+        font-size: 0.88rem;
+        line-height: 1.5;
+    }
+
+    .catalog-spread {
+        padding: 16px;
+        margin-bottom: 30px;
+        border-radius: 16px;
+        gap: 18px;
+    }
+
+    .spread-img-box {
+        border-radius: 12px;
+    }
+
+    .spread-tag-badge {
+        top: 10px;
+        left: 10px;
+        font-size: 0.65rem;
+        padding: 4px 10px;
+        letter-spacing: 1px;
+    }
+
+    .spread-info-box {
+        padding: 0;
+    }
+
+    .spread-col-num {
+        font-size: 0.78rem;
+        letter-spacing: 1.5px;
+        margin-bottom: 4px;
+    }
+
+    .spread-col-title {
+        font-size: 1.35rem;
+        line-height: 1.3;
+        margin-bottom: 10px;
+    }
+
+    .spread-col-desc {
+        font-size: 0.85rem;
+        line-height: 1.55;
+        margin-bottom: 16px;
+    }
+
+    .spread-specs-table {
+        display: block;
+        width: 100%;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        font-size: 0.76rem;
+        margin-bottom: 16px;
+    }
+
+    .spread-specs-table th, .spread-specs-table td {
+        padding: 7px 8px;
+        white-space: nowrap;
+    }
+
+    .spread-features-chips {
+        gap: 6px;
+        margin-bottom: 18px;
+    }
+
+    .chip-tag {
+        font-size: 0.72rem;
+        padding: 4px 10px;
+    }
+
+    .spread-action-row {
+        flex-direction: column;
+        width: 100%;
+        gap: 10px;
+    }
+
+    .spread-action-row .btn-spread-wholesale,
+    .spread-action-row .btn-spread-retail {
+        width: 100%;
+        justify-content: center;
+        text-align: center;
+        padding: 12px 16px;
+        font-size: 0.86rem;
+    }
+
+    /* Production Facility Section */
+    .facility-sec {
+        padding: 20px 14px 45px;
+    }
+
+    .facility-grid {
+        padding: 20px 16px;
+        border-radius: 16px;
+        gap: 20px;
+    }
+
+    .facility-title {
+        font-size: 1.45rem;
+        line-height: 1.3;
+        margin: 8px 0 12px;
+    }
+
+    .facility-desc {
+        font-size: 0.86rem;
+        line-height: 1.55;
+        margin-bottom: 18px;
+    }
+
+    .facility-metrics-row {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 8px;
+    }
+
+    .facility-metric-card {
+        padding: 10px 4px;
+        border-radius: 8px;
+    }
+
+    .facility-metric-val {
+        font-size: 1.2rem;
+    }
+
+    .facility-metric-lbl {
+        font-size: 0.62rem;
+        letter-spacing: 0;
+    }
+
+    .facility-img-card img {
+        min-height: 200px;
+        height: 200px;
+    }
+
+    /* Grand Finale Sales Gateway */
+    .sales-grand-section, .sales-hub-section {
+        padding: 50px 14px 40px;
+    }
+
+    .sales-grand-section h2 {
+        font-size: 1.6rem !important;
+        margin-bottom: 10px !important;
+    }
+
+    .sales-grand-section p {
+        font-size: 0.88rem !important;
+    }
+
+    .dual-sales-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .sales-module-card, .sales-hub-card {
+        padding: 22px 18px;
+        border-radius: 16px;
+    }
+
+    .sales-badge-pill {
+        font-size: 0.7rem;
+        padding: 6px 14px;
+        margin-bottom: 14px;
+    }
+
+    .sales-card-title {
+        font-size: 1.45rem;
+        margin-bottom: 10px;
+    }
+
+    .sales-card-desc {
+        font-size: 0.86rem;
+        line-height: 1.5;
+        margin-bottom: 18px;
+    }
+
+    .sales-perks-list {
+        gap: 10px;
+        margin-bottom: 22px;
+    }
+
+    .sales-perks-list li {
+        font-size: 0.82rem;
+        gap: 8px;
+    }
+
+    .btn-sales-primary {
+        padding: 13px 18px;
+        font-size: 0.88rem;
+    }
+
+    /* Retail Shelf */
+    #retail-catalog-shelf {
+        margin-top: 40px !important;
+        padding-top: 30px !important;
+    }
+
+    #retail-catalog-shelf h3 {
+        font-size: 1.5rem !important;
+    }
+
+    .retail-showcase-grid {
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+
+    .retail-card {
+        padding: 16px;
+        border-radius: 14px;
+    }
+
+    .retail-card-name {
+        font-size: 1.05rem;
+    }
+
+    .pack-chip {
+        padding: 8px 0;
+        font-size: 0.76rem;
+        min-height: 38px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .lid-pill-btn {
+        padding: 7px 0;
+        font-size: 0.74rem;
+        min-height: 34px;
+    }
+
+    .btn-card-add {
+        padding: 13px 18px;
+        font-size: 0.88rem;
+        min-height: 44px;
+    }
+
+    /* Cart Drawer */
+    .cart-drawer {
+        width: 100vw;
+        max-width: 100vw;
+        right: -100vw;
+        padding: 20px 16px;
+    }
+
+    .cart-drawer-header {
+        padding-bottom: 14px;
+    }
+
+    .cart-drawer-title {
+        font-size: 1.15rem;
+    }
+
+    .cart-item {
+        gap: 10px;
+        padding: 10px;
+    }
+
+    .cart-item-img {
+        width: 48px;
+        height: 48px;
+    }
+
+    .cart-item-title {
+        font-size: 0.84rem;
+    }
+
+    .cart-item-price {
+        font-size: 0.84rem;
+    }
+
+    .btn-checkout-now {
+        padding: 13px;
+        font-size: 0.9rem;
+        min-height: 44px;
+    }
+
+    .btn-checkout-wa {
+        padding: 12px;
+        font-size: 0.84rem;
+        min-height: 44px;
+    }
+
+    /* Checkout Modal */
+    .modal-checkout {
+        padding: 14px;
+    }
+
+    .checkout-box {
+        padding: 22px 16px;
+        border-radius: 16px;
+        max-height: 92vh;
+        overflow-y: auto;
+    }
+
+    .checkout-box h3 {
+        font-size: 1.3rem !important;
+    }
+
+    .form-input {
+        font-size: 16px !important; /* Prevents auto-zoom in iOS Safari */
+        padding: 12px 14px;
+    }
+
+    /* Bento Blog */
+    .bento-grid-sec, .blog-bento-sec {
+        padding: 45px 14px 40px;
+    }
+
+    .bento-grid, .bento-grid-3 {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    .bento-card {
+        padding: 20px 18px;
+        border-radius: 14px;
+    }
+
+    .bento-title {
+        font-size: 1.1rem;
+        margin-bottom: 10px;
+    }
+
+    .bento-excerpt {
+        font-size: 0.84rem;
+        margin-bottom: 16px;
+    }
+
+    /* Admin Panel Modal */
+    .admin-box {
+        padding: 18px 14px;
+        width: 96vw;
+        max-height: 92vh;
+        border-radius: 14px;
+    }
+
+    .admin-item-row {
+        grid-template-columns: 1fr;
+        gap: 8px;
+        padding: 10px;
+    }
+
+    /* Minimal Corporate Footer */
+    .site-footer {
+        padding: 40px 14px 25px;
+    }
+
+    .footer-logo {
+        height: 34px;
+    }
+
+    .footer-desc {
+        font-size: 0.84rem;
+        margin-bottom: 16px;
+    }
+
+    .footer-contact-row {
+        flex-direction: column;
+        gap: 8px;
+        font-size: 0.82rem;
+        margin-bottom: 16px;
+    }
+
+    .footer-links-row {
+        gap: 12px;
+        font-size: 0.78rem;
+        margin-bottom: 16px;
+    }
+}
+
+/* Small Smart Phones (<= 480px) */
+@media (max-width: 480px) {
+    .catalog-nav {
+        padding: 8px 10px;
+    }
+
+    .nav-brand-title {
+        font-size: 0.92rem;
+        letter-spacing: 0.5px;
+    }
+
+    .nav-brand img {
+        height: 26px;
+    }
+
+    .nav-actions-wrap {
+        gap: 4px;
+    }
+
+    .btn-nav-action {
+        padding: 6px 8px;
+        font-size: 0.7rem;
+    }
+
+    /* Show clean compact B2B / B2C tags on tiny mobile */
+    .btn-nav-wholesale span {
+        display: none;
+    }
+    .btn-nav-wholesale::after {
+        content: 'B2B';
+        font-weight: 800;
+        margin-left: 2px;
+    }
+
+    .btn-nav-retail span {
+        display: none;
+    }
+    .btn-nav-retail::after {
+        content: 'B2C';
+        font-weight: 800;
+        margin-left: 2px;
+    }
+
+    .slide-title {
+        font-size: 1.48rem;
+    }
+
+    .facility-metrics-row {
+        grid-template-columns: 1fr;
+        gap: 8px;
+    }
+
+    .facility-metric-card {
+        padding: 10px 12px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .facility-metric-val {
+        font-size: 1.35rem;
+        margin-bottom: 0;
+    }
+
+    .spread-col-title {
+        font-size: 1.22rem;
+    }
+}
+
