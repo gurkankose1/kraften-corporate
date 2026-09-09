@@ -21,14 +21,12 @@ class BlogPageApp {
         const loader = document.getElementById('loader');
         if (!loader) return;
         const hideLoader = () => {
-            setTimeout(() => {
-                loader.classList.add('hidden');
-            }, 500);
+            loader.classList.add('hidden');
         };
-        if (document.readyState === 'complete') {
+        if (document.readyState === 'complete' || document.readyState === 'interactive') {
             hideLoader();
         } else {
-            window.addEventListener('load', hideLoader);
+            window.addEventListener('DOMContentLoaded', hideLoader);
         }
     }
 
