@@ -37,17 +37,15 @@ class CorporateApp {
 
     initLoader() {
         const hideLoader = () => {
-            setTimeout(() => {
-                const loader = document.getElementById('loader');
-                if(loader) loader.classList.add('hidden');
-                setTimeout(() => this.triggerReveals(), 100);
-            }, 1000);
+            const loader = document.getElementById('loader');
+            if (loader) loader.classList.add('hidden');
+            this.triggerReveals();
         };
 
-        if (document.readyState === 'complete') {
+        if (document.readyState === 'complete' || document.readyState === 'interactive') {
             hideLoader();
         } else {
-            window.addEventListener('load', hideLoader);
+            window.addEventListener('DOMContentLoaded', hideLoader);
         }
     }
 
