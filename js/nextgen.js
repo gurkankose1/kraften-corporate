@@ -8,108 +8,115 @@ const defaultNextgenProducts = [
     {
         id: 'prod-550-kraft',
         name: '550 CC Kraft Salata Kasesi',
-        desc: 'Doğal kraft gıda kartonu, %100 sızdırmaz PE bariyer. Sıcak ve soğuk yemeklere uygun.',
+        desc: 'Doğal saf kraft gıda kartonundan üretilmiş, iç yüzeyindeki sızdırmaz polietilen (PE) bariyer ile zeytinyağlı salatalar, soslu makarnalar ve sıcak başlangıçlar için mükemmel dayanım sağlar. Yağ çekmez, yumuşamaz ve koku yapmaz. Klipsli kristal PET şeffaf kapak ile tam uyumludur.',
+        specs: ['150 mm Çap', '500 Adet/Koli', '%100 Sızdırmaz PE', '-20°C / +100°C', 'FSC Sertifikalı'],
         img: './images/prods/550_kraft_main.webp',
         category: 'kraft_kaseler',
-        wholesaleBoxQty: 300,
+        wholesaleBoxQty: 500,
         hasLidOption: true,
-        lidPrice: 25,
+        lidPrice: 35,
         packs: [
-            { count: 25, price: 120, oldPrice: 150 },
-            { count: 50, price: 225, oldPrice: 280 },
-            { count: 100, price: 420, oldPrice: 510 }
+            { count: 25, price: 75, oldPrice: 95 },
+            { count: 50, price: 140, oldPrice: 175 },
+            { count: 100, price: 265, oldPrice: 330 }
         ]
     },
     {
         id: 'prod-750-kraft',
         name: '750 CC Kraft Salata Kasesi',
-        desc: 'Orta boy doyurucu porsiyonlar için dayanıklı kraft gövde ve sızdırmaz klipsli kapak seçeneği.',
+        desc: 'En çok tercih edilen standart porsiyon salata kasesi. Doyurucu sezar/tavuklu salatalar, sıcak bowl ve pilav üstü menüler için ekstra rijit kraft gövde. Sızdırmaz taban kıvrımı ve güvenli kilitlenen kapak sistemi sayesinde kurye taşımalarında sıfır akma garantilidir.',
+        specs: ['150 mm Çap', '500 Adet/Koli', 'Sıcak & Soğuk Menü', 'Mikrodalga Uyumlu', 'Gıdaya Uygun'],
         img: './images/prods/750_kraft_main.webp',
         category: 'kraft_kaseler',
-        wholesaleBoxQty: 300,
+        wholesaleBoxQty: 500,
         hasLidOption: true,
-        lidPrice: 25,
+        lidPrice: 35,
         packs: [
-            { count: 25, price: 140, oldPrice: 170 },
-            { count: 50, price: 255, oldPrice: 320 },
-            { count: 100, price: 475, oldPrice: 580 }
+            { count: 25, price: 85, oldPrice: 110 },
+            { count: 50, price: 155, oldPrice: 195 },
+            { count: 100, price: 295, oldPrice: 370 }
         ]
     },
     {
         id: 'prod-32oz-kraft',
-        name: '32 OZ Kraft Bowl Kase',
-        desc: 'Büyük boy poke bowl, salata ve sulu sıcak yemekler için ekstra kalın kraft kase.',
+        name: '32 OZ (1100 CC) Kraft Bowl Kase',
+        desc: 'Büyük boy poke bowl, etli salatalar, noodle ve sulu sıcak yemekler için geliştirilmiş geniş hacimli profesyonel kraft kase. Kalınlaştırılmış taban ve güçlendirilmiş kenar formu ile paket serviste deforme olmaz, üst üste güvenle istiflenebilir.',
+        specs: ['187 mm Ağız', '300 Adet/Koli', '1100 ml Hacim', 'Sıcak Yemek Dayanıklı', 'Sızdırmaz Kilit'],
         img: './images/prods/32oz_kraft_main.webp',
         category: 'kraft_kaseler',
         wholesaleBoxQty: 300,
         hasLidOption: true,
-        lidPrice: 30,
+        lidPrice: 50,
         packs: [
-            { count: 25, price: 155, oldPrice: 190 },
-            { count: 50, price: 285, oldPrice: 360 },
-            { count: 100, price: 530, oldPrice: 650 }
+            { count: 25, price: 105, oldPrice: 130 },
+            { count: 50, price: 195, oldPrice: 245 },
+            { count: 100, price: 370, oldPrice: 460 }
         ]
     },
     {
         id: 'prod-38oz-kraft',
-        name: '38 OZ Kraft Mega Bowl Kase',
-        desc: 'En büyük hacimli lüks kraft kase. Catering ve toplu menü sunumları için ideal.',
+        name: '38 OZ (1300 CC) Kraft Mega Bowl Kase',
+        desc: 'Geniş porsiyonlu aile boyu salatalar, catering ikramları, döner/kebap menüleri ve toplu yemek sunumları için amiral gemisi mega hacim. Ağır soslara ve yüksek ısıya karşı iç çift kat bariyerli, estetik ve sağlam çevre dostu ambalaj.',
+        specs: ['187 mm Ağız', '300 Adet/Koli', '1300 ml Mega Hacim', 'Catering & Paket Servis', '%100 Hijyen'],
         img: './images/prods/38oz_kraft_main.webp',
         category: 'kraft_kaseler',
         wholesaleBoxQty: 300,
         hasLidOption: true,
-        lidPrice: 35,
+        lidPrice: 50,
         packs: [
-            { count: 25, price: 175, oldPrice: 215 },
-            { count: 50, price: 325, oldPrice: 400 },
-            { count: 100, price: 610, oldPrice: 750 }
+            { count: 25, price: 115, oldPrice: 145 },
+            { count: 50, price: 215, oldPrice: 270 },
+            { count: 100, price: 410, oldPrice: 510 }
         ]
     },
 
     // --- YENİ KARTON KASELER (12OZ, 14OZ, 16OZ) ---
     {
         id: 'prod-12oz-bowl',
-        name: '12 OZ Soğuk Gıda Kasesi',
-        desc: 'Dondurma, yoğurt, soğuk meze ve tatlılar için çift katmanlı soğuk bariyerli kase.',
+        name: '12 OZ Soğuk Gıda & Bardak Kasesi',
+        desc: 'Dondurma, donuk yoğurt, soğuk meze, meyve salatası ve soğuk içecekler için çift katmanlı soğuk bariyerli kase/bardak gövdesi. Dış yüzeyde terleme yapmaz, çıtçıtlı bombeli şeffaf kristal kapak seçeneği ile lezzeti taze tutar.',
+        specs: ['2.000 Adet/Koli', 'Terleme Yapmaz', 'Soğuk Bariyer', 'Dondurma & Meze', 'Kristal Kapak Uyumlu'],
         img: './images/prods/12oz_bowl_clean.webp',
         category: 'yeni_kaseler',
-        wholesaleBoxQty: 500,
+        wholesaleBoxQty: 2000,
         hasLidOption: true,
-        lidPrice: 20,
+        lidPrice: 25,
         packs: [
-            { count: 25, price: 110, oldPrice: 135 },
-            { count: 50, price: 205, oldPrice: 250 },
-            { count: 100, price: 385, oldPrice: 470 }
+            { count: 50, price: 75, oldPrice: 95 },
+            { count: 100, price: 140, oldPrice: 175 },
+            { count: 250, price: 320, oldPrice: 400 }
         ]
     },
     {
         id: 'prod-14oz-bowl',
-        name: '14 OZ Karton Kase (Kapak Dahil)',
-        desc: 'Çorba ve sıcak sulu yemekler için şeffaf bombeli PET kapağıyla birlikte tam set.',
+        name: '14 OZ Karton Çorba Kasesi Seti (Kapak Dahil)',
+        desc: 'Sıcak çorba, kuru fasulye, güveç ve sulu tencere yemekleri için tasarlanmış komple set ambalaj. Buhar tahliye kanallı şeffaf bombeli kapağı pakete dahildir; taşırken basınç yapmaz, sızdırmaz ve kapağı fırlamaz. 500 kase + 500 kapak hazır set standardı.',
+        specs: ['500 Set/Koli', 'Buhar Tahliyeli Kapak Dahil', 'Sıcak Sulu Yemek', 'El Yakmaz Gövde', 'Klipsli Sızdırmaz'],
         img: './images/prods/14oz_bowl_clean.webp',
         category: 'yeni_kaseler',
-        wholesaleBoxQty: 300,
+        wholesaleBoxQty: 500,
         hasLidOption: false,
         lidPrice: 0,
         packs: [
-            { count: 25, price: 165, oldPrice: 195 },
-            { count: 50, price: 305, oldPrice: 370 },
-            { count: 100, price: 570, oldPrice: 690 }
+            { count: 25, price: 55, oldPrice: 70 },
+            { count: 50, price: 100, oldPrice: 125 },
+            { count: 100, price: 190, oldPrice: 240 }
         ]
     },
     {
         id: 'prod-16oz-bowl',
-        name: '16 OZ Karton Kase (Kapak Dahil)',
-        desc: 'Geniş hacimli sıcak/soğuk yemek kasesi. Sızdırmaz PET kapağıyla birlikte paket halinde.',
+        name: '16 OZ Karton Çorba Kasesi Seti (Kapak Dahil)',
+        desc: 'Daha büyük hacimli mercimek, kelle paça, işkembe ve sulu menüler için büyük boy çorba kasesi seti. Güçlendirilmiş alt taban kıvrımı ve ısı yalıtımlı gövde yapısı el yakmadan güvenli taşıma sağlar. Kristal buhar tahliyeli kapağıyla set halindedir.',
+        specs: ['500 Set/Koli', 'Buhar Tahliyeli Kapak Dahil', '16 OZ (480 ml)', 'Yüksek Isı Yalıtımı', 'Hijyenik Ambalaj'],
         img: './images/prods/16oz_bowl_clean.webp',
         category: 'yeni_kaseler',
-        wholesaleBoxQty: 300,
+        wholesaleBoxQty: 500,
         hasLidOption: false,
         lidPrice: 0,
         packs: [
-            { count: 25, price: 185, oldPrice: 220 },
-            { count: 50, price: 345, oldPrice: 420 },
-            { count: 100, price: 640, oldPrice: 780 }
+            { count: 25, price: 60, oldPrice: 75 },
+            { count: 50, price: 110, oldPrice: 140 },
+            { count: 100, price: 205, oldPrice: 260 }
         ]
     },
 
@@ -117,61 +124,65 @@ const defaultNextgenProducts = [
     {
         id: 'prod-4oz-cup',
         name: '4 OZ Karton Bardak (Kapaksız)',
-        desc: 'Espresso, şurup, numune ve tadım ikramları için kalın gramajlı mini karton bardak.',
+        desc: 'Tek ve duble espresso shot servisleri, mağaza/şarküteri tadım ikramları ve numune dağıtımları için kompakt yüksek gramajlı mini karton bardak. Pürüzsüz dudak kıvrımı ile dökülmeden içim keyfi sunar.',
+        specs: ['3.000 Adet/Koli', '62 mm Ağız Çapı', 'Espresso & Tadım', '118 ml Hacim', 'Sıvı Sızdırmaz'],
         img: './images/prods/4oz_cup_clean.webp',
         category: 'bardaklar',
-        wholesaleBoxQty: 1000,
+        wholesaleBoxQty: 3000,
         hasLidOption: false,
         lidPrice: 0,
         packs: [
-            { count: 50, price: 75, oldPrice: 95 },
-            { count: 100, price: 135, oldPrice: 170 },
-            { count: 250, price: 295, oldPrice: 370 }
+            { count: 50, price: 25, oldPrice: 32 },
+            { count: 100, price: 45, oldPrice: 58 },
+            { count: 250, price: 105, oldPrice: 135 }
         ]
     },
     {
         id: 'prod-6oz-cup',
         name: '6 OZ Karton Bardak (Kapaksız)',
-        desc: 'Geleneksel Türk çayı, flat white ve su servisi için ideal boyutta sızdırmaz bardak.',
+        desc: 'Türk çayı, su, meyve suyu ve flat white için en ideal orta-küçük hacimli ergonomik bardak. Dayanıklı saf selüloz yapısı sayesinde sıcak içeceklerde bardağın formu bozulmaz ve yumuşama yapmaz.',
+        specs: ['3.000 Adet/Koli', '70 mm Ağız Çapı', 'Çay & Su Servisi', '175 ml Hacim', 'Kokusuz Karton'],
         img: './images/prods/6oz_cup_clean.webp',
         category: 'bardaklar',
-        wholesaleBoxQty: 1000,
+        wholesaleBoxQty: 3000,
         hasLidOption: false,
         lidPrice: 0,
         packs: [
-            { count: 50, price: 85, oldPrice: 105 },
-            { count: 100, price: 155, oldPrice: 190 },
-            { count: 250, price: 345, oldPrice: 430 }
+            { count: 50, price: 28, oldPrice: 36 },
+            { count: 100, price: 50, oldPrice: 65 },
+            { count: 250, price: 115, oldPrice: 148 }
         ]
     },
     {
         id: 'prod-7oz-cup',
         name: '7 OZ Karton Bardak (Kapaksız)',
-        desc: 'Otomat ve ofis kahve makineleri için standart uyumlu pürüzsüz karton bardak.',
+        desc: 'Otomat kahve makineleri, kurumsal ofisler, şantiyeler ve toplantı salonları için Türkiye standardı pürüzsüz karton bardak. Otomat raylarına tam uyumlu ölçüler ve sıkışma yapmayan kusursuz istif geometrisi.',
+        specs: ['3.000 Adet/Koli', '73 mm Ağız Çapı', 'Otomat & Ofis Uyumlu', '200 ml Hacim', 'Sıkışma Yapmaz'],
         img: './images/prods/7oz_cup_clean.webp',
         category: 'bardaklar',
-        wholesaleBoxQty: 1000,
+        wholesaleBoxQty: 3000,
         hasLidOption: false,
         lidPrice: 0,
         packs: [
-            { count: 50, price: 95, oldPrice: 120 },
-            { count: 100, price: 175, oldPrice: 220 },
-            { count: 250, price: 395, oldPrice: 490 }
+            { count: 50, price: 32, oldPrice: 42 },
+            { count: 100, price: 58, oldPrice: 75 },
+            { count: 250, price: 135, oldPrice: 175 }
         ]
     },
     {
         id: 'prod-8oz-cup',
         name: '8 OZ Karton Bardak (Kapaksız)',
-        desc: 'Kafelerin ve paket servislerin en çok satan standart sıcak kahve bardağı.',
+        desc: '3. dalga kahve dükkanları, kafeler, pastaneler ve take-away servislerin amiral gemisi sıcak kahve bardağı. Filtre kahve, latte, cappuccino ve bitki çayları için el yakmayan yüksek yoğunluklu karton gövde.',
+        specs: ['2.000 Adet/Koli', '80 mm Ağız Çapı', 'Filtre Kahve & Latte', '240 ml Hacim', 'El Yakmayan Gövde'],
         img: './images/prods/8oz_cup_clean.webp',
         category: 'bardaklar',
-        wholesaleBoxQty: 1000,
+        wholesaleBoxQty: 2000,
         hasLidOption: false,
         lidPrice: 0,
         packs: [
-            { count: 50, price: 110, oldPrice: 135 },
-            { count: 100, price: 195, oldPrice: 245 },
-            { count: 250, price: 440, oldPrice: 550 }
+            { count: 50, price: 60, oldPrice: 78 },
+            { count: 100, price: 115, oldPrice: 148 },
+            { count: 250, price: 265, oldPrice: 340 }
         ]
     },
 
@@ -179,31 +190,33 @@ const defaultNextgenProducts = [
     {
         id: 'prod-550-white',
         name: '550 CC Beyaz Salata Kasesi',
-        desc: 'Lüks beyaz estetik, pürüzsüz yüzey ve sızdırmaz PET kapak seçeneği.',
+        desc: 'Saf beyaz gıda kartonundan üretilen lüks salata kasesi. Minimalist, modern ve temiz restoran konseptleri için leke tutmaz pürüzsüz dış yüzey. Soslu salatalar, makarna ve soğuk gurme mezelerde sıfır sızdırma sağlar.',
+        specs: ['150 mm Çap', '500 Adet/Koli', 'Saf Beyaz Prestij', '%100 Sızdırmaz PE', 'Restoran Standardı'],
         img: './images/prods/550_white_main.webp',
         category: 'beyaz_kaseler',
-        wholesaleBoxQty: 300,
+        wholesaleBoxQty: 500,
         hasLidOption: true,
-        lidPrice: 25,
+        lidPrice: 35,
         packs: [
-            { count: 25, price: 125, oldPrice: 155 },
-            { count: 50, price: 235, oldPrice: 290 },
-            { count: 100, price: 435, oldPrice: 530 }
+            { count: 25, price: 80, oldPrice: 100 },
+            { count: 50, price: 150, oldPrice: 190 },
+            { count: 100, price: 285, oldPrice: 360 }
         ]
     },
     {
         id: 'prod-750-white',
         name: '750 CC Beyaz Salata Kasesi',
-        desc: 'Beyaz karton gövde, yüksek bariyerli iç kaplama, prestijli restoran sunumu.',
+        desc: 'Gurme restorasyon ve otel mutfakları için saf beyaz estetiğe sahip 750 cc salata kasesi. Ağır salata sosları, zeytinyağlılar ve sıcak menü sunumlarında yüksek mukavemet gösterir. Şeffaf PET kapakla vitrinde premium görünüm.',
+        specs: ['150 mm Çap', '500 Adet/Koli', 'Gurme Menü Sunumu', 'Sıcak & Soğuk Dayanımı', 'Klipsli Kapak Uyumlu'],
         img: './images/prods/750_white_main.webp',
         category: 'beyaz_kaseler',
-        wholesaleBoxQty: 300,
+        wholesaleBoxQty: 500,
         hasLidOption: true,
-        lidPrice: 25,
+        lidPrice: 35,
         packs: [
-            { count: 25, price: 145, oldPrice: 180 },
-            { count: 50, price: 265, oldPrice: 330 },
-            { count: 100, price: 495, oldPrice: 610 }
+            { count: 25, price: 90, oldPrice: 115 },
+            { count: 50, price: 165, oldPrice: 210 },
+            { count: 100, price: 315, oldPrice: 395 }
         ]
     }
 ];
@@ -226,6 +239,14 @@ class CatalogApp {
 
     loadProducts() {
         try {
+            const VERSION_KEY = 'kraften_price_version';
+            const CURRENT_VERSION = '2026-09-09-v2';
+            const currentVersion = localStorage.getItem(VERSION_KEY);
+            if (currentVersion !== CURRENT_VERSION) {
+                localStorage.setItem(VERSION_KEY, CURRENT_VERSION);
+                localStorage.setItem('kraften_catalog_products', JSON.stringify(defaultNextgenProducts));
+                return defaultNextgenProducts;
+            }
             const saved = localStorage.getItem('kraften_catalog_products');
             if (saved) return JSON.parse(saved);
         } catch (e) {
@@ -474,6 +495,12 @@ class CatalogApp {
                 finalOldPrice += prod.lidPrice;
             }
 
+            const vatAmount = Math.round(finalPrice * 0.20 * 100) / 100;
+            const kdvIncluded = Math.round((finalPrice + vatAmount) * 100) / 100;
+
+            const oldVatAmount = Math.round(finalOldPrice * 0.20 * 100) / 100;
+            const oldKdvIncluded = Math.round((finalOldPrice + oldVatAmount) * 100) / 100;
+
             const card = document.createElement('div');
             card.className = 'retail-card';
 
@@ -491,8 +518,8 @@ class CatalogApp {
                 `;
             } else if (prod.category !== 'bardaklar') {
                 lidHtml = `
-                    <div style="font-size: 0.72rem; color: var(--gold); background: rgba(200,169,110,0.12); padding: 4px 8px; border-radius: 4px; text-align: center; margin-bottom: 10px;">
-                        ✔ Şeffaf PET Kapak Dahildir
+                    <div style="font-size: 0.74rem; font-weight: 700; color: var(--gold-bright); background: rgba(200,169,110,0.14); border: 1px solid rgba(200,169,110,0.3); padding: 6px 10px; border-radius: 6px; text-align: center; margin-bottom: 12px;">
+                        ✔ Şeffaf Bombeli PET Kapak Dahildir
                     </div>
                 `;
             }
@@ -502,13 +529,17 @@ class CatalogApp {
             card.innerHTML = `
                 <img src="${prod.img}" alt="${prod.name}" class="retail-card-img" loading="lazy">
                 <h4 class="retail-card-name">${prod.name}</h4>
-                <p style="font-size: 0.82rem; color: var(--text-muted); line-height: 1.5; margin-bottom: 10px;">${prod.desc}</p>
+                <p class="retail-card-desc">${prod.desc}</p>
                 
+                <div class="retail-specs-chips">
+                    ${(prod.specs || []).map(s => `<span class="micro-spec-chip"><i class="fas fa-check"></i> ${s}</span>`).join('')}
+                </div>
+
                 ${lidHtml}
 
-                <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 4px;">
-                    <span style="font-size: 0.72rem; color: var(--text-muted); font-weight: 600;">Paket Tercihi:</span>
-                    <span style="font-size: 0.72rem; color: var(--gold-bright);">Min. ${prod.minQty || prod.packs[0]?.count} Adet</span>
+                <div class="pack-selection-header">
+                    <span class="pack-selection-label">Paket Seçimi:</span>
+                    <span class="pack-min-info">Min. ${prod.minQty || prod.packs[0]?.count} Adet</span>
                 </div>
 
                 <div class="retail-pack-row">
@@ -519,10 +550,16 @@ class CatalogApp {
                     `).join('')}
                 </div>
 
-                <div class="retail-price-row">
-                    <span class="price-main">₺${finalPrice}</span>
-                    <span class="price-kdv-tag">+ %20 KDV</span>
-                    <span class="price-prev">₺${finalOldPrice}</span>
+                <div class="retail-price-box">
+                    <div class="price-kdv-row">
+                        <span class="price-main">₺${kdvIncluded.toLocaleString('tr-TR', {minimumFractionDigits: 2})}</span>
+                        <span class="price-kdv-badge"><i class="fas fa-shield-alt"></i> KDV DAHİL</span>
+                        <span class="price-prev">₺${oldKdvIncluded.toLocaleString('tr-TR', {minimumFractionDigits: 2})}</span>
+                    </div>
+                    <div class="price-kdv-sub">
+                        <span class="price-base-text">₺${finalPrice.toLocaleString('tr-TR', {minimumFractionDigits: 2})} KDV Hariç</span>
+                        <span class="price-vat-calc">(+%20 KDV: +₺${vatAmount.toLocaleString('tr-TR', {minimumFractionDigits: 2})})</span>
+                    </div>
                 </div>
 
                 <button class="btn-card-add" data-id="${prod.id}">
@@ -623,7 +660,10 @@ class CatalogApp {
                     <div class="cart-item-details">
                         <div class="cart-item-title">${item.name}</div>
                         <div class="cart-item-pack">${item.packCount}'li Paket · <span style="color: var(--accent-green);">${item.lidText}</span></div>
-                        <div class="cart-item-price">₺${item.price} x ${item.qty} = ₺${sum} <span style="font-size: 0.65rem; color: var(--text-muted);">(KDV Hariç)</span></div>
+                        <div class="cart-item-price">
+                            <strong style="color: var(--gold-bright); font-size: 0.95rem;">₺${(Math.round(sum * 1.20 * 100) / 100).toLocaleString('tr-TR', {minimumFractionDigits: 2})}</strong> <span style="font-size: 0.7rem; color: #FFF; font-weight: 600;">(KDV Dahil)</span>
+                            <div style="font-size: 0.68rem; color: var(--text-muted);">₺${sum.toLocaleString('tr-TR', {minimumFractionDigits: 2})} KDV Hariç · +₺${(Math.round(sum * 0.20 * 100) / 100).toLocaleString('tr-TR', {minimumFractionDigits: 2})} KDV</div>
+                        </div>
                     </div>
                     <div class="cart-qty-ctrl">
                         <button class="qty-btn" data-act="dec" data-id="${item.cartItemId}">−</button>
