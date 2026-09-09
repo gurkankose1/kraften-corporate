@@ -1,0 +1,950 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kraften Ambalaj | Fiyat &amp; Ürün Yönetim Paneli</title>
+    <meta name="robots" content="noindex, nofollow, noarchive">
+    
+    <!-- Modern Luxury Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;900&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome 6 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        :root {
+            --bg-deep: #050B08;
+            --bg-card: rgba(14, 26, 20, 0.85);
+            --bg-card-hover: rgba(20, 36, 28, 0.95);
+            --border-glass: rgba(200, 169, 110, 0.2);
+            --border-glass-bright: rgba(200, 169, 110, 0.5);
+            --gold: #C8A96E;
+            --gold-bright: #DFCA97;
+            --text-light: #F0EDE6;
+            --text-muted: #8E9B94;
+            --accent-green: #2D6A4F;
+            --danger: #E63946;
+            --success: #2A9D8F;
+            --ff-sans: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            --ff-serif: 'Cinzel', Georgia, serif;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: var(--bg-deep);
+            color: var(--text-light);
+            font-family: var(--ff-sans);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            background-image: 
+                radial-gradient(circle at 15% 20%, rgba(200, 169, 110, 0.08) 0%, transparent 40%),
+                radial-gradient(circle at 85% 80%, rgba(45, 106, 79, 0.12) 0%, transparent 40%);
+        }
+
+        /* LOGIN SCREEN */
+        #login-section {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex: 1;
+            padding: 24px;
+        }
+
+        .login-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-glass-bright);
+            border-radius: 16px;
+            padding: 44px 36px;
+            width: 100%;
+            max-width: 440px;
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.7), 0 0 30px rgba(200, 169, 110, 0.1);
+            backdrop-filter: blur(20px);
+            text-align: center;
+            animation: fadeIn 0.5s ease-out;
+        }
+
+        .login-logo {
+            height: 48px;
+            margin-bottom: 20px;
+        }
+
+        .login-title {
+            font-family: var(--ff-serif);
+            font-size: 1.4rem;
+            color: #FFF;
+            margin-bottom: 8px;
+            letter-spacing: 1px;
+        }
+
+        .login-subtitle {
+            font-size: 0.82rem;
+            color: var(--text-muted);
+            margin-bottom: 30px;
+        }
+
+        .form-group {
+            text-align: left;
+            margin-bottom: 20px;
+        }
+
+        .form-label {
+            display: block;
+            font-size: 0.78rem;
+            color: var(--gold);
+            font-weight: 700;
+            margin-bottom: 8px;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+        }
+
+        .form-input {
+            width: 100%;
+            padding: 12px 16px;
+            background: rgba(0, 0, 0, 0.5);
+            border: 1px solid var(--border-glass);
+            border-radius: 8px;
+            color: #FFF;
+            font-size: 0.95rem;
+            outline: none;
+            transition: 0.3s ease;
+        }
+
+        .form-input:focus {
+            border-color: var(--gold);
+            box-shadow: 0 0 12px rgba(200, 169, 110, 0.3);
+            background: rgba(0, 0, 0, 0.7);
+        }
+
+        .btn-login {
+            width: 100%;
+            padding: 14px;
+            background: var(--gold);
+            color: #08100C;
+            font-weight: 800;
+            font-size: 0.95rem;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: 0.3s ease;
+            margin-top: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .btn-login:hover {
+            background: var(--gold-bright);
+            box-shadow: 0 0 20px rgba(200, 169, 110, 0.5);
+            transform: translateY(-2px);
+        }
+
+        .login-error {
+            background: rgba(230, 57, 70, 0.15);
+            border: 1px solid var(--danger);
+            color: #FFA5AB;
+            padding: 10px;
+            border-radius: 6px;
+            font-size: 0.82rem;
+            margin-bottom: 20px;
+            display: none;
+        }
+
+        /* DASHBOARD SCREEN */
+        #dashboard-section {
+            display: none;
+            flex-direction: column;
+            flex: 1;
+        }
+
+        .admin-nav {
+            background: rgba(8, 16, 12, 0.9);
+            border-bottom: 1px solid var(--border-glass);
+            padding: 16px 36px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            backdrop-filter: blur(15px);
+        }
+
+        .admin-brand {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+        }
+
+        .admin-brand img {
+            height: 36px;
+        }
+
+        .admin-brand-title {
+            font-family: var(--ff-serif);
+            font-size: 1.15rem;
+            font-weight: 700;
+            color: #FFF;
+            letter-spacing: 1.5px;
+        }
+
+        .admin-brand-badge {
+            background: rgba(200, 169, 110, 0.2);
+            border: 1px solid var(--gold);
+            color: var(--gold);
+            font-size: 0.68rem;
+            font-weight: 800;
+            padding: 3px 8px;
+            border-radius: 4px;
+            text-transform: uppercase;
+        }
+
+        .admin-nav-user {
+            display: flex;
+            align-items: center;
+            gap: 18px;
+        }
+
+        .user-greeting {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+        }
+
+        .user-greeting strong {
+            color: #FFF;
+        }
+
+        .btn-action-sm {
+            padding: 8px 16px;
+            border-radius: 6px;
+            font-size: 0.82rem;
+            font-weight: 700;
+            text-decoration: none;
+            cursor: pointer;
+            transition: 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            border: none;
+        }
+
+        .btn-view-store {
+            background: rgba(45, 106, 79, 0.3);
+            border: 1px solid var(--accent-green);
+            color: #74C69D;
+        }
+
+        .btn-view-store:hover {
+            background: var(--accent-green);
+            color: #FFF;
+        }
+
+        .btn-logout {
+            background: rgba(230, 57, 70, 0.2);
+            border: 1px solid var(--danger);
+            color: #FFA5AB;
+        }
+
+        .btn-logout:hover {
+            background: var(--danger);
+            color: #FFF;
+        }
+
+        .admin-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 36px 24px 60px;
+            width: 100%;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 18px;
+            margin-bottom: 32px;
+        }
+
+        .stat-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-glass);
+            padding: 20px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+
+        .stat-icon {
+            width: 48px;
+            height: 48px;
+            border-radius: 10px;
+            background: rgba(200, 169, 110, 0.15);
+            color: var(--gold);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.3rem;
+        }
+
+        .stat-val {
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: #FFF;
+        }
+
+        .stat-lbl {
+            font-size: 0.75rem;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        /* PRODUCT MANAGEMENT TABLE/CARDS */
+        .mgmt-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 24px;
+            flex-wrap: wrap;
+            gap: 16px;
+        }
+
+        .mgmt-title {
+            font-family: var(--ff-serif);
+            font-size: 1.5rem;
+            color: #FFF;
+        }
+
+        .btn-save-all {
+            background: var(--gold);
+            color: #08100C;
+            padding: 12px 28px;
+            font-size: 0.95rem;
+            font-weight: 800;
+            border-radius: 8px;
+            border: none;
+            cursor: pointer;
+            transition: 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            box-shadow: 0 4px 20px rgba(200, 169, 110, 0.3);
+        }
+
+        .btn-save-all:hover {
+            background: var(--gold-bright);
+            box-shadow: 0 6px 30px rgba(200, 169, 110, 0.6);
+            transform: translateY(-2px);
+        }
+
+        .prod-mgmt-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        .prod-card-row {
+            background: var(--bg-card);
+            border: 1px solid var(--border-glass);
+            border-radius: 12px;
+            padding: 20px 24px;
+            display: grid;
+            grid-template-columns: 280px 1fr 1fr 1fr 160px;
+            gap: 20px;
+            align-items: center;
+            transition: 0.3s ease;
+        }
+
+        .prod-card-row:hover {
+            border-color: var(--border-glass-bright);
+            background: var(--bg-card-hover);
+        }
+
+        .prod-meta {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+        }
+
+        .prod-img {
+            width: 54px;
+            height: 54px;
+            border-radius: 8px;
+            object-fit: cover;
+            border: 1px solid var(--border-glass);
+            background: #000;
+        }
+
+        .prod-title {
+            font-size: 0.95rem;
+            font-weight: 700;
+            color: #FFF;
+            margin-bottom: 4px;
+        }
+
+        .prod-cat-pill {
+            display: inline-block;
+            font-size: 0.68rem;
+            color: var(--gold);
+            background: rgba(200, 169, 110, 0.1);
+            padding: 2px 8px;
+            border-radius: 4px;
+        }
+
+        .pack-input-group {
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+        }
+
+        .pack-lbl {
+            font-size: 0.72rem;
+            color: var(--text-muted);
+            font-weight: 600;
+        }
+
+        .input-cur-wrap {
+            position: relative;
+            display: flex;
+            align-items: center;
+        }
+
+        .cur-symbol {
+            position: absolute;
+            left: 10px;
+            color: var(--gold);
+            font-size: 0.85rem;
+            font-weight: 700;
+        }
+
+        .input-cur-wrap input {
+            width: 100%;
+            padding: 8px 10px 8px 24px;
+            background: rgba(0, 0, 0, 0.5);
+            border: 1px solid var(--border-glass);
+            border-radius: 6px;
+            color: #FFF;
+            font-size: 0.9rem;
+            font-weight: 700;
+            outline: none;
+            transition: 0.2s;
+        }
+
+        .input-cur-wrap input:focus {
+            border-color: var(--gold);
+            background: #000;
+        }
+
+        .lid-config-wrap {
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+        }
+
+        /* TOAST NOTIFICATION */
+        .admin-toast {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: var(--success);
+            color: #FFF;
+            padding: 16px 24px;
+            border-radius: 8px;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+            transform: translateY(100px);
+            opacity: 0;
+            transition: 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+            z-index: 1000;
+        }
+
+        .admin-toast.show {
+            transform: translateY(0);
+            opacity: 1;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(15px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @media (max-width: 1024px) {
+            .prod-card-row {
+                grid-template-columns: 1fr 1fr;
+                gap: 16px;
+            }
+            .prod-meta {
+                grid-column: 1 / -1;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .prod-card-row {
+                grid-template-columns: 1fr;
+            }
+            .admin-nav {
+                padding: 14px 18px;
+                flex-direction: column;
+                gap: 12px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- 1. LOGIN SCREEN -->
+    <section id="login-section">
+        <div class="login-card">
+            <img src="./logo.png" alt="Kraften Ambalaj" class="login-logo">
+            <h1 class="login-title">YÖNETİM GİRİŞİ</h1>
+            <p class="login-subtitle">Kraften Ambalaj Fiyat &amp; Ürün Kontrol Paneli</p>
+            
+            <div id="login-error-msg" class="login-error">
+                <i class="fas fa-exclamation-triangle"></i> Hatalı kullanıcı adı veya şifre!
+            </div>
+
+            <form id="admin-login-form">
+                <div class="form-group">
+                    <label class="form-label" for="login-username">Kullanıcı Adı</label>
+                    <input type="text" id="login-username" class="form-input" placeholder="Kullanıcı adınızı girin" required autocomplete="username">
+                </div>
+                <div class="form-group">
+                    <label class="form-label" for="login-password">Şifre</label>
+                    <input type="password" id="login-password" class="form-input" placeholder="••••••••" required autocomplete="current-password">
+                </div>
+                <button type="submit" class="btn-login">
+                    <i class="fas fa-lock"></i> Güvenli Giriş Yap
+                </button>
+            </form>
+        </div>
+    </section>
+
+    <!-- 2. DASHBOARD SCREEN -->
+    <section id="dashboard-section">
+        <nav class="admin-nav">
+            <div class="admin-brand">
+                <img src="./logo.png" alt="Kraften Logo">
+                <div>
+                    <span class="admin-brand-title">KRAFTEN AMBALAJ</span>
+                    <span class="admin-brand-badge">Admin Panel</span>
+                </div>
+            </div>
+            <div class="admin-nav-user">
+                <span class="user-greeting">Yetkili: <strong>Emirhan Köse</strong></span>
+                <a href="/" target="_blank" class="btn-action-sm btn-view-store">
+                    <i class="fas fa-external-link-alt"></i> Mağazayı Gör
+                </a>
+                <button id="btn-logout-admin" class="btn-action-sm btn-logout">
+                    <i class="fas fa-sign-out-alt"></i> Çıkış Yap
+                </button>
+            </div>
+        </nav>
+
+        <main class="admin-content">
+            <!-- QUICK STATS -->
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-icon"><i class="fas fa-boxes"></i></div>
+                    <div>
+                        <div class="stat-val" id="stat-total-prods">11</div>
+                        <div class="stat-lbl">Aktif Perakende Ürün</div>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon"><i class="fas fa-shield-alt"></i></div>
+                    <div>
+                        <div class="stat-val" style="color: var(--gold);">Korumalı</div>
+                        <div class="stat-lbl">Oturum: Aktif</div>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon"><i class="fas fa-sync-alt"></i></div>
+                    <div>
+                        <div class="stat-val" style="color: #74C69D;">Anlık</div>
+                        <div class="stat-lbl">Canlı Mağaza Senkronu</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PRODUCT PRICE & LID LIST -->
+            <div class="mgmt-header">
+                <div>
+                    <h2 class="mgmt-title">Perakende Fiyat &amp; Kapak Ayarları</h2>
+                    <p style="font-size: 0.85rem; color: var(--text-muted); margin-top: 4px;">
+                        Tüm paket fiyatlarını ve kapak farklarını bu ekrandan dilediğiniz gibi güncelleyebilirsiniz.
+                    </p>
+                </div>
+                <button id="btn-save-all-top" class="btn-save-all">
+                    <i class="fas fa-save"></i> Değişiklikleri Kaydet
+                </button>
+            </div>
+
+            <div class="prod-mgmt-grid" id="admin-prod-container">
+                <!-- Dynamically populated via JS -->
+            </div>
+
+            <div style="margin-top: 30px; text-align: right;">
+                <button id="btn-save-all-bottom" class="btn-save-all">
+                    <i class="fas fa-save"></i> Değişiklikleri Kaydet
+                </button>
+            </div>
+        </main>
+    </section>
+
+    <!-- SUCCESS TOAST -->
+    <div id="admin-toast" class="admin-toast">
+        <i class="fas fa-check-circle" style="font-size: 1.2rem;"></i>
+        <span>Fiyatlar ve kapak farkları başarıyla kaydedildi!</span>
+    </div>
+
+    <!-- ADMIN LOGIC SCRIPT -->
+    <script>
+        const AUTH_USER = "emirhankose";
+        const AUTH_PASS = "asdfasas8";
+
+        const defaultCatalogProducts = [
+            {
+                id: 'prod-550-kraft',
+                name: '550 CC Kraft Salata Kasesi',
+                category: 'Kraft Kaseler',
+                img: './images/prods/550_kraft_main.webp',
+                hasLidOption: true,
+                lidPrice: 25,
+                packs: [
+                    { count: 25, price: 120 },
+                    { count: 50, price: 225 },
+                    { count: 100, price: 420 }
+                ]
+            },
+            {
+                id: 'prod-750-kraft',
+                name: '750 CC Kraft Salata Kasesi',
+                category: 'Kraft Kaseler',
+                img: './images/prods/750_kraft_main.webp',
+                hasLidOption: true,
+                lidPrice: 25,
+                packs: [
+                    { count: 25, price: 140 },
+                    { count: 50, price: 255 },
+                    { count: 100, price: 475 }
+                ]
+            },
+            {
+                id: 'prod-32oz-kraft',
+                name: '32 OZ Kraft Bowl Kase',
+                category: 'Kraft Kaseler',
+                img: './images/prods/32oz_kraft_main.webp',
+                hasLidOption: true,
+                lidPrice: 30,
+                packs: [
+                    { count: 25, price: 155 },
+                    { count: 50, price: 285 },
+                    { count: 100, price: 530 }
+                ]
+            },
+            {
+                id: 'prod-38oz-kraft',
+                name: '38 OZ Kraft Mega Bowl Kase',
+                category: 'Kraft Kaseler',
+                img: './images/prods/38oz_kraft_main.webp',
+                hasLidOption: true,
+                lidPrice: 35,
+                packs: [
+                    { count: 25, price: 175 },
+                    { count: 50, price: 325 },
+                    { count: 100, price: 610 }
+                ]
+            },
+            {
+                id: 'prod-12oz-bowl',
+                name: '12 OZ Soğuk Gıda Kasesi',
+                category: 'Yeni Kaseler',
+                img: './images/prods/bowls_12_14_16.jpg',
+                hasLidOption: true,
+                lidPrice: 20,
+                packs: [
+                    { count: 25, price: 110 },
+                    { count: 50, price: 205 },
+                    { count: 100, price: 385 }
+                ]
+            },
+            {
+                id: 'prod-14oz-bowl',
+                name: '14 OZ Karton Kase (Kapak Dahil)',
+                category: 'Yeni Kaseler (Set)',
+                img: './images/prods/bowls_12_14_16.jpg',
+                hasLidOption: false,
+                lidPrice: 0,
+                packs: [
+                    { count: 25, price: 165 },
+                    { count: 50, price: 305 },
+                    { count: 100, price: 570 }
+                ]
+            },
+            {
+                id: 'prod-16oz-bowl',
+                name: '16 OZ Karton Kase (Kapak Dahil)',
+                category: 'Yeni Kaseler (Set)',
+                img: './images/prods/bowls_12_14_16.jpg',
+                hasLidOption: false,
+                lidPrice: 0,
+                packs: [
+                    { count: 25, price: 185 },
+                    { count: 50, price: 345 },
+                    { count: 100, price: 640 }
+                ]
+            },
+            {
+                id: 'prod-4oz-cup',
+                name: '4 OZ Karton Bardak (Kapaksız)',
+                category: 'Karton Bardaklar',
+                img: './images/prods/cups_series.jpg',
+                hasLidOption: false,
+                lidPrice: 0,
+                packs: [
+                    { count: 50, price: 75 },
+                    { count: 100, price: 135 },
+                    { count: 250, price: 295 }
+                ]
+            },
+            {
+                id: 'prod-6oz-cup',
+                name: '6 OZ Karton Bardak (Kapaksız)',
+                category: 'Karton Bardaklar',
+                img: './images/prods/cups_series.jpg',
+                hasLidOption: false,
+                lidPrice: 0,
+                packs: [
+                    { count: 50, price: 85 },
+                    { count: 100, price: 155 },
+                    { count: 250, price: 345 }
+                ]
+            },
+            {
+                id: 'prod-7oz-cup',
+                name: '7 OZ Karton Bardak (Kapaksız)',
+                category: 'Karton Bardaklar',
+                img: './images/prods/cups_series.jpg',
+                hasLidOption: false,
+                lidPrice: 0,
+                packs: [
+                    { count: 50, price: 95 },
+                    { count: 100, price: 175 },
+                    { count: 250, price: 395 }
+                ]
+            },
+            {
+                id: 'prod-8oz-cup',
+                name: '8 OZ Karton Bardak (Kapaksız)',
+                category: 'Karton Bardaklar',
+                img: './images/prods/cups_series.jpg',
+                hasLidOption: false,
+                lidPrice: 0,
+                packs: [
+                    { count: 50, price: 110 },
+                    { count: 100, price: 195 },
+                    { count: 250, price: 440 }
+                ]
+            },
+            {
+                id: 'prod-550-white',
+                name: '550 CC Beyaz Salata Kasesi',
+                category: 'Beyaz Kaseler',
+                img: './images/prods/550_white_main.webp',
+                hasLidOption: true,
+                lidPrice: 25,
+                packs: [
+                    { count: 25, price: 125 },
+                    { count: 50, price: 235 },
+                    { count: 100, price: 435 }
+                ]
+            },
+            {
+                id: 'prod-750-white',
+                name: '750 CC Beyaz Salata Kasesi',
+                category: 'Beyaz Kaseler',
+                img: './images/prods/750_white_main.webp',
+                hasLidOption: true,
+                lidPrice: 25,
+                packs: [
+                    { count: 25, price: 145 },
+                    { count: 50, price: 265 },
+                    { count: 100, price: 495 }
+                ]
+            }
+        ];
+
+        class AdminApp {
+            constructor() {
+                this.products = this.loadProducts();
+                this.initAuth();
+            }
+
+            loadProducts() {
+                try {
+                    const saved = localStorage.getItem('kraften_catalog_products');
+                    if (saved) return JSON.parse(saved);
+                } catch (e) {
+                    console.warn(e);
+                }
+                return defaultCatalogProducts;
+            }
+
+            saveProducts() {
+                localStorage.setItem('kraften_catalog_products', JSON.stringify(this.products));
+                this.showToast();
+            }
+
+            initAuth() {
+                const isAuth = sessionStorage.getItem('emadmin_auth') === 'true';
+                if (isAuth) {
+                    this.showDashboard();
+                } else {
+                    this.showLogin();
+                }
+
+                const loginForm = document.getElementById('admin-login-form');
+                if (loginForm) {
+                    loginForm.addEventListener('submit', (e) => {
+                        e.preventDefault();
+                        const u = document.getElementById('login-username').value.trim();
+                        const p = document.getElementById('login-password').value.trim();
+                        const err = document.getElementById('login-error-msg');
+
+                        if (u === AUTH_USER && p === AUTH_PASS) {
+                            sessionStorage.setItem('emadmin_auth', 'true');
+                            err.style.display = 'none';
+                            this.showDashboard();
+                        } else {
+                            err.style.display = 'block';
+                        }
+                    });
+                }
+
+                const btnLogout = document.getElementById('btn-logout-admin');
+                if (btnLogout) {
+                    btnLogout.addEventListener('click', () => {
+                        sessionStorage.removeItem('emadmin_auth');
+                        window.location.reload();
+                    });
+                }
+
+                const saveBtns = [document.getElementById('btn-save-all-top'), document.getElementById('btn-save-all-bottom')];
+                saveBtns.forEach(btn => {
+                    if (btn) btn.addEventListener('click', () => this.collectAndSave());
+                });
+            }
+
+            showLogin() {
+                document.getElementById('login-section').style.display = 'flex';
+                document.getElementById('dashboard-section').style.display = 'none';
+            }
+
+            showDashboard() {
+                document.getElementById('login-section').style.display = 'none';
+                document.getElementById('dashboard-section').style.display = 'flex';
+                this.renderProducts();
+            }
+
+            renderProducts() {
+                const container = document.getElementById('admin-prod-container');
+                if (!container) return;
+
+                document.getElementById('stat-total-prods').textContent = this.products.length;
+
+                container.innerHTML = this.products.map(prod => `
+                    <div class="prod-card-row" data-id="${prod.id}">
+                        <div class="prod-meta">
+                            <img src="${prod.img}" alt="${prod.name}" class="prod-img">
+                            <div>
+                                <div class="prod-title">${prod.name}</div>
+                                <span class="prod-cat-pill">${prod.category}</span>
+                            </div>
+                        </div>
+
+                        <div class="pack-input-group">
+                            <label class="pack-lbl">${prod.packs[0]?.count || 25}'li Paket Fiyatı</label>
+                            <div class="input-cur-wrap">
+                                <span class="cur-symbol">₺</span>
+                                <input type="number" step="0.5" class="input-p0" value="${prod.packs[0]?.price || 0}">
+                            </div>
+                        </div>
+
+                        <div class="pack-input-group">
+                            <label class="pack-lbl">${prod.packs[1]?.count || 50}'li Paket Fiyatı</label>
+                            <div class="input-cur-wrap">
+                                <span class="cur-symbol">₺</span>
+                                <input type="number" step="0.5" class="input-p1" value="${prod.packs[1]?.price || 0}">
+                            </div>
+                        </div>
+
+                        <div class="pack-input-group">
+                            <label class="pack-lbl">${prod.packs[2]?.count || 100}'lü Paket Fiyatı</label>
+                            <div class="input-cur-wrap">
+                                <span class="cur-symbol">₺</span>
+                                <input type="number" step="0.5" class="input-p2" value="${prod.packs[2]?.price || 0}">
+                            </div>
+                        </div>
+
+                        <div class="lid-config-wrap">
+                            <label class="pack-lbl">Kapak Farkı</label>
+                            <div class="input-cur-wrap">
+                                <span class="cur-symbol">₺</span>
+                                <input type="number" step="0.5" class="input-lid" value="${prod.lidPrice || 0}" ${!prod.hasLidOption ? 'disabled title="Bu üründe kapak dahildir veya kapaksızdır"' : ''}>
+                            </div>
+                            <span style="font-size: 0.65rem; color: ${prod.hasLidOption ? 'var(--gold)' : 'var(--text-muted)'}; margin-top: 2px;">
+                                ${prod.hasLidOption ? 'Opsiyonel Kapak' : 'Sabit Paket'}
+                            </span>
+                        </div>
+                    </div>
+                `).join('');
+            }
+
+            collectAndSave() {
+                const rows = document.querySelectorAll('.prod-card-row');
+                rows.forEach(row => {
+                    const id = row.dataset.id;
+                    const prod = this.products.find(x => x.id === id);
+                    if (prod) {
+                        const p0 = parseFloat(row.querySelector('.input-p0').value) || prod.packs[0].price;
+                        const p1 = parseFloat(row.querySelector('.input-p1').value) || (prod.packs[1]?.price || 0);
+                        const p2 = parseFloat(row.querySelector('.input-p2').value) || (prod.packs[2]?.price || 0);
+                        const lid = parseFloat(row.querySelector('.input-lid').value) || 0;
+
+                        if (prod.packs[0]) prod.packs[0].price = p0;
+                        if (prod.packs[1]) prod.packs[1].price = p1;
+                        if (prod.packs[2]) prod.packs[2].price = p2;
+                        if (prod.hasLidOption) prod.lidPrice = lid;
+                    }
+                });
+
+                this.saveProducts();
+            }
+
+            showToast() {
+                const toast = document.getElementById('admin-toast');
+                if (toast) {
+                    toast.classList.add('show');
+                    setTimeout(() => toast.classList.remove('show'), 3500);
+                }
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            new AdminApp();
+        });
+    </script>
+</body>
+</html>
