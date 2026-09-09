@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:g="http://base.google.com/ns/1.0">
+  <channel>
+    <title>Kraften Ambalaj Ürün Kataloğu &amp; Perakende Satış</title>
+    <link>https://www.kraftenambalaj.com/</link>
+    <description>Toptan ve perakende kraft salata kaseleri, bowl kaseler, karton bardaklar ve sızdırmaz yemek kapları.</description>
+
+    <!-- 1. 550 CC Kraft Salata Kasesi -->
+    <item>
+      <g:id>prod-550-kraft</g:id>
+      <g:title>550 CC Kraft Salata Kasesi - Sızdırmaz Karton Kase</g:title>
+      <g:description>550 ml doğal kraft karton salata kasesi. %100 sızdırmaz PE koruyucu bariyer, sıcak ve soğuk yemeklere tam uyumlu.</g:description>
+      <g:link>https://www.kraftenambalaj.com/#sales-retail</g:link>
+      <g:image_link>https://www.kraftenambalaj.com/images/prods/550_kraft_main.webp</g:image_link>
+      <g:brand>Kraften Ambalaj</g:brand>
+      <g:condition>new</g:condition>
+      <g:availability>in_stock</g:availability>
+      <g:price>120.00 TRY</g:price>
+      <g:google_product_category>Food &amp; Beverage &gt; Food Service &gt; Take-Out Containers</g:google_product_category>
+    </item>
+
+    <!-- 2. 750 CC Kraft Salata Kasesi -->
+    <item>
+      <g:id>prod-750-kraft</g:id>
+      <g:title>750 CC Kraft Salata Kasesi - Klipsli Kapak Uyumlu</g:title>
+      <g:description>750 ml orta boy doyurucu porsiyonlar için dayanıklı kraft gövde ve sızdırmaz klipsli kapak seçeneği.</g:description>
+      <g:link>https://www.kraftenambalaj.com/#sales-retail</g:link>
+      <g:image_link>https://www.kraftenambalaj.com/images/prods/750_kraft_main.webp</g:image_link>
+      <g:brand>Kraften Ambalaj</g:brand>
+      <g:condition>new</g:condition>
+      <g:availability>in_stock</g:availability>
+      <g:price>140.00 TRY</g:price>
+      <g:google_product_category>Food &amp; Beverage &gt; Food Service &gt; Take-Out Containers</g:google_product_category>
+    </item>
+
+    <!-- 3. 32 OZ Kraft Bowl Kase -->
+    <item>
+      <g:id>prod-32oz-kraft</g:id>
+      <g:title>32 OZ Kraft Bowl Kase (945 ml) Poke &amp; Salata Kasesi</g:title>
+      <g:description>Büyük boy poke bowl, salata ve sıcak sulu yemekler için ekstra kalın kraft kase. 150mm ağız çapı.</g:description>
+      <g:link>https://www.kraftenambalaj.com/#sales-retail</g:link>
+      <g:image_link>https://www.kraftenambalaj.com/images/prods/32oz_kraft_main.webp</g:image_link>
+      <g:brand>Kraften Ambalaj</g:brand>
+      <g:condition>new</g:condition>
+      <g:availability>in_stock</g:availability>
+      <g:price>155.00 TRY</g:price>
+      <g:google_product_category>Food &amp; Beverage &gt; Food Service &gt; Take-Out Containers</g:google_product_category>
+    </item>
+
+    <!-- 4. 38 OZ Kraft Mega Bowl Kase -->
+    <item>
+      <g:id>prod-38oz-kraft</g:id>
+      <g:title>38 OZ Kraft Mega Bowl Kase (1125 ml)</g:title>
+      <g:description>Geniş porsiyonlar, catering ve toplu menü sunumları için en büyük hacimli lüks kraft kase.</g:description>
+      <g:link>https://www.kraftenambalaj.com/#sales-retail</g:link>
+      <g:image_link>https://www.kraftenambalaj.com/images/prods/38oz_kraft_main.webp</g:image_link>
+      <g:brand>Kraften Ambalaj</g:brand>
+      <g:condition>new</g:condition>
+      <g:availability>in_stock</g:availability>
+      <g:price>175.00 TRY</g:price>
+      <g:google_product_category>Food &amp; Beverage &gt; Food Service &gt; Take-Out Containers</g:google_product_category>
+    </item>
+
+    <!-- 5. 12 OZ Soğuk Gıda Kasesi -->
+    <item>
+      <g:id>prod-12oz-bowl</g:id>
+      <g:title>12 OZ Soğuk Gıda Kasesi - Dondurma ve Tatlı Kasesi</g:title>
+      <g:description>Dondurma, yoğurt, soğuk meze ve tatlılar için çift katmanlı soğuk bariyerli kase.</g:description>
+      <g:link>https://www.kraftenambalaj.com/#sales-retail</g:link>
+      <g:image_link>https://www.kraftenambalaj.com/images/prods/bowls_12_14_16.jpg</g:image_link>
+      <g:brand>Kraften Ambalaj</g:brand>
+      <g:condition>new</g:condition>
+      <g:availability>in_stock</g:availability>
+      <g:price>110.00 TRY</g:price>
+      <g:google_product_category>Food &amp; Beverage &gt; Food Service &gt; Take-Out Containers</g:google_product_category>
+    </item>
+
+    <!-- 6. 14 OZ Karton Kase Seti -->
+    <item>
+      <g:id>prod-14oz-bowl</g:id>
+      <g:title>14 OZ Karton Çorba Kasesi (Şeffaf Bombeli PET Kapak Dahil)</g:title>
+      <g:description>Çorba ve sıcak sulu yemekler için buhar tahliyeli bombeli kristal PET kapağıyla birlikte tam set ambalaj.</g:description>
+      <g:link>https://www.kraftenambalaj.com/#sales-retail</g:link>
+      <g:image_link>https://www.kraftenambalaj.com/images/prods/bowls_12_14_16.jpg</g:image_link>
+      <g:brand>Kraften Ambalaj</g:brand>
+      <g:condition>new</g:condition>
+      <g:availability>in_stock</g:availability>
+      <g:price>165.00 TRY</g:price>
+      <g:google_product_category>Food &amp; Beverage &gt; Food Service &gt; Take-Out Containers</g:google_product_category>
+    </item>
+
+    <!-- 7. 16 OZ Karton Kase Seti -->
+    <item>
+      <g:id>prod-16oz-bowl</g:id>
+      <g:title>16 OZ Karton Kase Seti (PET Kapak Dahil)</g:title>
+      <g:description>Geniş hacimli sıcak yemekler için kristal bombeli kapaklı hijyenik paketlenmiş kase seti.</g:description>
+      <g:link>https://www.kraftenambalaj.com/#sales-retail</g:link>
+      <g:image_link>https://www.kraftenambalaj.com/images/prods/bowls_12_14_16.jpg</g:image_link>
+      <g:brand>Kraften Ambalaj</g:brand>
+      <g:condition>new</g:condition>
+      <g:availability>in_stock</g:availability>
+      <g:price>185.00 TRY</g:price>
+      <g:google_product_category>Food &amp; Beverage &gt; Food Service &gt; Take-Out Containers</g:google_product_category>
+    </item>
+
+    <!-- 8. Karton Bardaklar (4oz, 6oz, 7oz, 8oz) -->
+    <item>
+      <g:id>prod-4oz-cup</g:id>
+      <g:title>4 OZ Karton Bardak - Espresso &amp; Numune Bardağı</g:title>
+      <g:description>Espresso, şurup, numune ve tadım ikramları için kalın gramajlı mini karton bardak.</g:description>
+      <g:link>https://www.kraftenambalaj.com/#sales-retail</g:link>
+      <g:image_link>https://www.kraftenambalaj.com/images/prods/cups_series.jpg</g:image_link>
+      <g:brand>Kraften Ambalaj</g:brand>
+      <g:condition>new</g:condition>
+      <g:availability>in_stock</g:availability>
+      <g:price>75.00 TRY</g:price>
+      <g:google_product_category>Food &amp; Beverage &gt; Food Service &gt; Disposable Cups</g:google_product_category>
+    </item>
+    <item>
+      <g:id>prod-8oz-cup</g:id>
+      <g:title>8 OZ Sıcak İçecek ve Kahve Karton Bardağı</g:title>
+      <g:description>Kafelerin ve paket servislerin en çok satan standart sıcak kahve bardağı. Yüksek gramajlı el yakmayan form.</g:description>
+      <g:link>https://www.kraftenambalaj.com/#sales-retail</g:link>
+      <g:image_link>https://www.kraftenambalaj.com/images/prods/cups_series.jpg</g:image_link>
+      <g:brand>Kraften Ambalaj</g:brand>
+      <g:condition>new</g:condition>
+      <g:availability>in_stock</g:availability>
+      <g:price>110.00 TRY</g:price>
+      <g:google_product_category>Food &amp; Beverage &gt; Food Service &gt; Disposable Cups</g:google_product_category>
+    </item>
+
+    <!-- 9. 550 CC & 750 CC Beyaz Lüks Kase -->
+    <item>
+      <g:id>prod-550-white</g:id>
+      <g:title>550 CC Beyaz Lüks Salata Kasesi - Özel Baskı Uyumlu</g:title>
+      <g:description>Lüks beyaz estetik, pürüzsüz yüzey ve sızdırmaz PET kapak seçeneği.</g:description>
+      <g:link>https://www.kraftenambalaj.com/#sales-retail</g:link>
+      <g:image_link>https://www.kraftenambalaj.com/images/prods/550_white_main.webp</g:image_link>
+      <g:brand>Kraften Ambalaj</g:brand>
+      <g:condition>new</g:condition>
+      <g:availability>in_stock</g:availability>
+      <g:price>125.00 TRY</g:price>
+      <g:google_product_category>Food &amp; Beverage &gt; Food Service &gt; Take-Out Containers</g:google_product_category>
+    </item>
+    <item>
+      <g:id>prod-750-white</g:id>
+      <g:title>750 CC Beyaz Lüks Salata Kasesi - Özel Logo Baskılı</g:title>
+      <g:description>Beyaz karton gövde, yüksek bariyerli iç kaplama, prestijli restoran sunumu.</g:description>
+      <g:link>https://www.kraftenambalaj.com/#sales-retail</g:link>
+      <g:image_link>https://www.kraftenambalaj.com/images/prods/750_white_main.webp</g:image_link>
+      <g:brand>Kraften Ambalaj</g:brand>
+      <g:condition>new</g:condition>
+      <g:availability>in_stock</g:availability>
+      <g:price>145.00 TRY</g:price>
+      <g:google_product_category>Food &amp; Beverage &gt; Food Service &gt; Take-Out Containers</g:google_product_category>
+    </item>
+  </channel>
+</rss>
