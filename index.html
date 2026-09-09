@@ -1,35 +1,46 @@
 <!DOCTYPE html>
 <html lang="tr">
 <head>
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-Q2WT6P3QVD"></script>
+    <!-- Deferred Google Analytics (gtag.js) for Zero TBT -->
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-
-      gtag('config', 'G-Q2WT6P3QVD');
+      function initAnalytics() {
+        if (window.gtagLoaded) return;
+        window.gtagLoaded = true;
+        var s = document.createElement('script');
+        s.async = true;
+        s.src = 'https://www.googletagmanager.com/gtag/js?id=G-Q2WT6P3QVD';
+        document.head.appendChild(s);
+        gtag('js', new Date());
+        gtag('config', 'G-Q2WT6P3QVD');
+      }
+      if ('requestIdleCallback' in window) {
+        requestIdleCallback(initAnalytics, { timeout: 3500 });
+      } else {
+        window.addEventListener('load', function() { setTimeout(initAnalytics, 2000); });
+      }
+      ['touchstart', 'scroll', 'click'].forEach(function(evt) {
+        window.addEventListener(evt, initAnalytics, { once: true, passive: true });
+      });
     </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="robots" content="index, follow, max-image-preview:large">
     <meta name="google-site-verification" content="1uluKl1VSqgTfIbcZq0kJisPbNvdW3wQAHv4bG9PlLo">
-    <title>Kraften Ambalaj | Toptan Kraft Salata Kasesi & Kabı</title>
-    <meta name="description" content="Kraften Ambalaj: Toptan kraft salata kasesi, bowl kase (32oz, 38oz) ve sızdırmaz karton gıda kapları imalatçısı. Fabrikadan doğrudan toptan satış.">
-    <meta name="keywords" content="kraft salata kasesi, kraft salata kabı, bowl kase, toptan karton kase, sızdırmaz gıda kabı, 550cc kraft kase, 750cc kraft kase, 32oz salata kabı, 38oz bowl kase, karton kase imalatçısı">
+    <title>Kraften Ambalaj | Toptan Kraft Salata Kasesi &amp; Perakende Online Satış</title>
+    <meta name="description" content="Kraften Ambalaj: Toptan ve perakende kraft salata kasesi, 32oz 38oz bowl kase, sızdırmaz gurme karton kaplar ve karton bardak imalatçısı. Fabrikadan doğrudan online satış.">
+    <meta name="keywords" content="kraft salata kasesi, kraft salata kabı, bowl kase, toptan karton kase, perakende karton kase, sızdırmaz gıda kabı, 550cc kraft kase, 750cc kraft kase, 32oz salata kabı, 38oz bowl kase, karton kase imalatçısı, karton bardak toptan">
     <meta name="author" content="Kraften Ambalaj">
     <meta name="publisher" content="Kraften Ambalaj San. ve Tic. A.Ş.">
     <link rel="canonical" href="https://www.kraftenambalaj.com/">
 
-    <!-- Hreflang Multi-Language Declarations (TR | EN | DE | FR) -->
+    <!-- Hreflang Multi-Language Declarations -->
     <link rel="alternate" hreflang="tr" href="https://www.kraftenambalaj.com/" />
-    <link rel="alternate" hreflang="en" href="https://www.kraftenambalaj.com/" />
-    <link rel="alternate" hreflang="de" href="https://www.kraftenambalaj.com/" />
-    <link rel="alternate" hreflang="fr" href="https://www.kraftenambalaj.com/" />
     <link rel="alternate" hreflang="x-default" href="https://www.kraftenambalaj.com/" />
     <link rel="alternate" type="application/rss+xml" title="Kraften Ambalaj Blog RSS Feed" href="https://www.kraftenambalaj.com/rss.xml" />
 
-    <!-- Comprehensive Favicon & App Icon Declarations -->
+    <!-- Favicon & App Icon Declarations -->
     <link rel="icon" type="image/x-icon" href="./favicon.ico">
     <link rel="icon" type="image/png" sizes="32x32" href="./logo.png">
     <link rel="icon" type="image/png" sizes="16x16" href="./logo.png">
@@ -38,19 +49,31 @@
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
-    <meta property="og:title" content="Kraften Ambalaj | Toptan Kraft Salata Kasesi & Gıda Kapları İmalatçısı">
-    <meta property="og:description" content="Toptan kraft salata kasesi, bowl kase (32oz, 38oz), kraft salata kabı (550cc, 750cc) ve sızdırmaz ambalaj kapları. Fabrikadan doğrudan toptan satış.">
+    <meta property="og:title" content="Kraften Ambalaj | Toptan Kraft Salata Kasesi &amp; Perakende Satış">
+    <meta property="og:description" content="550cc'den 38oz'a sızdırmaz kraft salata kaseleri, karton bardaklar ve gurme yemek kapları. Fabrikadan toptan ve perakende sipariş verin.">
     <meta property="og:url" content="https://www.kraftenambalaj.com/">
-    <meta property="og:image" content="https://www.kraftenambalaj.com/images/prods/550_kraft_main.webp">
+    <meta property="og:image" content="https://www.kraftenambalaj.com/images/catalog/kraft_bowls_catalog.jpg">
     <meta property="og:site_name" content="Kraften Ambalaj">
+    <meta property="og:locale" content="tr_TR">
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Kraften Ambalaj | Toptan Kraft Salata Kasesi & Bowl Kase İmalatı">
-    <meta name="twitter:description" content="550cc, 750cc, 32oz, 38oz sızdırmaz PET kapaklı doğal kraft ve beyaz karton salata kaseleri.">
-    <meta name="twitter:image" content="https://www.kraftenambalaj.com/images/prods/550_kraft_main.webp">
+    <meta name="twitter:title" content="Kraften Ambalaj | Toptan Kraft Salata Kasesi &amp; Gıda Kapları">
+    <meta name="twitter:description" content="550cc, 750cc, 32oz, 38oz sızdırmaz PET kapaklı doğal kraft ve beyaz salata kaseleri.">
+    <meta name="twitter:image" content="https://www.kraftenambalaj.com/images/catalog/kraft_bowls_catalog.jpg">
 
-    <!-- Schema.org Multi-Structured Data (LocalBusiness + Product + FAQPage) -->
+    <!-- Modern Luxury Fonts (Cinzel & Inter) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;900&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome 6 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Editorial Catalog Stylesheet -->
+    <link rel="stylesheet" href="./css/nextgen.css">
+
+    <!-- Schema.org Multi-Structured Data (LocalBusiness + Organization + Product + FAQPage) -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -78,19 +101,32 @@
             "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
             "opens": "08:30",
             "closes": "18:30"
-          },
-          "sameAs": ["https://www.kraftenambalaj.com"]
+          }
+        },
+        {
+          "@type": "Organization",
+          "name": "Kraften Ambalaj",
+          "url": "https://www.kraftenambalaj.com",
+          "logo": "https://www.kraftenambalaj.com/logo.png",
+          "contactPoint": {
+            "@type": "ContactPoint",
+            "telephone": "+905415019478",
+            "contactType": "customer service",
+            "areaServed": ["TR", "EU"],
+            "availableLanguage": ["Turkish", "English"]
+          }
         },
         {
           "@type": "Product",
           "name": "Kraften Kraft Salata Kasesi & Bowl Kase Serisi (550cc, 750cc, 32oz, 38oz)",
           "image": [
-            "https://www.kraftenambalaj.com/images/prods/550_kraft_main.webp",
-            "https://www.kraftenambalaj.com/images/prods/750_kraft_main.webp",
-            "https://www.kraftenambalaj.com/images/prods/32oz_kraft_main.webp"
+            "https://www.kraftenambalaj.com/images/catalog/kraft_bowls_catalog.jpg",
+            "https://www.kraftenambalaj.com/images/catalog/white_bowls_catalog.jpg",
+            "https://www.kraftenambalaj.com/images/prods/bowls_12_14_16.jpg",
+            "https://www.kraftenambalaj.com/images/prods/cups_series.jpg"
           ],
-          "description": "%100 sızdırmaz PET kapaklı doğal kraft ve beyaz karton salata kaseleri. Gıda temasına uygun, FSC sertifikalı toptan gıda kapları.",
-          "sku": "KRAFTEN-ALL-BOWLS-2026",
+          "description": "%100 sızdırmaz PET kapaklı doğal kraft ve beyaz karton salata kaseleri, sıcak/soğuk yemek kapları ve karton bardaklar. FSC sertifikalı toptan ve perakende satış.",
+          "sku": "KRAFTEN-ALL-PRODS-2026",
           "brand": {
             "@type": "Brand",
             "name": "Kraften Ambalaj"
@@ -98,13 +134,10 @@
           "offers": {
             "@type": "AggregateOffer",
             "priceCurrency": "TRY",
-            "price": "0.00",
-            "offerCount": "8",
-            "availability": "https://schema.org/InStock",
-            "seller": {
-              "@type": "Organization",
-              "name": "Kraften Ambalaj San. ve Tic. A.Ş."
-            }
+            "lowPrice": "75.00",
+            "highPrice": "640.00",
+            "offerCount": "11",
+            "availability": "https://schema.org/InStock"
           }
         },
         {
@@ -112,26 +145,26 @@
           "mainEntity": [
             {
               "@type": "Question",
-              "name": "Kraft salata kaseleri sıvı, yağ ve soslarda sızdırma yapar mı?",
+              "name": "Kraft salata kaseleri sıcak yemekler ve çorbalar için uygun mudur?",
               "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "Hayır. Kraften Ambalaj karton kase ürünleri iç yüzeyinde gıdaya uygun polietilen (PE) koruyucu bariyer içerir. Soslu salatalar ve sulu yemeklerde kesinlikle sızdırma yapmaz."
+                "text": "Evet, Kraften kraft salata kaseleri ve çorba kapları iç yüzeylerindeki yüksek kaliteli PE koruyucu bariyer sayesinde +100°C sıcaklığa kadar dayanıklıdır. Yağlı soslar ve sıcak sulu yemeklerde sıfır sızdırma garantisi sunar."
               }
             },
             {
               "@type": "Question",
-              "name": "Kraft salata kaplarında minimum toptan koli siparişi nedir?",
+              "name": "Toptan alımlarda özel logo baskısı yapılıyor mu?",
               "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "Ürünlerimiz standart 300 adetlik koliler halinde satılmaktadır. 1 koli ve üzeri tüm toptan alımlarda aynı gün stoktan sevk edilmektedir."
+                "text": "Evet, fabrikamızda işletmenizin kurumsal logosunu yüksek çözünürlüklü flekso baskı tekniği ile kase ve bardak gövdesine basmaktayız."
               }
             },
             {
               "@type": "Question",
-              "name": "Karton kase üzerine firma logosu basılabilir mi?",
+              "name": "Perakende olarak küçük paketlerde alabilir miyim?",
               "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "Evet! Kraften Ambalaj olarak markanıza özel logo ve grafik tasarımlı özel baskılı kraft salata kaseleri üretmekteyiz."
+                "text": "Evet, online mağazamız üzerinden 25'li, 50'li ve 100'lü paketlerde kapaklı veya kapaksız olarak güvenle perakende sipariş verebilirsiniz."
               }
             }
           ]
@@ -139,660 +172,712 @@
       ]
     }
     </script>
-    <!-- Resource Preconnects -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
-    <link rel="preload" as="image" href="./logo.png">
-    
-    <!-- Modern Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;800&family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
-    <!-- Non-blocking FontAwesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'">
-    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
-    
-    <link rel="icon" href="./logo.png" type="image/png">
-    <link rel="stylesheet" href="https://kobiseo.com/rozet/rozet.css">
-    <link rel="stylesheet" href="./css/main.css?v=20260909">
 </head>
 <body>
-    <!-- Custom Mouse Follower Dot -->
-    <div class="cursor-dot"></div>
-    <div class="cursor-outline"></div>
 
-    <script>
-        // Disable custom cursor on touch devices to prevent stuck circles
-        if ('ontouchstart' in window || navigator.maxTouchPoints > 0 || window.innerWidth < 900) {
-            document.querySelector('.cursor-dot').style.display = 'none';
-            document.querySelector('.cursor-outline').style.display = 'none';
-        }
-    </script>
-
-    <!-- Loading Screen -->
-    <div id="loader" class="loader-screen">
-        <img src="./logo.png" alt="Kraften Logo" class="loader-logo">
-        <div class="loader-brand">KRAFTEN</div>
-        <div class="loader-line"></div>
+    <!-- AMBIENT AURORA & GLOW FX LAYER -->
+    <div class="ambient-fx" aria-hidden="true">
+        <i class="glow-orb orb-1"></i>
+        <i class="glow-orb orb-2"></i>
     </div>
 
-    <!-- Glass Header -->
-    <header id="main-header" class="glass-header">
-        <div class="header-container">
-            <div class="logo">
-                <img src="./logo.png" alt="Kraften Logo" class="logo-img" width="160" height="40">
-                <span class="logo-text">KRAFTEN</span>
-            </div>
-            <nav class="nav-links">
-                <a href="#vision" class="nav-link" data-i18n="navVision">VİZYON</a>
-                <a href="#products" class="nav-link" data-i18n="navProducts">ENDÜSTRİYEL ÇÖZÜMLER</a>
-                <a href="#certificates" class="nav-link" data-i18n="navCertificates">SERTİFİKALAR</a>
-                <a href="./blog.html" class="nav-link" data-i18n="navBlog">BLOG</a>
-                <a href="#sustainability" class="nav-link" data-i18n="navSustainability">SÜRDÜRÜLEBİLİRLİK</a>
-            </nav>
-            <div class="header-actions">
-                <div class="lang-switcher-wrapper">
-                    <button id="lang-menu-btn" class="lang-btn-sleek" aria-label="Select Language">
-                        <span id="current-lang-flag">🇹🇷</span> <span id="current-lang-code">TR</span> <i class="fas fa-chevron-down" style="font-size: 0.65rem; margin-left: 2px; opacity: 0.7;"></i>
-                    </button>
-                    <div id="lang-dropdown-menu" class="lang-dropdown-menu hidden">
-                        <div class="lang-option active" data-lang="tr"><span>🇹🇷</span> Türkçe (TR)</div>
-                        <div class="lang-option" data-lang="en"><span>🇬🇧</span> English (EN)</div>
-                        <div class="lang-option" data-lang="de"><span>🇩🇪</span> Deutsch (DE)</div>
-                        <div class="lang-option" data-lang="fr"><span>🇫🇷</span> Français (FR)</div>
-                    </div>
+    <!-- ======================================================= -->
+    <!-- TOP EDITORIAL NAVIGATION BAR                           -->
+    <!-- ======================================================= -->
+    <nav class="catalog-nav">
+        <div class="nav-container">
+            <a href="#" class="nav-brand">
+                <img src="./logo.png" alt="Kraften Ambalaj Logo">
+                <div>
+                    <span class="nav-brand-title">KRAFTEN</span>
+                    <span class="nav-brand-sub">Üretim &amp; Ambalaj Sistemleri</span>
                 </div>
-                <a href="#contact" class="btn-primary" data-i18n="navContactBtn">İLETİŞİME GEÇİN</a>
-                <a href="./kraften_2026_katalog.pdf" target="_blank" rel="noopener" id="btn-header-catalog" class="btn-outline-dark btn-sm" style="border-color: rgba(255,255,255,0.3); color: #fff; padding: 10px 18px; font-size: 0.75rem;" data-i18n="btnCatalog"><i class="fas fa-file-pdf"></i> E-Katalog (PDF)</a>
+            </a>
+
+            <!-- Anchor Links -->
+            <div class="nav-links-menu">
+                <a href="#kraft-series" class="nav-link-item">Kraft Kaseler</a>
+                <a href="#white-series" class="nav-link-item">Özel Baskılı</a>
+                <a href="#cold-series" class="nav-link-item">Kapaklı Setler</a>
+                <a href="#cups-series" class="nav-link-item">Karton Bardak</a>
+                <a href="#facility" class="nav-link-item">Üretim Tesisi</a>
+                <a href="#blog-bento" class="nav-link-item">Sektörel Blog</a>
+            </div>
+
+            <!-- Conversion Actions -->
+            <div class="nav-actions-wrap">
+                <a href="#sales-wholesale" class="btn-nav-action btn-nav-wholesale">
+                    <i class="fas fa-industry"></i> <span>Toptan (B2B)</span>
+                </a>
+
+                <a href="#sales-retail" class="btn-nav-action btn-nav-retail">
+                    <i class="fas fa-shopping-bag"></i> <span>Perakende (B2C)</span>
+                </a>
+
+                <button id="btn-open-cart" class="btn-nav-action btn-nav-cart" aria-label="Sepeti Gör">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span id="nav-cart-count" class="cart-count-badge">0</span>
+                </button>
             </div>
         </div>
-    </header>
+    </nav>
 
-    <main>
-        <!-- Cinematic Hero -->
-        <section id="hero" class="hero-section">
-            <div class="hero-bg-overlay"></div>
-            <div class="hero-content reveal-up">
-                <div class="hero-subtitle tracking-widest" data-i18n="heroSubtitle">GLOBAL PACKAGING INDUSTRY</div>
-                <h1 class="hero-title" data-i18n="heroTitle">Mükemmelliği<br>Yeniden Tanımlıyoruz.</h1>
-                <p class="hero-desc" data-i18n="heroDesc">
-                    Kraften Ambalaj; toptan kraft salata kasesi, sızdırmaz karton gıda kapları ve bowl tabağı imalatçısıdır. Fabrikadan doğrudan toptan satış ve uluslararası gıda güvenliği standartlarında sürdürülebilir gıda ambalajı çözümleri sunar.
+    <!-- ======================================================= -->
+    <!-- 1. HERO: DYNAMIC PRODUCT SLIDING BANNER (CAROUSEL)      -->
+    <!-- ======================================================= -->
+    <section id="hero-carousel-section" class="hero-carousel-sec">
+        <div class="hero-carousel" id="main-hero-carousel">
+            <!-- SLIDE 1: KRAFT SALATA & BOWL KASELERİ -->
+            <div class="carousel-slide active" data-slide="0">
+                <img src="./images/catalog/kraft_bowls_catalog.jpg" alt="Doğal Kraft Salata Kaseleri" class="slide-bg-img">
+                <div class="slide-overlay-gradient"></div>
+                <div class="slide-content-wrap">
+                    <span class="slide-tag">✦ AMİRAL GEMİSİ · DOĞAL KRAFT KOLEKSİYONU</span>
+                    <h1 class="slide-title">Doğal Kraft Salata &amp;<br><span style="color: var(--gold-bright); font-style: italic;">Sızdırmaz Bowl Kaseleri</span></h1>
+                    <p class="slide-desc">%100 sızdırmaz klipsli PET şeffaf kapak, sıcak sulu yemeklerde ve yağlı soslarda sıfır akma garantisi. 550cc'den 38oz'a kadar zengin ebatlar.</p>
+                    <div class="slide-btn-row">
+                        <a href="#sales-wholesale" class="btn-spread-wholesale">
+                            <i class="fas fa-boxes"></i> Toptan Koli Fiyatı Al (300'lü)
+                        </a>
+                        <a href="#sales-retail" class="btn-spread-retail">
+                            <i class="fas fa-shopping-cart"></i> Perakende Paket Satın Al
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SLIDE 2: ÖZEL BASKILI & BEYAZ LÜKS GURME KASELER -->
+            <div class="carousel-slide" data-slide="1">
+                <img src="./images/catalog/white_bowls_catalog.jpg" alt="Özel Logo Baskılı Beyaz Lüks Salata Kaseleri" class="slide-bg-img">
+                <div class="slide-overlay-gradient"></div>
+                <div class="slide-content-wrap">
+                    <span class="slide-tag">✦ ÖZEL LOGO BASKILI &amp; LÜKS BEYAZ SERİ</span>
+                    <h2 class="slide-title">Özel Logo Baskılı &amp;<br><span style="color: var(--gold-bright); font-style: italic;">Lüks Gurme Salata Kaseleri</span></h2>
+                    <p class="slide-desc">Markanıza özel altın yaldız ve kurumsal renklerde yüksek çözünürlüklü flekso logo baskısı. 550cc ve 750cc yuvarlak formda kristal bombeli kapaklı gurme sunum.</p>
+                    <div class="slide-btn-row">
+                        <a href="#white-series" class="btn-spread-wholesale">
+                            <i class="fas fa-palette"></i> Baskılı Seri Detayları
+                        </a>
+                        <a href="#sales-retail" class="btn-spread-retail">
+                            <i class="fas fa-cart-plus"></i> Perakende Satın Al
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SLIDE 3: SOĞUK GIDA & KAPAKLI KASE SETLERİ -->
+            <div class="carousel-slide" data-slide="2">
+                <img src="./images/prods/bowls_12_14_16.jpg" alt="12, 14 ve 16 OZ Gurme Kase Setleri" class="slide-bg-img">
+                <div class="slide-overlay-gradient"></div>
+                <div class="slide-content-wrap">
+                    <span class="slide-tag">✦ YENİ SERİ · BOMBELİ PET KAPAK DAHİL</span>
+                    <h2 class="slide-title">12, 14 &amp; 16 OZ<br><span style="color: var(--gold-bright); font-style: italic;">Gurme Kase Setleri</span></h2>
+                    <p class="slide-desc">Dondurma ve mezelerden sıcak çorbalara kadar; buhar tahliyeli ve bombeli kristal PET kapaklarıyla birlikte tam set kolilenmiş ambalaj.</p>
+                    <div class="slide-btn-row">
+                        <a href="#cold-series" class="btn-spread-wholesale">
+                            <i class="fas fa-layer-group"></i> Set Detaylarını Gör
+                        </a>
+                        <a href="#sales-retail" class="btn-spread-retail">
+                            <i class="fas fa-shopping-bag"></i> Hemen Sipariş Ver
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SLIDE 4: SICAK İÇECEK KARTON BARDAK KOLEKSİYONU -->
+            <div class="carousel-slide" data-slide="3">
+                <img src="./images/prods/cups_series.jpg" alt="Karton Bardaklar Koleksiyonu" class="slide-bg-img">
+                <div class="slide-overlay-gradient"></div>
+                <div class="slide-content-wrap">
+                    <span class="slide-tag">✦ İÇECEK &amp; KAFE ÇÖZÜMLERİ</span>
+                    <h2 class="slide-title">Sıcak İçecek<br><span style="color: var(--gold-bright); font-style: italic;">Karton Bardak Serisi</span></h2>
+                    <p class="slide-desc">4oz espresso shot'tan 8oz kahve bardağına kadar yüksek gramajlı, el yakmayan ergonomik tasarım. 1000'li hijyenik kolilerle stoktan aynı gün sevk.</p>
+                    <div class="slide-btn-row">
+                        <a href="#cups-series" class="btn-spread-wholesale">
+                            <i class="fas fa-coffee"></i> Bardakları İncele
+                        </a>
+                        <a href="#sales-wholesale" class="btn-spread-retail">
+                            <i class="fas fa-truck"></i> Toptan Koli Fiyatı Al
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CAROUSEL ARROWS -->
+            <button id="carousel-prev-btn" class="carousel-nav-btn carousel-prev" aria-label="Önceki Slayt">
+                <i class="fas fa-chevron-left"></i>
+            </button>
+            <button id="carousel-next-btn" class="carousel-nav-btn carousel-next" aria-label="Sonraki Slayt">
+                <i class="fas fa-chevron-right"></i>
+            </button>
+
+            <!-- CAROUSEL DOT INDICATORS -->
+            <div class="carousel-indicators" id="carousel-dots-wrap">
+                <div class="indicator-dot active" data-target="0"></div>
+                <div class="indicator-dot" data-target="1"></div>
+                <div class="indicator-dot" data-target="2"></div>
+                <div class="indicator-dot" data-target="3"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TRUST STRIP -->
+    <div style="border-top: 1px solid var(--border-glass); border-bottom: 1px solid var(--border-glass); background: rgba(14, 26, 20, 0.7); padding: 18px 36px;">
+        <div style="max-width: 1400px; margin: 0 auto; display: flex; justify-content: space-around; flex-wrap: wrap; gap: 20px; font-size: 0.88rem; font-weight: 700; color: var(--gold-bright);">
+            <span><i class="fas fa-shield-alt"></i> ISO 22000 Gıda Temasına Tam Uygunluk</span>
+            <span><i class="fas fa-tree"></i> FSC Sertifikalı Doğal İskandinav Kraftı</span>
+            <span><i class="fas fa-recycle"></i> %99 Biyolojik Geri Dönüştürülebilir</span>
+            <span><i class="fas fa-truck-loading"></i> Fabrikadan Doğrudan Stok Sevk</span>
+            <span><i class="fas fa-award"></i> %100 Sıvı ve Sıcak Sos Sızdırmazlık</span>
+        </div>
+    </div>
+
+    <!-- ======================================================= -->
+    <!-- 2. EDITORIAL CATALOG LOOKBOOK SPREADS                   -->
+    <!-- ======================================================= -->
+    <section class="catalog-section">
+        <div class="catalog-header">
+            <span class="catalog-eyebrow">✦ 2026 ÜRÜN KOLEKSİYONU</span>
+            <h2 class="catalog-title">Mimari Tasarım, Endüstriyel Hassasiyet</h2>
+            <p class="catalog-desc">
+                Her bir milimetresi gıda güvenliği ve restoran prestiji için optimize edilmiş kraft salata kaseleri, sıcak yemek kapları ve karton bardak serilerimiz.
+            </p>
+        </div>
+
+        <!-- SPREAD 1: DOĞAL KRAFT SALATA & BOWL KASELERİ -->
+        <div id="kraft-series" class="catalog-spread">
+            <div class="spread-img-box">
+                <img src="./images/catalog/kraft_bowls_catalog.jpg" alt="Kraften Kraft Salata Kaseleri Koleksiyonu">
+                <span class="spread-tag-badge">Ana Koleksiyon · Kraft</span>
+            </div>
+            
+            <div class="spread-info-box">
+                <span class="spread-col-num">KOLEKSİYON 01</span>
+                <h3 class="spread-col-title">Doğal Kraft Salata &amp; Bowl Kase Serisi</h3>
+                <p class="spread-col-desc">
+                    Yüksek gramajlı doğal kraft kartondan üretilen, iç yüzeyindeki gıdaya uygun polietilen bariyer sayesinde zeytinyağlı, soslu ve sıcak sulu yemeklerde sıfır sızdırma sağlayan amiral gemisi serimiz.
                 </p>
-                <div class="hero-cta" style="display: flex; gap: 15px; flex-wrap: wrap; align-items: center;">
-                    <a href="#products" class="btn-solid" data-i18n="heroBtn">Çözümleri Keşfedin</a>
-                    <button id="btn-hero-sample" class="btn-outline-light" data-i18n="btnSample"><i class="fas fa-box-open"></i> Ücretsiz Numune İsteyin</button>
-                    <a href="./kraften_2026_katalog.pdf" target="_blank" rel="noopener" id="btn-hero-catalog" class="btn-outline-light" style="border-color: var(--color-accent); color: var(--color-accent);" data-i18n="btnCatalog"><i class="fas fa-file-pdf"></i> E-Katalog (PDF)</a>
-                </div>
-            </div>
-            <div class="hero-graphic reveal-up" style="transition-delay: 0.3s;">
-                <img src="./hero-transparent.png" alt="Kraften Ambalaj Salata Kasesi İmalatı" width="600" height="400">
-            </div>
-            <div class="scroll-indicator">
-                <div class="mouse"></div>
-            </div>
-        </section>
 
-        <!-- Vision / Numbers -->
-        <section id="vision" class="vision-section section-padding">
-            <div class="vision-container">
-                <div class="vision-text reveal-up">
-                    <h2 class="section-heading" data-i18n="visionHeading">Toptan Karton Kase ve Ambalaj İmalatında Geleceği Şekillendiriyoruz</h2>
-                    <p class="section-body" data-i18n="visionBody">Kraften Ambalaj San. ve Tic. A.Ş. olarak, restoran zincirleri, catering firmaları ve gıda üreticileri için sızdırmaz kraft salata kapları, çorba kaseleri ve gıda ambalajları üretiyoruz. Çevre dostu ve %99 geri dönüştürülebilir kağıt hammaddelerimizle gıda güvenliğini uluslararası kalite standartlarında sağlıyoruz.</p>
-                </div>
-                <div class="vision-stats">
-                    <div class="stat-item reveal-up" style="transition-delay: 0.1s;">
-                        <div class="stat-number">%99</div>
-                        <div class="stat-label" data-i18n="statEco">Geri Dönüştürülebilir</div>
-                    </div>
-                    <div class="stat-item reveal-up" style="transition-delay: 0.2s;">
-                        <div class="stat-number">ISO</div>
-                        <div class="stat-label" data-i18n="statIso">22000 Standartları</div>
-                    </div>
-                    <div class="stat-item reveal-up" style="transition-delay: 0.3s;">
-                        <div class="stat-number">FSC</div>
-                        <div class="stat-label" data-i18n="statFsc">Sertifikalı Üretim</div>
-                    </div>
-                    <div class="stat-item reveal-up" style="transition-delay: 0.4s;">
-                        <div class="stat-number">30+</div>
-                        <div class="stat-label" data-i18n="statExport">Ülkeye İhracat</div>
-                    </div>
-                </div>
-            </div>
-        </section>
+                <table class="spread-specs-table">
+                    <thead>
+                        <tr>
+                            <th>Model</th>
+                            <th>Hacim</th>
+                            <th>Ağız Çapı</th>
+                            <th>Koli İçi</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>550 CC Kase</strong></td>
+                            <td>550 ml</td>
+                            <td>150 mm</td>
+                            <td>300 Adet</td>
+                        </tr>
+                        <tr>
+                            <td><strong>750 CC Kase</strong></td>
+                            <td>750 ml</td>
+                            <td>150 mm</td>
+                            <td>300 Adet</td>
+                        </tr>
+                        <tr>
+                            <td><strong>32 OZ Bowl</strong></td>
+                            <td>945 ml</td>
+                            <td>150 mm</td>
+                            <td>300 Adet</td>
+                        </tr>
+                        <tr>
+                            <td><strong>38 OZ Mega Bowl</strong></td>
+                            <td>1125 ml</td>
+                            <td>165 mm</td>
+                            <td>300 Adet</td>
+                        </tr>
+                    </tbody>
+                </table>
 
-        <!-- Asymmetrical Product Showcase with Filters -->
-        <section id="products" class="products-section section-padding">
-            <div class="container">
-                <div class="section-header reveal-up">
-                    <div class="sub-heading" data-i18n="prodSub">PREMIUM GIDA KAPLARI</div>
-                    <h2 class="section-heading" data-i18n="prodHeading">Fabrikadan Toptan Karton Salata ve Bowl Kapları</h2>
-                    <p style="color: var(--color-text-light); max-width: 700px; margin-top: 10px; font-size: 0.95rem;" data-i18n="prodDesc">550cc, 750cc kraft salata kapları ile 32oz ve 38oz sızdırmaz bowl kaselerimiz, gıda temasına %100 uygun PE bariyer kaplamaya sahiptir. Sıvı, yağ ve sıcak yemeklerde sızdırma yapmaz.</p>
-                </div>
-                
-                <!-- Filters -->
-                <div id="category-filters" class="category-filters reveal-up" style="transition-delay: 0.2s;">
-                    <!-- Categories injected via JS -->
+                <div class="spread-features-chips">
+                    <span class="chip-tag">✔ Şeffaf Klipsli PET Kapak</span>
+                    <span class="chip-tag">✔ Mikrodalga Uyumlu</span>
+                    <span class="chip-tag">✔ Logo Baskı İmkanı</span>
                 </div>
 
-                <div id="product-grid" class="corporate-product-grid">
-
-                    <article class="corp-card reveal-up" data-category="white">
-                        <div class="card-image-wrap">
-                            <img src="/images/prods/550_white_main.webp" alt="550 CC Salata Kabı (Beyaz)" class="main-img" width="400" height="300" loading="lazy">
-                            <img src="/images/prods/550_white_sub.webp" alt="550 CC Salata Kabı (Beyaz) detay" class="sub-img" width="400" height="300" loading="lazy">
-                            <span class="badge-volume">550 CC</span>
-                        </div>
-                        <div class="card-body">
-                            <span class="card-category">Beyaz Kase</span>
-                            <h3 class="card-title"><a href="/urunler/550cc-beyaz-salata-kabi.html">550 CC Salata Kabı (Beyaz)</a></h3>
-                            <p class="card-desc">550 cc Salata Kabı, %99 geri dönüştürülebilir yapısıyla çevre dostu ve hijyenik bir ambalaj çözümü sunar.</p>
-                            <div class="card-specs-mini">
-                                <span><i class="fa-solid fa-arrows-left-right"></i> 150 mm</span>
-                                <span><i class="fa-solid fa-box"></i> 300 Adet / pcs</span>
-                            </div>
-                            <div class="card-actions">
-                                <a href="/urunler/550cc-beyaz-salata-kabi.html" class="btn-card-details"><i class="fa-solid fa-circle-info"></i> Detaylar</a>
-                                <button class="btn-card-quickview" data-id="prod-550-white"><i class="fa-solid fa-eye"></i> Hızlı İncele</button>
-                            </div>
-                        </div>
-                    </article>
-
-                    <article class="corp-card reveal-up" data-category="kraft">
-                        <div class="card-image-wrap">
-                            <img src="/images/prods/550_kraft_main.webp" alt="550 CC Kraft Salata Kabı" class="main-img" width="400" height="300" loading="lazy">
-                            <img src="/images/prods/550_kraft_sub.webp" alt="550 CC Kraft Salata Kabı detay" class="sub-img" width="400" height="300" loading="lazy">
-                            <span class="badge-volume">550 CC</span>
-                        </div>
-                        <div class="card-body">
-                            <span class="card-category">Kraft Kase</span>
-                            <h3 class="card-title"><a href="/urunler/550cc-kraft-salata-kabi.html">550 CC Kraft Salata Kabı</a></h3>
-                            <p class="card-desc">550 cc Kraft Salata Kabı, doğal kraft dokusuyla üst düzey sunum sağlayan, dayanıklı ve doğa dostu bir seçimdir.</p>
-                            <div class="card-specs-mini">
-                                <span><i class="fa-solid fa-arrows-left-right"></i> 150 mm</span>
-                                <span><i class="fa-solid fa-box"></i> 300 Adet / pcs</span>
-                            </div>
-                            <div class="card-actions">
-                                <a href="/urunler/550cc-kraft-salata-kabi.html" class="btn-card-details"><i class="fa-solid fa-circle-info"></i> Detaylar</a>
-                                <button class="btn-card-quickview" data-id="prod-550-kraft"><i class="fa-solid fa-eye"></i> Hızlı İncele</button>
-                            </div>
-                        </div>
-                    </article>
-
-                    <article class="corp-card reveal-up" data-category="white">
-                        <div class="card-image-wrap">
-                            <img src="/images/prods/750_white_main.webp" alt="750 CC Salata Kabı (Beyaz)" class="main-img" width="400" height="300" loading="lazy">
-                            <img src="/images/prods/750_white_sub.webp" alt="750 CC Salata Kabı (Beyaz) detay" class="sub-img" width="400" height="300" loading="lazy">
-                            <span class="badge-volume">750 CC</span>
-                        </div>
-                        <div class="card-body">
-                            <span class="card-category">Beyaz Kase</span>
-                            <h3 class="card-title"><a href="/urunler/750cc-beyaz-salata-kabi.html">750 CC Salata Kabı (Beyaz)</a></h3>
-                            <p class="card-desc">750 cc Salata Kabı, orta boy porsiyonlar için idealdir. Gıda sertifikalı kartondan üretilmiş olup sıvıya dayanıklıdır.</p>
-                            <div class="card-specs-mini">
-                                <span><i class="fa-solid fa-arrows-left-right"></i> 150 mm</span>
-                                <span><i class="fa-solid fa-box"></i> 300 Adet / pcs</span>
-                            </div>
-                            <div class="card-actions">
-                                <a href="/urunler/750cc-beyaz-salata-kabi.html" class="btn-card-details"><i class="fa-solid fa-circle-info"></i> Detaylar</a>
-                                <button class="btn-card-quickview" data-id="prod-750-white"><i class="fa-solid fa-eye"></i> Hızlı İncele</button>
-                            </div>
-                        </div>
-                    </article>
-
-                    <article class="corp-card reveal-up" data-category="kraft">
-                        <div class="card-image-wrap">
-                            <img src="/images/prods/750_kraft_main.webp" alt="750 CC Kraft Salata Kabı" class="main-img" width="400" height="300" loading="lazy">
-                            <img src="/images/prods/750_kraft_sub.webp" alt="750 CC Kraft Salata Kabı detay" class="sub-img" width="400" height="300" loading="lazy">
-                            <span class="badge-volume">750 CC</span>
-                        </div>
-                        <div class="card-body">
-                            <span class="card-category">Kraft Kase</span>
-                            <h3 class="card-title"><a href="/urunler/750cc-kraft-salata-kabi.html">750 CC Kraft Salata Kabı</a></h3>
-                            <p class="card-desc">750 cc Doğal Kraft Salata Kabı. Ekolojik duyarlılığa sahip işletmeler için özel olarak tasarlanmıştır. Şık ve sızdırmaz.</p>
-                            <div class="card-specs-mini">
-                                <span><i class="fa-solid fa-arrows-left-right"></i> 150 mm</span>
-                                <span><i class="fa-solid fa-box"></i> 300 Adet / pcs</span>
-                            </div>
-                            <div class="card-actions">
-                                <a href="/urunler/750cc-kraft-salata-kabi.html" class="btn-card-details"><i class="fa-solid fa-circle-info"></i> Detaylar</a>
-                                <button class="btn-card-quickview" data-id="prod-750-kraft"><i class="fa-solid fa-eye"></i> Hızlı İncele</button>
-                            </div>
-                        </div>
-                    </article>
-
-                    <article class="corp-card reveal-up" data-category="white">
-                        <div class="card-image-wrap">
-                            <img src="/images/prods/32oz_white_main.webp" alt="32 OZ Salata Kabı (Beyaz)" class="main-img" width="400" height="300" loading="lazy">
-                            <img src="/images/prods/32oz_white_sub.webp" alt="32 OZ Salata Kabı (Beyaz) detay" class="sub-img" width="400" height="300" loading="lazy">
-                            <span class="badge-volume">32 OZ</span>
-                        </div>
-                        <div class="card-body">
-                            <span class="card-category">Beyaz Kase</span>
-                            <h3 class="card-title"><a href="/urunler/32oz-beyaz-salata-kabi.html">32 OZ Salata Kabı (Beyaz)</a></h3>
-                            <p class="card-desc">32 OZ Salata Kabı, büyük porsiyon salatalar ve sıcak yemekler için mükemmel beyaz estetik tasarım.</p>
-                            <div class="card-specs-mini">
-                                <span><i class="fa-solid fa-arrows-left-right"></i> 185 mm</span>
-                                <span><i class="fa-solid fa-box"></i> 300 Adet / pcs</span>
-                            </div>
-                            <div class="card-actions">
-                                <a href="/urunler/32oz-beyaz-salata-kabi.html" class="btn-card-details"><i class="fa-solid fa-circle-info"></i> Detaylar</a>
-                                <button class="btn-card-quickview" data-id="prod-32oz-white"><i class="fa-solid fa-eye"></i> Hızlı İncele</button>
-                            </div>
-                        </div>
-                    </article>
-
-                    <article class="corp-card reveal-up" data-category="kraft">
-                        <div class="card-image-wrap">
-                            <img src="/images/prods/32oz_kraft_main.webp" alt="32 OZ Kraft Salata Kabı" class="main-img" width="400" height="300" loading="lazy">
-                            <img src="/images/prods/32oz_kraft_sub.webp" alt="32 OZ Kraft Salata Kabı detay" class="sub-img" width="400" height="300" loading="lazy">
-                            <span class="badge-volume">32 OZ</span>
-                        </div>
-                        <div class="card-body">
-                            <span class="card-category">Kraft Kase</span>
-                            <h3 class="card-title"><a href="/urunler/32oz-kraft-salata-kabi.html">32 OZ Kraft Salata Kabı</a></h3>
-                            <p class="card-desc">32 OZ Doğal Kraft Salata Kabı, yüksek gramajlı gıda kartonu sayesinde ekstra dayanıklılık sağlar.</p>
-                            <div class="card-specs-mini">
-                                <span><i class="fa-solid fa-arrows-left-right"></i> 185 mm</span>
-                                <span><i class="fa-solid fa-box"></i> 300 Adet / pcs</span>
-                            </div>
-                            <div class="card-actions">
-                                <a href="/urunler/32oz-kraft-salata-kabi.html" class="btn-card-details"><i class="fa-solid fa-circle-info"></i> Detaylar</a>
-                                <button class="btn-card-quickview" data-id="prod-32oz-kraft"><i class="fa-solid fa-eye"></i> Hızlı İncele</button>
-                            </div>
-                        </div>
-                    </article>
-
-                    <article class="corp-card reveal-up" data-category="white">
-                        <div class="card-image-wrap">
-                            <img src="/images/prods/38oz_white_main.webp" alt="38 OZ Salata Kabı (Beyaz)" class="main-img" width="400" height="300" loading="lazy">
-                            <img src="/images/prods/38oz_white_sub.webp" alt="38 OZ Salata Kabı (Beyaz) detay" class="sub-img" width="400" height="300" loading="lazy">
-                            <span class="badge-volume">38 OZ</span>
-                        </div>
-                        <div class="card-body">
-                            <span class="card-category">Beyaz Kase</span>
-                            <h3 class="card-title"><a href="/urunler/38oz-beyaz-salata-kabi.html">38 OZ Salata Kabı (Beyaz)</a></h3>
-                            <p class="card-desc">38 OZ en büyük hacimli beyaz kase modelimiz. Toplu yemek ve büyük porsiyon paket servisleri için sızdırmaz çözüm.</p>
-                            <div class="card-specs-mini">
-                                <span><i class="fa-solid fa-arrows-left-right"></i> 185 mm</span>
-                                <span><i class="fa-solid fa-box"></i> 300 Adet / pcs</span>
-                            </div>
-                            <div class="card-actions">
-                                <a href="/urunler/38oz-beyaz-salata-kabi.html" class="btn-card-details"><i class="fa-solid fa-circle-info"></i> Detaylar</a>
-                                <button class="btn-card-quickview" data-id="prod-38oz-white"><i class="fa-solid fa-eye"></i> Hızlı İncele</button>
-                            </div>
-                        </div>
-                    </article>
-
-                    <article class="corp-card reveal-up" data-category="kraft">
-                        <div class="card-image-wrap">
-                            <img src="/images/prods/38oz_kraft_main.webp" alt="38 OZ Kraft Salata Kabı" class="main-img" width="400" height="300" loading="lazy">
-                            <img src="/images/prods/38oz_kraft_sub.webp" alt="38 OZ Kraft Salata Kabı detay" class="sub-img" width="400" height="300" loading="lazy">
-                            <span class="badge-volume">38 OZ</span>
-                        </div>
-                        <div class="card-body">
-                            <span class="card-category">Kraft Kase</span>
-                            <h3 class="card-title"><a href="/urunler/38oz-kraft-salata-kabi.html">38 OZ Kraft Salata Kabı</a></h3>
-                            <p class="card-desc">38 OZ Kraft Salata Kabı, geniş kapasitesi ve doğal görünümüyle lüks restoranların bir numaralı tercihi.</p>
-                            <div class="card-specs-mini">
-                                <span><i class="fa-solid fa-arrows-left-right"></i> 185 mm</span>
-                                <span><i class="fa-solid fa-box"></i> 300 Adet / pcs</span>
-                            </div>
-                            <div class="card-actions">
-                                <a href="/urunler/38oz-kraft-salata-kabi.html" class="btn-card-details"><i class="fa-solid fa-circle-info"></i> Detaylar</a>
-                                <button class="btn-card-quickview" data-id="prod-38oz-kraft"><i class="fa-solid fa-eye"></i> Hızlı İncele</button>
-                            </div>
-                        </div>
-                    </article>
-                </div>
-                        <div class="card-body">
-                            <span class="card-category">Beyaz Kase</span>
-                            <h3 class="card-title"><a href="/urunler/550cc-beyaz-salata-kabi.html">550 CC Salata Kabı (Beyaz)</a></h3>
-                            <p class="card-desc">550 cc Salata Kabı, %99 geri dönüştürülebilir yapısıyla çevre dostu ve hijyenik bir ambalaj çözümü sunar.</p>
-                            <div class="card-specs-mini">
-                                <span><i class="fa-solid fa-arrows-left-right"></i> 150 mm</span>
-                                <span><i class="fa-solid fa-box"></i> 300 Adet / pcs</span>
-                            </div>
-                            <div class="card-actions">
-                                <a href="/urunler/550cc-beyaz-salata-kabi.html" class="btn-card-details"><i class="fa-solid fa-circle-info"></i> Detaylar</a>
-                                <button class="btn-card-quickview" data-id="prod-550-white"><i class="fa-solid fa-eye"></i> Hızlı İncele</button>
-                            </div>
-                        </div>
-                    </article>
-
-                    <article class="corp-card reveal-up" data-category="kraft">
-                        <div class="card-image-wrap">
-                            <img src="/images/prods/550_kraft_main.webp" alt="550 CC Kraft Salata Kabı" class="main-img" width="400" height="300" loading="lazy">
-                            <img src="/images/prods/550_kraft_sub.webp" alt="550 CC Kraft Salata Kabı detay" class="sub-img" width="400" height="300" loading="lazy">
-                            <span class="badge-volume">550 CC</span>
-                        </div>
-                        <div class="card-body">
-                            <span class="card-category">Kraft Kase</span>
-                            <h3 class="card-title"><a href="/urunler/550cc-kraft-salata-kabi.html">550 CC Kraft Salata Kabı</a></h3>
-                            <p class="card-desc">550 cc Kraft Salata Kabı, doğal kraft dokusuyla üst düzey sunum sağlayan, dayanıklı ve doğa dostu bir seçimdir.</p>
-                            <div class="card-specs-mini">
-                                <span><i class="fa-solid fa-arrows-left-right"></i> 150 mm</span>
-                                <span><i class="fa-solid fa-box"></i> 300 Adet / pcs</span>
-                            </div>
-                            <div class="card-actions">
-                                <a href="/urunler/550cc-kraft-salata-kabi.html" class="btn-card-details"><i class="fa-solid fa-circle-info"></i> Detaylar</a>
-                                <button class="btn-card-quickview" data-id="prod-550-kraft"><i class="fa-solid fa-eye"></i> Hızlı İncele</button>
-                            </div>
-                        </div>
-                    </article>
-
-                    <article class="corp-card reveal-up" data-category="white">
-                        <div class="card-image-wrap">
-                            <img src="/images/prods/750_white_main.webp" alt="750 CC Salata Kabı (Beyaz)" class="main-img" width="400" height="300" loading="lazy">
-                            <img src="/images/prods/750_white_sub.webp" alt="750 CC Salata Kabı (Beyaz) detay" class="sub-img" width="400" height="300" loading="lazy">
-                            <span class="badge-volume">750 CC</span>
-                        </div>
-                        <div class="card-body">
-                            <span class="card-category">Beyaz Kase</span>
-                            <h3 class="card-title"><a href="/urunler/750cc-beyaz-salata-kabi.html">750 CC Salata Kabı (Beyaz)</a></h3>
-                            <p class="card-desc">750 cc Salata Kabı, orta boy porsiyonlar için idealdir. Gıda sertifikalı kartondan üretilmiş olup sıvıya dayanıklıdır.</p>
-                            <div class="card-specs-mini">
-                                <span><i class="fa-solid fa-arrows-left-right"></i> 150 mm</span>
-                                <span><i class="fa-solid fa-box"></i> 300 Adet / pcs</span>
-                            </div>
-                            <div class="card-actions">
-                                <a href="/urunler/750cc-beyaz-salata-kabi.html" class="btn-card-details"><i class="fa-solid fa-circle-info"></i> Detaylar</a>
-                                <button class="btn-card-quickview" data-id="prod-750-white"><i class="fa-solid fa-eye"></i> Hızlı İncele</button>
-                            </div>
-                        </div>
-                    </article>
-
-                    <article class="corp-card reveal-up" data-category="kraft">
-                        <div class="card-image-wrap">
-                            <img src="/images/prods/750_kraft_main.webp" alt="750 CC Kraft Salata Kabı" class="main-img" width="400" height="300" loading="lazy">
-                            <img src="/images/prods/750_kraft_sub.webp" alt="750 CC Kraft Salata Kabı detay" class="sub-img" width="400" height="300" loading="lazy">
-                            <span class="badge-volume">750 CC</span>
-                        </div>
-                        <div class="card-body">
-                            <span class="card-category">Kraft Kase</span>
-                            <h3 class="card-title"><a href="/urunler/750cc-kraft-salata-kabi.html">750 CC Kraft Salata Kabı</a></h3>
-                            <p class="card-desc">750 cc Doğal Kraft Salata Kabı. Ekolojik duyarlılığa sahip işletmeler için özel olarak tasarlanmıştır. Şık ve sızdırmaz.</p>
-                            <div class="card-specs-mini">
-                                <span><i class="fa-solid fa-arrows-left-right"></i> 150 mm</span>
-                                <span><i class="fa-solid fa-box"></i> 300 Adet / pcs</span>
-                            </div>
-                            <div class="card-actions">
-                                <a href="/urunler/750cc-kraft-salata-kabi.html" class="btn-card-details"><i class="fa-solid fa-circle-info"></i> Detaylar</a>
-                                <button class="btn-card-quickview" data-id="prod-750-kraft"><i class="fa-solid fa-eye"></i> Hızlı İncele</button>
-                            </div>
-                        </div>
-                    </article>
-
-                    <article class="corp-card reveal-up" data-category="white">
-                        <div class="card-image-wrap">
-                            <img src="/images/prods/32oz_white_main.webp" alt="32 OZ Salata Kabı (Beyaz)" class="main-img" width="400" height="300" loading="lazy">
-                            <img src="/images/prods/32oz_white_sub.webp" alt="32 OZ Salata Kabı (Beyaz) detay" class="sub-img" width="400" height="300" loading="lazy">
-                            <span class="badge-volume">32 OZ</span>
-                        </div>
-                        <div class="card-body">
-                            <span class="card-category">Beyaz Kase</span>
-                            <h3 class="card-title"><a href="/urunler/32oz-beyaz-salata-kabi.html">32 OZ Salata Kabı (Beyaz)</a></h3>
-                            <p class="card-desc">32 OZ Salata Kabı, büyük porsiyon salatalar ve sıcak yemekler için mükemmel beyaz estetik tasarım.</p>
-                            <div class="card-specs-mini">
-                                <span><i class="fa-solid fa-arrows-left-right"></i> 185 mm</span>
-                                <span><i class="fa-solid fa-box"></i> 300 Adet / pcs</span>
-                            </div>
-                            <div class="card-actions">
-                                <a href="/urunler/32oz-beyaz-salata-kabi.html" class="btn-card-details"><i class="fa-solid fa-circle-info"></i> Detaylar</a>
-                                <button class="btn-card-quickview" data-id="prod-32oz-white"><i class="fa-solid fa-eye"></i> Hızlı İncele</button>
-                            </div>
-                        </div>
-                    </article>
-
-                    <article class="corp-card reveal-up" data-category="kraft">
-                        <div class="card-image-wrap">
-                            <img src="/images/prods/32oz_kraft_main.webp" alt="32 OZ Kraft Salata Kabı" class="main-img" width="400" height="300" loading="lazy">
-                            <img src="/images/prods/32oz_kraft_sub.webp" alt="32 OZ Kraft Salata Kabı detay" class="sub-img" width="400" height="300" loading="lazy">
-                            <span class="badge-volume">32 OZ</span>
-                        </div>
-                        <div class="card-body">
-                            <span class="card-category">Kraft Kase</span>
-                            <h3 class="card-title"><a href="/urunler/32oz-kraft-salata-kabi.html">32 OZ Kraft Salata Kabı</a></h3>
-                            <p class="card-desc">32 OZ Doğal Kraft Salata Kabı, yüksek gramajlı gıda kartonu sayesinde ekstra dayanıklılık sağlar.</p>
-                            <div class="card-specs-mini">
-                                <span><i class="fa-solid fa-arrows-left-right"></i> 185 mm</span>
-                                <span><i class="fa-solid fa-box"></i> 300 Adet / pcs</span>
-                            </div>
-                            <div class="card-actions">
-                                <a href="/urunler/32oz-kraft-salata-kabi.html" class="btn-card-details"><i class="fa-solid fa-circle-info"></i> Detaylar</a>
-                                <button class="btn-card-quickview" data-id="prod-32oz-kraft"><i class="fa-solid fa-eye"></i> Hızlı İncele</button>
-                            </div>
-                        </div>
-                    </article>
-
-                    <article class="corp-card reveal-up" data-category="white">
-                        <div class="card-image-wrap">
-                            <img src="/images/prods/38oz_white_main.webp" alt="38 OZ Salata Kabı (Beyaz)" class="main-img" width="400" height="300" loading="lazy">
-                            <img src="/images/prods/38oz_white_sub.webp" alt="38 OZ Salata Kabı (Beyaz) detay" class="sub-img" width="400" height="300" loading="lazy">
-                            <span class="badge-volume">38 OZ</span>
-                        </div>
-                        <div class="card-body">
-                            <span class="card-category">Beyaz Kase</span>
-                            <h3 class="card-title"><a href="/urunler/38oz-beyaz-salata-kabi.html">38 OZ Salata Kabı (Beyaz)</a></h3>
-                            <p class="card-desc">38 OZ en büyük hacimli beyaz kase modelimiz. Toplu yemek ve büyük porsiyon paket servisleri için sızdırmaz çözüm.</p>
-                            <div class="card-specs-mini">
-                                <span><i class="fa-solid fa-arrows-left-right"></i> 185 mm</span>
-                                <span><i class="fa-solid fa-box"></i> 300 Adet / pcs</span>
-                            </div>
-                            <div class="card-actions">
-                                <a href="/urunler/38oz-beyaz-salata-kabi.html" class="btn-card-details"><i class="fa-solid fa-circle-info"></i> Detaylar</a>
-                                <button class="btn-card-quickview" data-id="prod-38oz-white"><i class="fa-solid fa-eye"></i> Hızlı İncele</button>
-                            </div>
-                        </div>
-                    </article>
-
-                    <article class="corp-card reveal-up" data-category="kraft">
-                        <div class="card-image-wrap">
-                            <img src="/images/prods/38oz_kraft_main.webp" alt="38 OZ Kraft Salata Kabı" class="main-img" width="400" height="300" loading="lazy">
-                            <img src="/images/prods/38oz_kraft_sub.webp" alt="38 OZ Kraft Salata Kabı detay" class="sub-img" width="400" height="300" loading="lazy">
-                            <span class="badge-volume">38 OZ</span>
-                        </div>
-                        <div class="card-body">
-                            <span class="card-category">Kraft Kase</span>
-                            <h3 class="card-title"><a href="/urunler/38oz-kraft-salata-kabi.html">38 OZ Kraft Salata Kabı</a></h3>
-                            <p class="card-desc">38 OZ Kraft Salata Kabı, geniş kapasitesi ve doğal görünümüyle lüks restoranların bir numaralı tercihi.</p>
-                            <div class="card-specs-mini">
-                                <span><i class="fa-solid fa-arrows-left-right"></i> 185 mm</span>
-                                <span><i class="fa-solid fa-box"></i> 300 Adet / pcs</span>
-                            </div>
-                            <div class="card-actions">
-                                <a href="/urunler/38oz-kraft-salata-kabi.html" class="btn-card-details"><i class="fa-solid fa-circle-info"></i> Detaylar</a>
-                                <button class="btn-card-quickview" data-id="prod-38oz-kraft"><i class="fa-solid fa-eye"></i> Hızlı İncele</button>
-                            </div>
-                        </div>
-                    </article>
-                </div>
-            </div>
-        </section>
-
-        <!-- Certificates Section -->
-        <section id="certificates" class="certificates-section section-padding">
-            <div class="container">
-                <div class="section-header text-center reveal-up">
-                    <h2 class="section-heading" data-i18n="certTitle">Uluslararası Akreditasyon ve Gıda Uyum Sertifikaları</h2>
-                    <p class="section-body" data-i18n="certSub">Kraften Ambalaj bünyesinde üretilen tüm kraft gıda kapları FSC orman yönetim sertifikalı ve ISO 22000 gıda güvenliği yönetim sistemine uygundur.</p>
-                </div>
-                <div id="certificates-grid" class="certificates-grid">
-                    <!-- Certs injected via JS -->
-                </div>
-            </div>
-        </section>
-
-        <!-- Blog Section -->
-        <section id="blog" class="blog-section section-padding">
-            <div class="container">
-                <div class="section-header reveal-up" style="display: flex; justify-content: space-between; align-items: flex-end; flex-wrap: wrap; gap: 20px; margin-bottom: 20px;">
-                    <h2 class="section-heading" data-i18n="blogTitle" style="margin-bottom: 0;">Sektörel Haberler & Makaleler</h2>
-                    <a href="./blog.html" class="btn-outline-dark" data-i18n="blogViewAll">Tüm Haberleri İncele →</a>
-                </div>
-                <div id="blog-grid" class="blog-grid">
-                    <!-- Blogs injected via JS -->
-                </div>
-            </div>
-        </section>
-
-        <!-- Sustainability Dark Section -->
-        <section id="sustainability" class="sustainability-section">
-            <div class="sustain-content reveal-up">
-                <h2 class="serif-title" data-i18n="susTitle">Sıfır Karbon İzi ve Sürdürülebilirlik</h2>
-                <p data-i18n="susDesc">Üretim hatlarımızdan son tüketiciye kadar her adımda doğayı korumaya yeminliyiz. Plastik tüketimini azaltan yenilikçi Ar-Ge yatırımlarımızla karton ambalaj sektöründe lideriz.</p>
-                <a href="javascript:void(0)" onclick="document.getElementById('btn-hero-sample').click()" class="btn-outline-light mt-4" data-i18n="susBtn">Sürdürülebilirlik & Numune İsteyin</a>
-            </div>
-        </section>
-    </main>
-
-    <!-- Corporate Footer -->
-    <footer class="corporate-footer">
-        <div class="footer-container">
-            <div class="footer-brand">
-                <img src="./logo.png" alt="Kraften Ambalaj Logo" class="footer-logo" width="160" height="40">
-                <div class="footer-desc" data-i18n="footerDesc">
-                    Kraften Ambalaj: Toptan kraft salata kasesi, sızdırmaz gıda kapları ve karton bowl üreticisi.
-                </div>
-            </div>
-
-            <div class="footer-links" id="contact">
-                <h3 data-i18n="contactTitle">İletişim</h3>
-                <p style="margin-bottom: 8px;"><i class="fas fa-user-tie" style="color: var(--color-accent); margin-right: 8px;"></i> <strong>Emirhan KÖSE:</strong> <a href="tel:+905415019478" style="color: inherit; text-decoration: none;" title="Emirhan Köse Telefon">0541 501 94 78</a></p>
-                <p style="margin-bottom: 8px;"><i class="fas fa-user-tie" style="color: var(--color-accent); margin-right: 8px;"></i> <strong>Nuri KÖSE:</strong> <a href="tel:+905322744960" style="color: inherit; text-decoration: none;" title="Nuri Köse Telefon">0532 274 49 60</a></p>
-                <p style="margin-bottom: 12px;"><i class="fas fa-envelope" style="color: var(--color-accent); margin-right: 8px;"></i> <a href="mailto:info@kraftenambalaj.com" style="color: inherit; text-decoration: none;" title="Kraften Ambalaj E-Posta">info@kraftenambalaj.com</a></p>
-                
-                <div style="margin-top: 10px;">
-                    <a class="ksr-dugme" href="https://www.google.com/preferences/source?q=kraftenambalaj.com" target="_blank" rel="noopener nofollow" title="Google Tercih Edilen Kaynak Ekle"><span class="ksr-yildiz"></span><span class="ksr-degis"><span class="ksr-durgun">Google'da Tercih Edilen Kaynak ekle</span><span class="ksr-ustte">Daha fazlası için kraftenambalaj.com</span></span><span class="ksr-guven"><span class="ksr-g"></span></span></a>
-                </div>
-            </div>
-        </div>
-        <div class="footer-bottom" data-i18n="footerCopy">
-            &copy; 2026 Kraften Ambalaj. Tüm hakları saklıdır.
-        </div>
-    </footer>
-
-    <!-- PRODUCT DETAILS MODAL -->
-    <div id="product-modal" class="modal-overlay hidden">
-        <div class="modal-content corporate-modal">
-            <button id="close-modal" class="btn-close" title="Pencereyi Kapat"><i class="fas fa-times"></i></button>
-            <div class="modal-grid">
-                <div class="modal-gallery">
-                    <img id="modal-img-main" src="" alt="Kraften Ürün Detayı" class="modal-main-img" loading="lazy" width="400" height="400">
-                    <div id="modal-thumbnails" class="modal-thumbnails"></div>
-                </div>
-                <div class="modal-info">
-                    <div id="modal-title" class="modal-title" style="font-family: var(--font-serif); font-size: 1.8rem; font-weight: 700; color: var(--color-primary); margin-bottom: 15px;"></div>
-                    <p id="modal-desc" class="modal-desc"></p>
-                    
-                    <h3 class="spec-title" data-i18n="specTitle">Teknik Özellikler</h3>
-                    <ul class="spec-list">
-                        <li><span data-i18n="volume">Hacim</span> <span id="modal-volume" class="spec-val"></span></li>
-                        <li><span data-i18n="topDiameter">Ağız Çapı</span> <span id="modal-top-diameter" class="spec-val"></span></li>
-                        <li><span data-i18n="bottomDiameter">Taban Çapı</span> <span id="modal-bottom-diameter" class="spec-val"></span></li>
-                        <li><span data-i18n="height">Yükseklik</span> <span id="modal-height" class="spec-val"></span></li>
-                        <li><span data-i18n="boxQty">Koli İçi Adet</span> <span id="modal-box-qty" class="spec-val"></span></li>
-                        <li><span data-i18n="boxDimensions">Koli Ölçüsü</span> <span id="modal-box-dimensions" class="spec-val"></span></li>
-                    </ul>
-                    
-                    <a id="modal-whatsapp-btn" href="#" target="_blank" rel="noopener nofollow" class="btn-whatsapp" title="WhatsApp Fiyat Teklifi Al">
-                        <i class="fab fa-whatsapp"></i> <span data-i18n="btnWhatsappQuote">WhatsApp ile Sipariş & Teklif Al</span>
+                <div class="spread-action-row">
+                    <a href="#sales-wholesale" class="btn-spread-wholesale">
+                        <i class="fas fa-boxes"></i> Toptan Koli Teklifi Al
+                    </a>
+                    <a href="#sales-retail" class="btn-spread-retail">
+                        <i class="fas fa-shopping-cart"></i> Perakende Paket Satın Al
                     </a>
                 </div>
             </div>
         </div>
-    </div>
 
-    <!-- BLOG ARTICLE READER MODAL -->
-    <div id="blog-modal" class="modal-overlay hidden">
-        <div class="modal-content corporate-modal" style="max-width: 800px;">
-            <button id="close-blog-modal" class="btn-close" title="Makaleyi Kapat"><i class="fas fa-times"></i></button>
-            <div class="blog-modal-body">
-                <img id="blog-modal-img" src="" alt="Blog Makalesi Görseli" style="width: 100%; aspect-ratio: 16/9; object-fit: cover; border-radius: 8px; margin-bottom: 20px;" loading="lazy" width="800" height="450">
-                <div id="blog-modal-meta" style="font-size: 0.85rem; color: var(--color-accent); font-weight: 600; margin-bottom: 12px; text-transform: uppercase;"></div>
-                <div id="blog-modal-title" style="font-family: var(--font-serif); font-size: 2rem; color: var(--color-primary); margin-bottom: 20px; line-height: 1.2; font-weight: 700;"></div>
-                <div id="blog-modal-content" style="color: var(--color-text); font-size: 1.05rem; line-height: 1.8; white-space: pre-line;"></div>
+        <!-- SPREAD 2: ÖZEL LOGO BASKILI & BEYAZ LÜKS SALATA KASELERİ (REVERSE LAYOUT) -->
+        <div id="white-series" class="catalog-spread reverse">
+            <div class="spread-img-box">
+                <img src="./images/catalog/white_bowls_catalog.jpg" alt="Kraften Özel Logo Baskılı Beyaz Salata Kaseleri Koleksiyonu">
+                <span class="spread-tag-badge">Özel Logo Baskı · Lüks Seri</span>
             </div>
-        </div>
-    </div>
-    <div id="admin-modal" class="modal-overlay hidden">
-        <div class="modal-content corporate-modal admin-modal-content">
-            <button id="close-admin" class="btn-close"><i class="fas fa-times"></i></button>
-            <h2 class="serif-title" style="color: var(--color-primary);" data-i18n="adminTitle">Kraften - Üst Düzey Yönetim Paneli</h2>
             
-            <div class="admin-grid">
-                <!-- Add Category -->
-                <div class="admin-panel-section">
-                    <h3 data-i18n="adminAddCategory">Yeni Kategori Ekle</h3>
-                    <input type="text" id="cat-id" placeholder="ID (örn: salata)" class="admin-input">
-                    <input type="text" id="cat-tr" placeholder="Kategori Adı (TR)" class="admin-input" data-i18n="adminCategoryNameTr">
-                    <input type="text" id="cat-en" placeholder="Kategori Adı (EN)" class="admin-input" data-i18n="adminCategoryNameEn">
-                    <button id="btn-save-cat" class="btn-solid" data-i18n="adminSave">Kaydet</button>
+            <div class="spread-info-box">
+                <span class="spread-col-num">KOLEKSİYON 02</span>
+                <h3 class="spread-col-title">Özel Logo Baskılı &amp; Beyaz Lüks Kase Serisi</h3>
+                <p class="spread-col-desc">
+                    Markanızın prestijini zirveye taşıyan yüksek çözünürlüklü afilli logo baskıları veya pürüzsüz saf beyaz formuyla fine-dining standartlarında 550cc ve 750cc yuvarlak salata kaseleri. Çift taraflı gıda bariyeri ve kristal şeffaf bombeli PET kapak ile sıfır sızdırma.
+                </p>
+
+                <table class="spread-specs-table">
+                    <thead>
+                        <tr>
+                            <th>Model</th>
+                            <th>Hacim</th>
+                            <th>Ağız Çapı</th>
+                            <th>Koli İçi</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>550 CC Beyaz Yuvarlak Kase</strong></td>
+                            <td>550 ml</td>
+                            <td>150 mm</td>
+                            <td>300 Adet</td>
+                        </tr>
+                        <tr>
+                            <td><strong>750 CC Beyaz Yuvarlak Kase</strong></td>
+                            <td>750 ml</td>
+                            <td>150 mm</td>
+                            <td>300 Adet</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="spread-features-chips">
+                    <span class="chip-tag">✔ Yüksek Çözünürlüklü Logo Baskı</span>
+                    <span class="chip-tag">✔ Sadece Yuvarlak Ergonomik Form</span>
+                    <span class="chip-tag">✔ Kristal Bombeli PET Kapak</span>
                 </div>
 
-                <!-- Add Product -->
-                <div class="admin-panel-section">
-                    <h3 data-i18n="adminAddProduct">Yeni Ürün Ekle</h3>
-                    <input type="text" id="prod-id" placeholder="ID (örn: prod-1)" class="admin-input">
-                    <input type="text" id="prod-title-tr" placeholder="Ürün Başlığı (TR)" class="admin-input" data-i18n="adminProductTitleTr">
-                    <input type="text" id="prod-title-en" placeholder="Ürün Başlığı (EN)" class="admin-input" data-i18n="adminProductTitleEn">
-                    <select id="prod-category" class="admin-input"></select>
-                    <input type="text" id="prod-volume" placeholder="Hacim" class="admin-input" data-i18n="adminVolume">
-                    <input type="text" id="prod-img" placeholder="Görsel URL" class="admin-input" data-i18n="adminImage">
-                    <button id="btn-save-prod" class="btn-solid" data-i18n="adminSave">Kaydet & Yayınla</button>
+                <div class="spread-action-row">
+                    <a href="#sales-wholesale" class="btn-spread-wholesale">
+                        <i class="fas fa-boxes"></i> Toptan Koli Teklifi Al
+                    </a>
+                    <a href="#sales-retail" class="btn-spread-retail">
+                        <i class="fas fa-shopping-cart"></i> Perakende Paket Satın Al
+                    </a>
                 </div>
             </div>
-            <button id="btn-reset-data" class="btn-outline-dark mt-4" data-i18n="adminResetData">Varsayılana Sıfırla</button>
         </div>
-    </div>
 
-    <!-- Use module to load data and core logic -->
-    <script type="module" src="./js/core.js?v=20260909"></script>
-    <!-- FREE SAMPLE REQUEST MODAL -->
-    <div id="sample-modal" class="modal-overlay hidden">
-        <div class="modal-content corporate-modal" style="max-width: 600px;">
-            <button id="close-sample-modal" class="btn-close"><i class="fas fa-times"></i></button>
-            <div class="modal-header">
-                <h2 class="modal-title" data-i18n="sampleModalTitle">Kurumsal Ücretsiz Numune Talebi</h2>
-                <p style="color: var(--color-text-light); font-size: 0.9rem; margin-top: 5px;" data-i18n="sampleModalDesc">İşletmeniz için kağıt gramajı ve gıda temasına uygun ürün numunelerimizi adresinize gönderelim.</p>
+        <!-- SPREAD 3: YENİ GURME KASELER & SETLER (12, 14, 16 OZ) -->
+        <div id="cold-series" class="catalog-spread">
+            <div class="spread-img-box">
+                <img src="./images/prods/bowls_12_14_16.jpg" alt="12, 14 ve 16 OZ Gurme Kase ve Çorba Kapları">
+                <span class="spread-tag-badge">Gurme &amp; Set · Bombeli Kapak</span>
             </div>
-            <form id="sample-form" style="margin-top: 20px;">
-                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px;">
-                    <div>
-                        <label style="font-size: 0.85rem; font-weight: 600;" data-i18n="sampleCompany">Firma / İşletme Adı *</label>
-                        <input type="text" id="sample-company" required class="admin-input" placeholder="Örn: ABC Restoran A.Ş.">
+            
+            <div class="spread-info-box">
+                <span class="spread-col-num">KOLEKSİYON 03</span>
+                <h3 class="spread-col-title">Soğuk Gıda, Çorba &amp; Kapaklı Kase Setleri</h3>
+                <p class="spread-col-desc">
+                    12oz soğuk tatlı ve dondurma kasesinden; 14oz ve 16oz buhar delikli bombeli PET kapak dahil çorba ve sıcak sulu yemek setlerine kadar mutfağınızın her ihtiyacı tek seride.
+                </p>
+
+                <table class="spread-specs-table">
+                    <thead>
+                        <tr>
+                            <th>Model</th>
+                            <th>Kullanım</th>
+                            <th>Kapak Durumu</th>
+                            <th>Koli İçi</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>12 OZ Kase</strong></td>
+                            <td>Soğuk Ürünler / Dondurma</td>
+                            <td>Kapak Opsiyonlu</td>
+                            <td>500 Adet</td>
+                        </tr>
+                        <tr>
+                            <td><strong>14 OZ Kase Set</strong></td>
+                            <td>Çorba &amp; Sıcak Yemek</td>
+                            <td>Bombeli Kapak Dahil</td>
+                            <td>300 Set</td>
+                        </tr>
+                        <tr>
+                            <td><strong>16 OZ Kase Set</strong></td>
+                            <td>Mega Menü &amp; Çorba</td>
+                            <td>Bombeli Kapak Dahil</td>
+                            <td>300 Set</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="spread-features-chips">
+                    <span class="chip-tag">✔ Tam Set Kolilenmiş</span>
+                    <span class="chip-tag">✔ Buhar Tahliyeli Kapak</span>
+                    <span class="chip-tag">✔ Çift Katman Bariyer</span>
+                </div>
+
+                <div class="spread-action-row">
+                    <a href="#sales-wholesale" class="btn-spread-wholesale">
+                        <i class="fas fa-boxes"></i> Toptan Koli Teklifi Al
+                    </a>
+                    <a href="#sales-retail" class="btn-spread-retail">
+                        <i class="fas fa-shopping-cart"></i> Perakende Paket Satın Al
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- SPREAD 4: KARTON BARDAKLAR (4, 6, 7, 8 OZ) (REVERSE LAYOUT) -->
+        <div id="cups-series" class="catalog-spread reverse">
+            <div class="spread-img-box">
+                <img src="./images/prods/cups_series.jpg" alt="Kraften Sıcak İçecek Karton Bardak Serisi">
+                <span class="spread-tag-badge">İçecek Grubu · Kapaksız Seri</span>
+            </div>
+            
+            <div class="spread-info-box">
+                <span class="spread-col-num">KOLEKSİYON 04</span>
+                <h3 class="spread-col-title">Sıcak İçecek Karton Bardak Serisi</h3>
+                <p class="spread-col-desc">
+                    Kafe, restoran, otomat ve kurumsal ofisler için yüksek gramajlı saf selüloz kartondan üretilmiş ergonomik sıcak içecek bardakları. El yakmaz, koku yapmaz, sızdırmaz taban kıvrımı.
+                </p>
+
+                <table class="spread-specs-table">
+                    <thead>
+                        <tr>
+                            <th>Model</th>
+                            <th>Kullanım Alanı</th>
+                            <th>Ağız Çapı</th>
+                            <th>Koli İçi</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>4 OZ Bardak</strong></td>
+                            <td>Espresso / Tadım</td>
+                            <td>62 mm</td>
+                            <td>1000 Adet</td>
+                        </tr>
+                        <tr>
+                            <td><strong>6 OZ Bardak</strong></td>
+                            <td>Türk Çayı / Flat White</td>
+                            <td>70 mm</td>
+                            <td>1000 Adet</td>
+                        </tr>
+                        <tr>
+                            <td><strong>7 OZ Bardak</strong></td>
+                            <td>Otomat &amp; Ofis Çayı</td>
+                            <td>73 mm</td>
+                            <td>1000 Adet</td>
+                        </tr>
+                        <tr>
+                            <td><strong>8 OZ Bardak</strong></td>
+                            <td>Standart Filtre Kahve / Latte</td>
+                            <td>80 mm</td>
+                            <td>1000 Adet</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="spread-features-chips">
+                    <span class="chip-tag">✔ 1000'li Hijyenik Koli</span>
+                    <span class="chip-tag">✔ Otomat Makinelerine Uyumlu</span>
+                    <span class="chip-tag">✔ El Yakmayan Gövde</span>
+                </div>
+
+                <div class="spread-action-row">
+                    <a href="#sales-wholesale" class="btn-spread-wholesale">
+                        <i class="fas fa-boxes"></i> Toptan Koli Teklifi Al
+                    </a>
+                    <a href="#sales-retail" class="btn-spread-retail">
+                        <i class="fas fa-shopping-cart"></i> Perakende Paket Satın Al
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ======================================================= -->
+    <!-- COMPACT PRODUCTION FACILITY STRIP                       -->
+    <!-- ======================================================= -->
+    <section id="facility" style="position: relative; z-index: 1; padding: 60px 36px; background: rgba(8, 16, 12, 0.95); border-top: 1px solid var(--border-glass); border-bottom: 1px solid var(--border-glass);">
+        <div style="max-width: 1400px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center;">
+            <div>
+                <span class="catalog-eyebrow">✦ YÜKSEK HIZLI ÜRETİM PARKURU</span>
+                <h2 style="font-family: var(--ff-serif); font-size: 2.2rem; color: #FFF; margin-bottom: 16px;">
+                    Endüstriyel Kapasite, Hijyenik Cleanroom
+                </h2>
+                <p style="color: var(--text-light); line-height: 1.7; margin-bottom: 24px; font-size: 0.98rem;">
+                    Kraften Ambalaj üretim tesisimizde, tam otomatik servo motorlu şekillendirme ve ultrasonik yapıştırma teknolojisiyle el değmeden imalat yapılmaktadır. Aylık 10+ milyon kase üretim kapasitesiyle Türkiye'nin en büyük gıda zincirlerine ve ihracat pazarlarına kesintisiz tedarik sağlıyoruz.
+                </p>
+                <div style="display: flex; gap: 20px; flex-wrap: wrap;">
+                    <div style="background: rgba(200, 169, 110, 0.1); border: 1px solid var(--border-glass); padding: 12px 20px; border-radius: 8px;">
+                        <strong style="color: var(--gold-bright); font-size: 1.4rem; display: block;">10M+</strong>
+                        <span style="font-size: 0.75rem; color: var(--text-muted);">Aylık Kase Üretimi</span>
                     </div>
-                    <div>
-                        <label style="font-size: 0.85rem; font-weight: 600;" data-i18n="sampleName">Yetkili Adı Soyadı *</label>
-                        <input type="text" id="sample-name" required class="admin-input" placeholder="Örn: Ahmet Yılmaz">
+                    <div style="background: rgba(200, 169, 110, 0.1); border: 1px solid var(--border-glass); padding: 12px 20px; border-radius: 8px;">
+                        <strong style="color: var(--gold-bright); font-size: 1.4rem; display: block;">%100</strong>
+                        <span style="font-size: 0.75rem; color: var(--text-muted);">Gıda Temas Güvenliği</span>
+                    </div>
+                    <div style="background: rgba(200, 169, 110, 0.1); border: 1px solid var(--border-glass); padding: 12px 20px; border-radius: 8px;">
+                        <strong style="color: var(--gold-bright); font-size: 1.4rem; display: block;">Aynı Gün</strong>
+                        <span style="font-size: 0.75rem; color: var(--text-muted);">Stoktan Fabrika Çıkışı</span>
                     </div>
                 </div>
-                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin-top: 10px;">
-                    <div>
-                        <label style="font-size: 0.85rem; font-weight: 600;" data-i18n="samplePhone">Telefon / WhatsApp *</label>
-                        <input type="tel" id="sample-phone" required class="admin-input" placeholder="05XX XXX XX XX">
-                    </div>
-                    <div>
-                        <label style="font-size: 0.85rem; font-weight: 600;" data-i18n="sampleProduct">İlgilendiğiniz Ürün Grubu</label>
-                        <select id="sample-product" class="admin-input">
-                            <option value="550 CC - 750 CC Karton Kaseler">550 CC & 750 CC Salata/Çorba Kaseleri</option>
-                            <option value="32 OZ - 38 OZ Büyük Boy Kaseler">32 OZ & 38 OZ Sıcak Yemek Kaseleri</option>
-                            <option value="Özel Logolu Baskılı Kaseler">Özel Logolu Baskılı Kaplar</option>
-                            <option value="Tüm Ürün Serisi">Tüm Ürün Serisi Numune Kiti</option>
-                        </select>
-                    </div>
+            </div>
+            <div style="border-radius: 16px; overflow: hidden; border: 1px solid var(--border-glass-bright); box-shadow: 0 10px 40px rgba(0,0,0,0.6);">
+                <img src="./images/catalog/factory_hero.jpg" alt="Kraften Ambalaj Fabrika Üretim Hattı" style="width: 100%; height: 360px; object-fit: cover; display: block;">
+            </div>
+        </div>
+    </section>
+
+    <!-- ======================================================= -->
+    <!-- 3. GRAND FINALE: TWO SALES CHANNELS (WHOLESALE & RETAIL) -->
+    <!-- ======================================================= -->
+    <section class="sales-grand-section">
+        <div style="text-align: center; max-width: 800px; margin: 0 auto 50px;">
+            <span class="catalog-eyebrow">✦ SİPARİŞ &amp; SATIŞ KANALLARI</span>
+            <h2 style="font-family: var(--ff-serif); font-size: 2.8rem; color: #FFF; margin-bottom: 15px;">
+                İhtiyacınıza Uygun Satın Alma Modeli
+            </h2>
+            <p style="color: var(--text-muted); font-size: 1.05rem;">
+                İster restoran ve catering zinciriniz için konteyner / palet bazlı toptan alım yapın, ister kafeniz ve eviniz için küçük paketlerde perakende sipariş verin.
+            </p>
+        </div>
+
+        <div class="dual-sales-grid">
+            <!-- MODULE 1: B2B TOPTAN FABRİKA SATIŞI -->
+            <div id="sales-wholesale" class="sales-module-card wholesale">
+                <div class="sales-badge-pill wholesale">
+                    <i class="fas fa-industry"></i> Kurumsal Satış
                 </div>
-                <div style="margin-top: 10px;">
-                    <label style="font-size: 0.85rem; font-weight: 600;" data-i18n="sampleAddress">Teslimat Adresi *</label>
-                    <textarea id="sample-address" required class="admin-input" rows="3" placeholder="Numunelerin kargolanacağı tam adres..."></textarea>
+                
+                <h3 class="sales-card-title">Toptan Fabrika Satışı (B2B)</h3>
+                <p class="sales-card-desc">
+                    Zincir restoranlar, toptancılar, oteller ve catering şirketleri için fabrikadan doğrudan koli ve palet bazlı en rekabetçi toptan fiyatlandırma.
+                </p>
+
+                <ul class="sales-perks-list">
+                    <li><i class="fas fa-check-circle"></i> <strong>Koli / Palet Bazlı Sevk:</strong> Standart 300'lü ve 1000'li ihracat kolileri.</li>
+                    <li><i class="fas fa-check-circle"></i> <strong>Özel Logo Baskı İmkanı:</strong> 25.000 adet üzeri siparişlerde kurumsal flekso baskı.</li>
+                    <li><i class="fas fa-check-circle"></i> <strong>Kurumsal e-Fatura:</strong> Şirket vergi kimliğinize anında kesilen tevkifatlı fatura.</li>
+                    <li><i class="fas fa-check-circle"></i> <strong>Fabrikadan Aynı Gün Yükleme:</strong> İstanbul içi ambar ve Türkiye geneli palet sevk.</li>
+                </ul>
+
+                <a href="https://wa.me/905415019478?text=Merhaba%20Kraften%20Ambalaj,%20toptan%20koli%20fiyat%20listenizi%20ve%20teklifinizi%20almak%20istiyorum." target="_blank" class="btn-sales-primary wholesale">
+                    <i class="fab fa-whatsapp"></i> Toptan Fiyat Teklifi Al
+                </a>
+                <div style="text-align: center; margin-top: 14px; font-size: 0.82rem; color: var(--text-muted);">
+                    Doğrudan Fabrika Satış Hattı: <strong>0541 501 94 78</strong>
                 </div>
-                <button type="submit" class="btn-solid" style="width: 100%; margin-top: 15px; background: var(--color-primary); color: #fff;" data-i18n="btnSubmitSample">Numune Talebini Gönder</button>
+            </div>
+
+            <!-- MODULE 2: B2C PERAKENDE E-TİCARET PLATFORMU -->
+            <div id="sales-retail" class="sales-module-card retail">
+                <div class="sales-badge-pill retail">
+                    <i class="fas fa-shopping-bag"></i> Perakende Sipariş
+                </div>
+                
+                <h3 class="sales-card-title">Perakende Online Satış (B2C)</h3>
+                <p class="sales-card-desc">
+                    Butik kafeler, etkinlikler ve küçük işletmeler için koli açma derdi olmadan 25'li, 50'li ve 100'lü paketlerde kapınıza kadar teslimat.
+                </p>
+
+                <ul class="sales-perks-list">
+                    <li><i class="fas fa-check-circle"></i> <strong>25'li, 50'li, 100'lü Paketler:</strong> İhtiyacınız kadar esnek adet seçimi.</li>
+                    <li><i class="fas fa-check-circle"></i> <strong>Dinamik Kapak Seçeneği:</strong> Kapaklı veya kapaksız sipariş özgürlüğü.</li>
+                    <li><i class="fas fa-check-circle"></i> <strong>Hızlı Havale &amp; WhatsApp:</strong> Tek tıkla kolay sipariş onayı ve aynı gün kargo.</li>
+                    <li><i class="fas fa-check-circle"></i> <strong>1000 TL Üzeri Ücretsiz Kargo:</strong> Kapınıza kadar sigortalı gönderim.</li>
+                </ul>
+
+                <a href="#retail-catalog-shelf" class="btn-sales-primary retail">
+                    <i class="fas fa-cart-plus"></i> Ürünleri İncele &amp; Sepete Ekle
+                </a>
+                <div style="text-align: center; margin-top: 14px; font-size: 0.82rem; color: var(--text-muted);">
+                    Minimum sipariş tutarı yok · Anında hızlı sevk
+                </div>
+            </div>
+        </div>
+
+        <!-- RETAIL E-COMMERCE SHELF (CANLI ÜRÜN SEPET SEÇİM ALANI) -->
+        <div id="retail-catalog-shelf" style="margin-top: 70px; border-top: 1px solid var(--border-glass); padding-top: 50px;">
+            <div style="text-align: center; margin-bottom: 35px;">
+                <span class="catalog-eyebrow">Perakende Ürün Vitrini</span>
+                <h3 style="font-family: var(--ff-serif); font-size: 2.2rem; color: #FFF;">Paketinizi Seçin, Sepete Ekleyin</h3>
+            </div>
+
+            <div id="retail-showcase-grid" class="retail-showcase-grid">
+                <!-- Injected via js/nextgen.js -->
+            </div>
+        </div>
+    </section>
+
+    <!-- ======================================================= -->
+    <!-- SLIDE-OVER SHOPPING CART DRAWER                         -->
+    <!-- ======================================================= -->
+    <div id="cart-drawer-overlay" class="cart-drawer-overlay"></div>
+    <aside id="cart-drawer" class="cart-drawer">
+        <div class="cart-drawer-header">
+            <h3 class="cart-drawer-title">
+                <i class="fas fa-shopping-bag" style="color: var(--gold);"></i> Alışveriş Sepeti
+            </h3>
+            <button id="cart-close-btn" class="cart-close-btn" aria-label="Kapat">✕</button>
+        </div>
+
+        <div style="background: rgba(255,255,255,0.04); padding: 12px; border-radius: 8px; margin-top: 15px; border: 1px solid var(--border-glass);">
+            <div style="font-size: 0.8rem; color: var(--gold-bright); font-weight: 600; display: flex; justify-content: space-between;">
+                <span>🚚 1000 TL Üzeri Ücretsiz Kargo</span>
+                <span>Fırsat</span>
+            </div>
+        </div>
+
+        <div id="cart-items-list" class="cart-items-list">
+            <!-- Injected via js -->
+        </div>
+
+        <div class="cart-drawer-footer">
+            <div class="cart-summary-line">
+                <span>Ara Toplam:</span>
+                <span id="cart-subtotal" style="font-weight: 700; color: #FFF;">₺0.00</span>
+            </div>
+            <div class="cart-summary-line">
+                <span>Kargo:</span>
+                <span style="color: var(--accent-green);">Stoktan Aynı Gün</span>
+            </div>
+            <div class="cart-summary-total">
+                <span>Genel Toplam:</span>
+                <span id="cart-total" style="color: var(--gold-bright);">₺0.00</span>
+            </div>
+
+            <button id="btn-checkout-now" class="btn-checkout-now">
+                <i class="fas fa-truck"></i> Teslimat Bilgileriyle Sipariş Ver
+            </button>
+            <button id="btn-checkout-wa" class="btn-checkout-wa">
+                <i class="fab fa-whatsapp"></i> WhatsApp ile Hızlı Sipariş İlet
+            </button>
+        </div>
+    </aside>
+
+    <!-- ======================================================= -->
+    <!-- ONLINE SİPARİŞ & TESLİMAT MODALI                        -->
+    <!-- ======================================================= -->
+    <div id="modal-checkout" class="modal-checkout">
+        <div class="checkout-box">
+            <button id="close-checkout-modal" style="position: absolute; top: 18px; right: 18px; background: transparent; border: none; color: #FFF; font-size: 1.3rem; cursor: pointer;">✕</button>
+            
+            <h3 style="font-family: var(--ff-serif); font-size: 1.5rem; color: #FFF; margin-bottom: 6px;">
+                <i class="fas fa-clipboard-check" style="color: var(--gold);"></i> Siparişi Tamamla
+            </h3>
+            <p style="color: var(--text-muted); font-size: 0.85rem; margin-bottom: 20px;">
+                Teslimat bilgilerinizi doldurun, sipariş dökümünüz anında WhatsApp ve fabrika satış sistemimize düşsün.
+            </p>
+
+            <form id="mock-checkout-form">
+                <div class="form-group">
+                    <label>Adınız ve Soyadınız</label>
+                    <input type="text" id="order-name" class="form-input" placeholder="Örn: Ahmet Yılmaz" required>
+                </div>
+                <div class="form-group">
+                    <label>Telefon Numaranız (WhatsApp Uyumlu)</label>
+                    <input type="tel" id="order-phone" class="form-input" placeholder="05XX XXX XX XX" required>
+                </div>
+                <div class="form-group">
+                    <label>Teslimat Adresi (İlçe, İl)</label>
+                    <textarea id="order-address" class="form-input" rows="3" placeholder="Siparişinizin teslim edileceği açık adres..." required style="resize: vertical;"></textarea>
+                </div>
+                <div class="form-group">
+                    <label>Ödeme Tercihi</label>
+                    <select id="order-payment" class="form-input" style="background: #000; color: #FFF;">
+                        <option value="Banka Havalesi / EFT">Banka Havalesi / EFT (En Hızlı)</option>
+                        <option value="Kapıda Nakit / Kredi Kartı">Kapıda Ödeme (Kargo Firması İle)</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn-checkout-now" style="margin-top: 15px;">
+                    <i class="fab fa-whatsapp"></i> Siparişi Onayla &amp; WhatsApp'a Gönder
+                </button>
             </form>
         </div>
     </div>
 
-    <!-- FLOATING WHATSAPP WIDGET -->
-    <a href="https://wa.me/905415019478?text=Merhaba,%20Kraften%20Ambalaj%20kurumsal%20ürünleri%20ve%20fiyat%20teklifi%20hakkında%20bilgi%20almak%20istiyorum." target="_blank" rel="noopener" class="whatsapp-widget" aria-label="WhatsApp Canlı Destek ve Hızlı Teklif Hattı">
-        <div class="wa-icon"><i class="fab fa-whatsapp"></i></div>
-        <div class="wa-text" data-i18n="waWidgetText">Hızlı Teklif & WhatsApp</div>
-    </a>
+    <!-- ======================================================= -->
+    <!-- 4. GOOGLEBOT SEO & KNOWLEDGE BENTO GRID                 -->
+    <!-- ======================================================= -->
+    <section id="blog-bento" class="bento-grid-sec">
+        <div style="text-align: center; max-width: 800px; margin: 0 auto 40px;">
+            <span class="catalog-eyebrow">✦ GÜNCEL BİLGİ MERKEZİ</span>
+            <h2 style="font-family: var(--ff-serif); font-size: 2.2rem; color: #FFF; margin-bottom: 12px;">
+                Sektörel Trendler &amp; Gıda Ambalajı Rehberi
+            </h2>
+            <p style="color: var(--text-muted); font-size: 0.95rem;">
+                Sürdürülebilir gıda ambalajı teknolojileri, gıda güvenliği standartları ve restoran operasyonlarına dair uzman analizleri.
+            </p>
+        </div>
+
+        <div class="bento-grid">
+            <article class="bento-card">
+                <span class="bento-category">Gıda Güvenliği &amp; Standartlar</span>
+                <h3 class="bento-title">Toptan Karton Kase Alımında Sızdırmazlık ve PE Kaplama Kalitesi</h3>
+                <p class="bento-excerpt">
+                    Sıcak çorba ve sulu yemek sunumlarında iç koruyucu PE kaplamanın mikrodalga dayanımı ve zeytinyağlı soslarda yağ sızdırmazlık performansı.
+                </p>
+                <a href="/blog.html?article=autonews-biyopolimer-gida-ambalaji-2026-09-09" class="bento-link">
+                    Makaleyi Oku <i class="fas fa-arrow-right"></i>
+                </a>
+            </article>
+
+            <article class="bento-card">
+                <span class="bento-category">Sürdürülebilirlik &amp; FSC</span>
+                <h3 class="bento-title">Restoran ve Paket Serviste Plastikten Kraft Ambalaja Dönüşüm</h3>
+                <p class="bento-excerpt">
+                    FSC sertifikalı saf selüloz liflerinden üretilen kraft salata kaselerinin restoran marka algısına ve doğaya olan pozitif etkisi.
+                </p>
+                <a href="/blog.html?article=autonews-u-yee-pack-builds-momentum-in-sustainabl" class="bento-link">
+                    Makaleyi Oku <i class="fas fa-arrow-right"></i>
+                </a>
+            </article>
+
+            <article class="bento-card">
+                <span class="bento-category">Tasarım &amp; Operasyon</span>
+                <h3 class="bento-title">Sıcak Çorba ve Salata Kaselerinde Buhar Dengesi ve Klipsli Kapaklar</h3>
+                <p class="bento-excerpt">
+                    Paket kurye taşımacılığında sallantıya dayanıklı kristal bombeli kapak mekanizması ve buhar tahliye deliklerinin ürün çıtırlığına etkisi.
+                </p>
+                <a href="/blog.html?article=autonews-sustainable-food-packaging-company-with" class="bento-link">
+                    Makaleyi Oku <i class="fas fa-arrow-right"></i>
+                </a>
+            </article>
+        </div>
+    </section>
+
+    <!-- MINIMAL CORPORATE FOOTER -->
+    <footer style="border-top: 1px solid var(--border-glass); padding: 50px 36px 30px; background: #050B08; text-align: center;">
+        <div style="max-width: 1200px; margin: 0 auto;">
+            <img src="./logo.png" alt="Kraften Logo" style="height: 42px; margin-bottom: 15px;">
+            <p style="color: var(--text-muted); font-size: 0.9rem; max-width: 600px; margin: 0 auto 20px;">
+                Kraften Ambalaj San. ve Tic. A.Ş. — Toptan kraft salata kasesi, sızdırmaz karton gıda kapları imalatı ve online perakende satış platformu.
+            </p>
+            <div style="display: flex; justify-content: center; gap: 25px; color: var(--gold); font-size: 0.88rem; margin-bottom: 20px; flex-wrap: wrap;">
+                <span><i class="fas fa-phone-alt"></i> 0541 501 94 78 (Emirhan KÖSE)</span>
+                <span><i class="fas fa-phone-alt"></i> 0532 274 49 60 (Nuri KÖSE)</span>
+                <span><i class="fas fa-envelope"></i> info@kraftenambalaj.com</span>
+            </div>
+            <div style="display: flex; justify-content: center; gap: 20px; font-size: 0.82rem; color: var(--text-muted); margin-bottom: 20px;">
+                <a href="/blog.html" style="color: var(--text-muted); text-decoration: none;">Sektörel Blog</a>
+                <span>·</span>
+                <a href="/kraften_2026_katalog.pdf" target="_blank" style="color: var(--text-muted); text-decoration: none;">PDF Katalog</a>
+                <span>·</span>
+                <a href="/sitemap.xml" style="color: var(--text-muted); text-decoration: none;">Site Haritası</a>
+            </div>
+            <div style="font-size: 0.8rem; color: #555; border-top: 1px solid rgba(255,255,255,0.05); padding-top: 20px;">
+                © 2026 Kraften Ambalaj San. ve Tic. A.Ş. Tüm hakları saklıdır.
+            </div>
+        </div>
+    </footer>
+
+    <!-- NEXT-GEN JS ENGINE -->
+    <script src="./js/nextgen.js"></script>
+
 </body>
 </html>
