@@ -211,6 +211,7 @@ const defaultNextgenProducts = [
 class CatalogApp {
     constructor() {
         this.cart = [];
+        this.currentFilter = 'all';
         this.selectedPacks = {};
         this.selectedLidOptions = {};
         this.products = this.loadProducts();
@@ -427,6 +428,17 @@ class CatalogApp {
 
         if (btnAdmin) btnAdmin.addEventListener('click', () => this.openAdminModal());
         if (closeAdmin) closeAdmin.addEventListener('click', () => modalAdmin.classList.remove('open'));
+
+        // Category Filter Tabs
+        const filterBtns = document.querySelectorAll('.filter-tab-btn');
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                filterBtns.forEach(b => b.classList.remove('active'));
+                e.currentTarget.classList.add('active');
+                this.currentFilter = e.currentTarget.dataset.filter || 'all';
+                this.renderRetailShowcase();
+            });
+        });
     }
 
     renderRetailShowcase() {
@@ -434,7 +446,16 @@ class CatalogApp {
         if (!grid) return;
         grid.innerHTML = '';
 
-        this.products.forEach(prod => {
+        const prodsToRender = this.currentFilter === 'all'
+            ? this.products
+            : this.products.filter(p => p.category === this.currentFilter);
+
+        if (prodsToRender.length === 0) {
+            grid.innerHTML = `<p style="grid-column: 1/-1; text-align: center; color: var(--text-muted); padding: 40px;">Bu kategoride henüz ürün bulunmuyor.</p>`;
+            return;
+        }
+
+        prodsToRender.forEach(prod => {
             const packIdx = this.selectedPacks[prod.id] || 0;
             const currentPack = prod.packs[packIdx];
             const isLidSelected = this.selectedLidOptions[prod.id];
