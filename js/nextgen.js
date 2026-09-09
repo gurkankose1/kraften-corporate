@@ -71,7 +71,7 @@ const defaultNextgenProducts = [
         id: 'prod-12oz-bowl',
         name: '12 OZ Soğuk Gıda Kasesi',
         desc: 'Dondurma, yoğurt, soğuk meze ve tatlılar için çift katmanlı soğuk bariyerli kase.',
-        img: './images/prods/bowls_12_14_16.jpg',
+        img: './images/prods/12oz_bowl_clean.webp',
         category: 'yeni_kaseler',
         wholesaleBoxQty: 500,
         hasLidOption: true,
@@ -86,7 +86,7 @@ const defaultNextgenProducts = [
         id: 'prod-14oz-bowl',
         name: '14 OZ Karton Kase (Kapak Dahil)',
         desc: 'Çorba ve sıcak sulu yemekler için şeffaf bombeli PET kapağıyla birlikte tam set.',
-        img: './images/prods/bowls_12_14_16.jpg',
+        img: './images/prods/14oz_bowl_clean.webp',
         category: 'yeni_kaseler',
         wholesaleBoxQty: 300,
         hasLidOption: false,
@@ -101,7 +101,7 @@ const defaultNextgenProducts = [
         id: 'prod-16oz-bowl',
         name: '16 OZ Karton Kase (Kapak Dahil)',
         desc: 'Geniş hacimli sıcak/soğuk yemek kasesi. Sızdırmaz PET kapağıyla birlikte paket halinde.',
-        img: './images/prods/bowls_12_14_16.jpg',
+        img: './images/prods/16oz_bowl_clean.webp',
         category: 'yeni_kaseler',
         wholesaleBoxQty: 300,
         hasLidOption: false,
@@ -118,7 +118,7 @@ const defaultNextgenProducts = [
         id: 'prod-4oz-cup',
         name: '4 OZ Karton Bardak (Kapaksız)',
         desc: 'Espresso, şurup, numune ve tadım ikramları için kalın gramajlı mini karton bardak.',
-        img: './images/prods/cups_series.jpg',
+        img: './images/prods/4oz_cup_clean.webp',
         category: 'bardaklar',
         wholesaleBoxQty: 1000,
         hasLidOption: false,
@@ -133,7 +133,7 @@ const defaultNextgenProducts = [
         id: 'prod-6oz-cup',
         name: '6 OZ Karton Bardak (Kapaksız)',
         desc: 'Geleneksel Türk çayı, flat white ve su servisi için ideal boyutta sızdırmaz bardak.',
-        img: './images/prods/cups_series.jpg',
+        img: './images/prods/6oz_cup_clean.webp',
         category: 'bardaklar',
         wholesaleBoxQty: 1000,
         hasLidOption: false,
@@ -148,7 +148,7 @@ const defaultNextgenProducts = [
         id: 'prod-7oz-cup',
         name: '7 OZ Karton Bardak (Kapaksız)',
         desc: 'Otomat ve ofis kahve makineleri için standart uyumlu pürüzsüz karton bardak.',
-        img: './images/prods/cups_series.jpg',
+        img: './images/prods/7oz_cup_clean.webp',
         category: 'bardaklar',
         wholesaleBoxQty: 1000,
         hasLidOption: false,
@@ -163,7 +163,7 @@ const defaultNextgenProducts = [
         id: 'prod-8oz-cup',
         name: '8 OZ Karton Bardak (Kapaksız)',
         desc: 'Kafelerin ve paket servislerin en çok satan standart sıcak kahve bardağı.',
-        img: './images/prods/cups_series.jpg',
+        img: './images/prods/8oz_cup_clean.webp',
         category: 'bardaklar',
         wholesaleBoxQty: 1000,
         hasLidOption: false,
@@ -402,14 +402,20 @@ class CatalogApp {
                 msg += `💳 *Ödeme Yöntemi:* ${payment}\n\n`;
                 msg += `*Sipariş Edilen Ürünler:*\n`;
 
-                let total = 0;
+                let subtotal = 0;
                 this.cart.forEach((it, i) => {
                     const sub = it.price * it.qty;
-                    total += sub;
-                    msg += `${i+1}) ${it.name} (${it.packCount}'li - ${it.lidText}) x ${it.qty} Adet: ₺${sub}\n`;
+                    subtotal += sub;
+                    msg += `${i+1}) ${it.name} (${it.packCount}'li - ${it.lidText}) x ${it.qty} Adet: ₺${sub} (KDV Hariç)\n`;
                 });
 
-                msg += `\n*Toplam Tutar:* ₺${total}\n`;
+                const vatAmount = Math.round(subtotal * 0.20 * 100) / 100;
+                const grandTotal = Math.round((subtotal + vatAmount) * 100) / 100;
+
+                msg += `\n📊 *Ödeme Dökümü:*\n`;
+                msg += `• Ara Toplam (KDV Hariç): ₺${subtotal.toLocaleString('tr-TR', {minimumFractionDigits: 2})}\n`;
+                msg += `• KDV Bedeli (%20): ₺${vatAmount.toLocaleString('tr-TR', {minimumFractionDigits: 2})}\n`;
+                msg += `• *GENEL TOPLAM (KDV Dahil): ₺${grandTotal.toLocaleString('tr-TR', {minimumFractionDigits: 2})}*\n`;
                 msg += `\nSiparişimin onaylanmasını ve hesap/IBAN bilgilerinizi rica ederim.`;
 
                 window.open(`https://wa.me/905415019478?text=${encodeURIComponent(msg)}`, '_blank');
@@ -491,12 +497,19 @@ class CatalogApp {
                 `;
             }
 
+            const waMsg = encodeURIComponent(`Merhaba Kraften Ambalaj, ${prod.name} için firmanıza özel logo baskılı toptan fiyat teklifi almak istiyorum.`);
+
             card.innerHTML = `
                 <img src="${prod.img}" alt="${prod.name}" class="retail-card-img" loading="lazy">
                 <h4 class="retail-card-name">${prod.name}</h4>
                 <p style="font-size: 0.82rem; color: var(--text-muted); line-height: 1.5; margin-bottom: 10px;">${prod.desc}</p>
                 
                 ${lidHtml}
+
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 4px;">
+                    <span style="font-size: 0.72rem; color: var(--text-muted); font-weight: 600;">Paket Tercihi:</span>
+                    <span style="font-size: 0.72rem; color: var(--gold-bright);">Min. ${prod.minQty || prod.packs[0]?.count} Adet</span>
+                </div>
 
                 <div class="retail-pack-row">
                     ${prod.packs.map((p, i) => `
@@ -508,12 +521,17 @@ class CatalogApp {
 
                 <div class="retail-price-row">
                     <span class="price-main">₺${finalPrice}</span>
+                    <span class="price-kdv-tag">+ %20 KDV</span>
                     <span class="price-prev">₺${finalOldPrice}</span>
                 </div>
 
                 <button class="btn-card-add" data-id="${prod.id}">
                     <i class="fas fa-cart-plus"></i> Sepete Ekle
                 </button>
+
+                <a href="https://wa.me/905415019478?text=${waMsg}" target="_blank" class="btn-custom-print-wa" title="Özel firmanızın logosu ile flekso baskılı sipariş vermek için tıklayın">
+                    <i class="fab fa-whatsapp"></i> Özel Logo Baskılı Teklif Al
+                </a>
             `;
 
             // Lid button
@@ -573,6 +591,7 @@ class CatalogApp {
         const badge = document.getElementById('nav-cart-count');
         const list = document.getElementById('cart-items-list');
         const subtotalEl = document.getElementById('cart-subtotal');
+        const vatEl = document.getElementById('cart-vat');
         const totalEl = document.getElementById('cart-total');
 
         const totalQty = this.cart.reduce((s, i) => s + i.qty, 0);
@@ -588,14 +607,15 @@ class CatalogApp {
                 </div>
             `;
             if (subtotalEl) subtotalEl.textContent = '₺0.00';
+            if (vatEl) vatEl.textContent = '₺0.00';
             if (totalEl) totalEl.textContent = '₺0.00';
             return;
         }
 
-        let total = 0;
+        let subtotal = 0;
         list.innerHTML = this.cart.map(item => {
             const sum = item.price * item.qty;
-            total += sum;
+            subtotal += sum;
 
             return `
                 <div class="cart-item">
@@ -603,7 +623,7 @@ class CatalogApp {
                     <div class="cart-item-details">
                         <div class="cart-item-title">${item.name}</div>
                         <div class="cart-item-pack">${item.packCount}'li Paket · <span style="color: var(--accent-green);">${item.lidText}</span></div>
-                        <div class="cart-item-price">₺${item.price} x ${item.qty} = ₺${sum}</div>
+                        <div class="cart-item-price">₺${item.price} x ${item.qty} = ₺${sum} <span style="font-size: 0.65rem; color: var(--text-muted);">(KDV Hariç)</span></div>
                     </div>
                     <div class="cart-qty-ctrl">
                         <button class="qty-btn" data-act="dec" data-id="${item.cartItemId}">−</button>
@@ -614,8 +634,12 @@ class CatalogApp {
             `;
         }).join('');
 
-        if (subtotalEl) subtotalEl.textContent = `₺${total}`;
-        if (totalEl) totalEl.textContent = `₺${total}`;
+        const vatAmount = Math.round(subtotal * 0.20 * 100) / 100;
+        const grandTotal = Math.round((subtotal + vatAmount) * 100) / 100;
+
+        if (subtotalEl) subtotalEl.textContent = `₺${subtotal.toLocaleString('tr-TR', {minimumFractionDigits: 2})}`;
+        if (vatEl) vatEl.textContent = `+₺${vatAmount.toLocaleString('tr-TR', {minimumFractionDigits: 2})}`;
+        if (totalEl) totalEl.textContent = `₺${grandTotal.toLocaleString('tr-TR', {minimumFractionDigits: 2})}`;
 
         list.querySelectorAll('.qty-btn').forEach(btn => {
             btn.addEventListener('click', (e) => {
@@ -645,14 +669,21 @@ class CatalogApp {
 
     dispatchWhatsAppOrder() {
         if (this.cart.length === 0) return alert('Sepetiniz boş!');
-        let msg = "Merhaba Kraften Ambalaj, online kataloğunuzdan perakende siparişim:\n\n";
-        let total = 0;
+        let msg = "*KRAFTEN AMBALAJ - ONLINE PERAKENDE SİPARİŞİ*\n\n";
+        let subtotal = 0;
         this.cart.forEach((it, i) => {
             const sub = it.price * it.qty;
-            total += sub;
-            msg += `${i+1}) ${it.name} (${it.packCount}'li - ${it.lidText}) x ${it.qty} Adet: ₺${sub}\n`;
+            subtotal += sub;
+            msg += `${i+1}) ${it.name} (${it.packCount}'li - ${it.lidText}) x ${it.qty} Adet: ₺${sub} (KDV Hariç)\n`;
         });
-        msg += `\nToplam Tutar: ₺${total}\nAdresime teslimat için yardımcı olabilir misiniz?`;
+        const vatAmount = Math.round(subtotal * 0.20 * 100) / 100;
+        const grandTotal = Math.round((subtotal + vatAmount) * 100) / 100;
+
+        msg += `\n📊 *Ödeme Dökümü:*\n`;
+        msg += `• Ara Toplam (KDV Hariç): ₺${subtotal.toLocaleString('tr-TR', {minimumFractionDigits: 2})}\n`;
+        msg += `• KDV Bedeli (%20): ₺${vatAmount.toLocaleString('tr-TR', {minimumFractionDigits: 2})}\n`;
+        msg += `• *GENEL TOPLAM (KDV Dahil): ₺${grandTotal.toLocaleString('tr-TR', {minimumFractionDigits: 2})}*\n`;
+        msg += `\nSiparişimin onaylanmasını ve hesap/IBAN bilgilerinizi rica ederim.`;
         window.open(`https://wa.me/905415019478?text=${encodeURIComponent(msg)}`, '_blank');
     }
 
