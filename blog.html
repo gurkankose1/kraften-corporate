@@ -1,26 +1,90 @@
 <!DOCTYPE html>
 <html lang="tr">
 <head>
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-Q2WT6P3QVD"></script>
+    <!-- Deferred Google Analytics (gtag.js) for Zero TBT -->
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-
-      gtag('config', 'G-Q2WT6P3QVD');
+      function initAnalytics() {
+        if (window.gtagLoaded) return;
+        window.gtagLoaded = true;
+        var s = document.createElement('script');
+        s.async = true;
+        s.src = 'https://www.googletagmanager.com/gtag/js?id=G-Q2WT6P3QVD';
+        document.head.appendChild(s);
+        gtag('js', new Date());
+        gtag('config', 'G-Q2WT6P3QVD');
+      }
+      if ('requestIdleCallback' in window) {
+        requestIdleCallback(initAnalytics, { timeout: 3500 });
+      } else {
+        window.addEventListener('load', function() { setTimeout(initAnalytics, 2000); });
+      }
+      ['touchstart', 'scroll', 'click'].forEach(function(evt) {
+        window.addEventListener(evt, initAnalytics, { once: true, passive: true });
+      });
     </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="robots" content="index, follow, max-image-preview:large">
-    <title>Sektörel Haberler & Makaleler | Kraften Ambalaj</title>
-    <!-- Modern Fonts -->
+    <title>Sektörel Haberler &amp; Makaleler | Kraften Ambalaj</title>
+    <meta name="description" content="Kraft ambalaj sektöründe sürdürülebilirlik, gıda güvenliği ve yenilikçi karton kase trendlerine dair güncel haberler ve makaleler.">
+    <link rel="canonical" href="https://www.kraftenambalaj.com/blog.html">
+
+    <!-- Hreflang -->
+    <link rel="alternate" hreflang="tr" href="https://www.kraftenambalaj.com/blog.html" />
+    <link rel="alternate" hreflang="x-default" href="https://www.kraftenambalaj.com/blog.html" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Sektörel Haberler &amp; Makaleler | Kraften Ambalaj">
+    <meta property="og:description" content="Kraft ambalaj sektöründe sürdürülebilirlik, gıda güvenliği ve yenilikçi karton kase trendleri.">
+    <meta property="og:url" content="https://www.kraftenambalaj.com/blog.html">
+    <meta property="og:image" content="https://www.kraftenambalaj.com/images/prods/550_kraft_main.webp">
+    <meta property="og:locale" content="tr_TR">
+    <meta property="og:site_name" content="Kraften Ambalaj">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Sektörel Haberler &amp; Makaleler | Kraften Ambalaj">
+    <meta name="twitter:description" content="Kraft ambalaj sektöründe sürdürülebilirlik ve yenilikçi kase trendleri.">
+    <meta name="twitter:image" content="https://www.kraftenambalaj.com/images/prods/550_kraft_main.webp">
+
+    <!-- Schema.org CollectionPage -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "CollectionPage",
+      "name": "Sektörel Haberler & Makaleler",
+      "description": "Kraft ambalaj sektöründe sürdürülebilirlik, gıda güvenliği ve yenilikçi karton kase trendlerine dair güncel haberler ve makaleler.",
+      "url": "https://www.kraftenambalaj.com/blog.html",
+      "isPartOf": {
+        "@type": "WebSite",
+        "name": "Kraften Ambalaj",
+        "url": "https://www.kraftenambalaj.com"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Kraften Ambalaj San. ve Tic. A.Ş.",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://www.kraftenambalaj.com/logo.png"
+        }
+      }
+    }
+    </script>
+
+    <!-- Preconnects & Non-blocking Modern Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;800&family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;800&family=Inter:wght@300;400;600;800&display=swap" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;800&family=Inter:wght@300;400;600;800&display=swap"></noscript>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
     <link rel="icon" href="./logo.png" type="image/png">
-    <link rel="stylesheet" href="https://kobiseo.com/rozet/rozet.css">
-    <link rel="stylesheet" href="./css/main.css?v=20260909">
+    <link rel="manifest" href="./site.webmanifest">
+    <link rel="stylesheet" href="https://kobiseo.com/rozet/rozet.css" media="print" onload="this.media='all'">
+    <link rel="stylesheet" href="./css/main.css?v=20260909_v5">
     <link rel="alternate" type="application/rss+xml" title="Kraften Ambalaj Blog RSS Feed" href="https://www.kraftenambalaj.com/rss.xml" />
 </head>
 <body>
@@ -101,289 +165,7 @@
 
                 <!-- Articles Grid -->
                 <div id="blog-archive-grid" class="blog-grid" style="grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));">
-
-                    <article class="blog-card reveal-up" data-category="trendler">
-                        <div class="blog-img-wrap">
-                            <img src="https://images.unsplash.com/photo-1509099836639-18ba1795216d?auto=format&fit=crop&w=800&q=80" alt="Küresel Gıda Ambalajı Sektöründe Sürdürülebilir Masaüstü Ürün Trendleri" width="600" height="400" loading="lazy">
-                            <span class="blog-badge">trendler</span>
-                        </div>
-                        <div class="blog-content">
-                            <div class="blog-meta">
-                                <span><i class="fa-regular fa-calendar"></i> 02 Eylül 2026</span>
-                                <span><i class="fa-regular fa-user"></i> Kraften Ar-Ge</span>
-                            </div>
-                            <h3 class="blog-title"><a href="/blog/kuresel-gida-ambalaji-sektorunde-surdurulebilir-masaustu-urun-trendleri.html">Küresel Gıda Ambalajı Sektöründe Sürdürülebilir Masaüstü Ürün Trendleri</a></h3>
-                            <p class="blog-summary">Dünya genelinde restoranların ve hazır gıda zincirlerinin doğa dostu kağıt ve karton kaplara geçişi hız kazanıyor.</p>
-                            <a href="/blog/kuresel-gida-ambalaji-sektorunde-surdurulebilir-masaustu-urun-trendleri.html" class="blog-read-more">Devamını Oku <i class="fa-solid fa-arrow-right"></i></a>
-                        </div>
-                    </article>
-
-                    <article class="blog-card reveal-up" data-category="trendler">
-                        <div class="blog-img-wrap">
-                            <img src="https://images.unsplash.com/photo-1589939705384-5185137a7f0f?auto=format&fit=crop&w=800&q=80" alt="Sürdürülebilir Ambalaj Sektöründe Küresel Yatırım ve Büyüme Fırsatları" width="600" height="400" loading="lazy">
-                            <span class="blog-badge">trendler</span>
-                        </div>
-                        <div class="blog-content">
-                            <div class="blog-meta">
-                                <span><i class="fa-regular fa-calendar"></i> 20 Ağustos 2026</span>
-                                <span><i class="fa-regular fa-user"></i> Kraften Ar-Ge</span>
-                            </div>
-                            <h3 class="blog-title"><a href="/blog/surdurulebilir-ambalaj-sektorunde-kuresel-yatirim-ve-buyume-firsatlari.html">Sürdürülebilir Ambalaj Sektöründe Küresel Yatırım ve Büyüme Fırsatları</a></h3>
-                            <p class="blog-summary">Çevre dostu ambalaj üretimine yapılan milyon dolarlık yeni yatırımlar, karton kase ve gıda kabı pazarını büyütüyor.</p>
-                            <a href="/blog/surdurulebilir-ambalaj-sektorunde-kuresel-yatirim-ve-buyume-firsatlari.html" class="blog-read-more">Devamını Oku <i class="fa-solid fa-arrow-right"></i></a>
-                        </div>
-                    </article>
-
-                    <article class="blog-card reveal-up" data-category="trendler">
-                        <div class="blog-img-wrap">
-                            <img src="https://degisimpack.com/images/blogs/blog2.jpg" alt="2045 Geleceğin Sürdürülebilir Gıda Ambalajı Trendleri ve İnovasyonlar" width="600" height="400" loading="lazy">
-                            <span class="blog-badge">trendler</span>
-                        </div>
-                        <div class="blog-content">
-                            <div class="blog-meta">
-                                <span><i class="fa-regular fa-calendar"></i> 17 Ağustos 2026</span>
-                                <span><i class="fa-regular fa-user"></i> Kraften Ar-Ge</span>
-                            </div>
-                            <h3 class="blog-title"><a href="/blog/2045-gelecegin-surdurulebilir-gida-ambalaji-trendleri-ve-inovasyonlar.html">2045 Geleceğin Sürdürülebilir Gıda Ambalajı Trendleri ve İnovasyonlar</a></h3>
-                            <p class="blog-summary">Smithers küresel ambalaj raporuna göre 2045 yılına kadar gıda ambalajı sektörünü şekillendirecek sıfır atık ve sürdürülebilir karton kaplama teknolojileri.</p>
-                            <a href="/blog/2045-gelecegin-surdurulebilir-gida-ambalaji-trendleri-ve-inovasyonlar.html" class="blog-read-more">Devamını Oku <i class="fa-solid fa-arrow-right"></i></a>
-                        </div>
-                    </article>
-
-                    <article class="blog-card reveal-up" data-category="hijyen">
-                        <div class="blog-img-wrap">
-                            <img src="https://degisimpack.com/images/blogs/blog4.jpg" alt="Zararlı Kimyasal İçermeyen (PFAS-Free) Gıda Ambalajlarında Küresel Büyüme" width="600" height="400" loading="lazy">
-                            <span class="blog-badge">hijyen</span>
-                        </div>
-                        <div class="blog-content">
-                            <div class="blog-meta">
-                                <span><i class="fa-regular fa-calendar"></i> 17 Ağustos 2026</span>
-                                <span><i class="fa-regular fa-user"></i> Kraften Ar-Ge</span>
-                            </div>
-                            <h3 class="blog-title"><a href="/blog/zararli-kimyasal-icermeyen-pfas-free-gida-ambalajlarinda-kuresel-buyume.html">Zararlı Kimyasal İçermeyen (PFAS-Free) Gıda Ambalajlarında Küresel Büyüme</a></h3>
-                            <p class="blog-summary">Fortune Business Insights araştırmasına göre gıda ile temasa uygun, zararlı kimyasal barındırmayan kağıt kapların pazar payı yıllık %6.54 büyüyor.</p>
-                            <a href="/blog/zararli-kimyasal-icermeyen-pfas-free-gida-ambalajlarinda-kuresel-buyume.html" class="blog-read-more">Devamını Oku <i class="fa-solid fa-arrow-right"></i></a>
-                        </div>
-                    </article>
-
-                    <article class="blog-card reveal-up" data-category="trendler">
-                        <div class="blog-img-wrap">
-                            <img src="https://degisimpack.com/images/blogs/blog1.jpg" alt="Çevre Dostu Geri Dönüşüm ve Kraft Ambalajın Geleceği" width="600" height="400" loading="lazy">
-                            <span class="blog-badge">trendler</span>
-                        </div>
-                        <div class="blog-content">
-                            <div class="blog-meta">
-                                <span><i class="fa-regular fa-calendar"></i> 14 Ağustos 2026</span>
-                                <span><i class="fa-regular fa-user"></i> Kraften Ambalaj</span>
-                            </div>
-                            <h3 class="blog-title"><a href="/blog/cevre-dostu-geri-donusum-ve-kraft-ambalajin-gelecegi.html">Çevre Dostu Geri Dönüşüm ve Kraft Ambalajın Geleceği</a></h3>
-                            <p class="blog-summary">Karton gıda kaplarımız %99 geri dönüştürülebilir yapısıyla atık miktarını en aza indirir. Gıda sektöründe kraft kullanımının avantajlarını keşfedin.</p>
-                            <a href="/blog/cevre-dostu-geri-donusum-ve-kraft-ambalajin-gelecegi.html" class="blog-read-more">Devamını Oku <i class="fa-solid fa-arrow-right"></i></a>
-                        </div>
-                    </article>
-
-                    <article class="blog-card reveal-up" data-category="surdurulebilirlik">
-                        <div class="blog-img-wrap">
-                            <img src="https://degisimpack.com/images/blogs/blog2.jpg" alt="Hızlı Biyolojik Çözünürlük ile Doğayı Koru" width="600" height="400" loading="lazy">
-                            <span class="blog-badge">surdurulebilirlik</span>
-                        </div>
-                        <div class="blog-content">
-                            <div class="blog-meta">
-                                <span><i class="fa-regular fa-calendar"></i> 02 Ağustos 2026</span>
-                                <span><i class="fa-regular fa-user"></i> Kraften Ambalaj</span>
-                            </div>
-                            <h3 class="blog-title"><a href="/blog/hizli-biyolojik-cozunurluk-ile-dogayi-koru.html">Hızlı Biyolojik Çözünürlük ile Doğayı Koru</a></h3>
-                            <p class="blog-summary">Doğada parça kalıntısı bırakmadan hızlıca yok olan kraft liflerinin ekolojik dengeye katkısı.</p>
-                            <a href="/blog/hizli-biyolojik-cozunurluk-ile-dogayi-koru.html" class="blog-read-more">Devamını Oku <i class="fa-solid fa-arrow-right"></i></a>
-                        </div>
-                    </article>
-
-                    <article class="blog-card reveal-up" data-category="hijyen">
-                        <div class="blog-img-wrap">
-                            <img src="https://degisimpack.com/images/blogs/blog4.jpg" alt="Gıda Ambalajında Uluslararası Hijyen Standartları" width="600" height="400" loading="lazy">
-                            <span class="blog-badge">hijyen</span>
-                        </div>
-                        <div class="blog-content">
-                            <div class="blog-meta">
-                                <span><i class="fa-regular fa-calendar"></i> 25 Temmuz 2026</span>
-                                <span><i class="fa-regular fa-user"></i> Kraften Ambalaj</span>
-                            </div>
-                            <h3 class="blog-title"><a href="/blog/gida-ambalajinda-uluslararasi-hijyen-standartlari.html">Gıda Ambalajında Uluslararası Hijyen Standartları</a></h3>
-                            <p class="blog-summary">Sıcak ve soğuk gıda temasında zararlı kanserojen madde içermeyen ISO 22000 onaylı hijyen koşulları.</p>
-                            <a href="/blog/gida-ambalajinda-uluslararasi-hijyen-standartlari.html" class="blog-read-more">Devamını Oku <i class="fa-solid fa-arrow-right"></i></a>
-                        </div>
-                    </article>
-
-                    <article class="blog-card reveal-up" data-category="trendler">
-                        <div class="blog-img-wrap">
-                            <img src="https://degisimpack.com/images/blogs/blog1.jpg" alt="Avrupa Birliği Tek Kullanımlık Plastik Yasağı ve Ambalaj Sektörü" width="600" height="400" loading="lazy">
-                            <span class="blog-badge">trendler</span>
-                        </div>
-                        <div class="blog-content">
-                            <div class="blog-meta">
-                                <span><i class="fa-regular fa-calendar"></i> 18 Temmuz 2026</span>
-                                <span><i class="fa-regular fa-user"></i> Kraften Ar-Ge</span>
-                            </div>
-                            <h3 class="blog-title"><a href="/blog/avrupa-birligi-tek-kullanimlik-plastik-yasagi-ve-ambalaj-sektoru.html">Avrupa Birliği Tek Kullanımlık Plastik Yasağı ve Ambalaj Sektörü</a></h3>
-                            <p class="blog-summary">AB çevre regülasyonlarının ihracatçı gıda firmalarına getirdiği yeni zorunluluklar ve kraft karton çözümleri.</p>
-                            <a href="/blog/avrupa-birligi-tek-kullanimlik-plastik-yasagi-ve-ambalaj-sektoru.html" class="blog-read-more">Devamını Oku <i class="fa-solid fa-arrow-right"></i></a>
-                        </div>
-                    </article>
-
-                    <article class="blog-card reveal-up" data-category="hijyen">
-                        <div class="blog-img-wrap">
-                            <img src="https://degisimpack.com/images/blogs/blog2.jpg" alt="Paket Serviste Sıcaklık ve Nem Dengesi Nasıl Korunur?" width="600" height="400" loading="lazy">
-                            <span class="blog-badge">hijyen</span>
-                        </div>
-                        <div class="blog-content">
-                            <div class="blog-meta">
-                                <span><i class="fa-regular fa-calendar"></i> 10 Temmuz 2026</span>
-                                <span><i class="fa-regular fa-user"></i> Kraften Akademi</span>
-                            </div>
-                            <h3 class="blog-title"><a href="/blog/paket-serviste-sicaklik-ve-nem-dengesi-nasil-korunur.html">Paket Serviste Sıcaklık ve Nem Dengesi Nasıl Korunur?</a></h3>
-                            <p class="blog-summary">Özel tasarlanmış buhar tahliye delikli kapaklar ve termos özellikli karton kaseler ile sipariş kalitesini artırın.</p>
-                            <a href="/blog/paket-serviste-sicaklik-ve-nem-dengesi-nasil-korunur.html" class="blog-read-more">Devamını Oku <i class="fa-solid fa-arrow-right"></i></a>
-                        </div>
-                    </article>
-                </div>
-                        <div class="blog-content">
-                            <div class="blog-meta">
-                                <span><i class="fa-regular fa-calendar"></i> 02 Eylül 2026</span>
-                                <span><i class="fa-regular fa-user"></i> Kraften Ar-Ge</span>
-                            </div>
-                            <h3 class="blog-title"><a href="/blog/kuresel-gida-ambalaji-sektorunde-surdurulebilir-masaustu-urun-trendleri.html">Küresel Gıda Ambalajı Sektöründe Sürdürülebilir Masaüstü Ürün Trendleri</a></h3>
-                            <p class="blog-summary">Dünya genelinde restoranların ve hazır gıda zincirlerinin doğa dostu kağıt ve karton kaplara geçişi hız kazanıyor.</p>
-                            <a href="/blog/kuresel-gida-ambalaji-sektorunde-surdurulebilir-masaustu-urun-trendleri.html" class="blog-read-more">Devamını Oku <i class="fa-solid fa-arrow-right"></i></a>
-                        </div>
-                    </article>
-
-                    <article class="blog-card reveal-up" data-category="trendler">
-                        <div class="blog-img-wrap">
-                            <img src="https://images.unsplash.com/photo-1589939705384-5185137a7f0f?auto=format&fit=crop&w=800&q=80" alt="Sürdürülebilir Ambalaj Sektöründe Küresel Yatırım ve Büyüme Fırsatları" width="600" height="400" loading="lazy">
-                            <span class="blog-badge">trendler</span>
-                        </div>
-                        <div class="blog-content">
-                            <div class="blog-meta">
-                                <span><i class="fa-regular fa-calendar"></i> 20 Ağustos 2026</span>
-                                <span><i class="fa-regular fa-user"></i> Kraften Ar-Ge</span>
-                            </div>
-                            <h3 class="blog-title"><a href="/blog/surdurulebilir-ambalaj-sektorunde-kuresel-yatirim-ve-buyume-firsatlari.html">Sürdürülebilir Ambalaj Sektöründe Küresel Yatırım ve Büyüme Fırsatları</a></h3>
-                            <p class="blog-summary">Çevre dostu ambalaj üretimine yapılan milyon dolarlık yeni yatırımlar, karton kase ve gıda kabı pazarını büyütüyor.</p>
-                            <a href="/blog/surdurulebilir-ambalaj-sektorunde-kuresel-yatirim-ve-buyume-firsatlari.html" class="blog-read-more">Devamını Oku <i class="fa-solid fa-arrow-right"></i></a>
-                        </div>
-                    </article>
-
-                    <article class="blog-card reveal-up" data-category="trendler">
-                        <div class="blog-img-wrap">
-                            <img src="https://degisimpack.com/images/blogs/blog2.jpg" alt="2045 Geleceğin Sürdürülebilir Gıda Ambalajı Trendleri ve İnovasyonlar" width="600" height="400" loading="lazy">
-                            <span class="blog-badge">trendler</span>
-                        </div>
-                        <div class="blog-content">
-                            <div class="blog-meta">
-                                <span><i class="fa-regular fa-calendar"></i> 17 Ağustos 2026</span>
-                                <span><i class="fa-regular fa-user"></i> Kraften Ar-Ge</span>
-                            </div>
-                            <h3 class="blog-title"><a href="/blog/2045-gelecegin-surdurulebilir-gida-ambalaji-trendleri-ve-inovasyonlar.html">2045 Geleceğin Sürdürülebilir Gıda Ambalajı Trendleri ve İnovasyonlar</a></h3>
-                            <p class="blog-summary">Smithers küresel ambalaj raporuna göre 2045 yılına kadar gıda ambalajı sektörünü şekillendirecek sıfır atık ve sürdürülebilir karton kaplama teknolojileri.</p>
-                            <a href="/blog/2045-gelecegin-surdurulebilir-gida-ambalaji-trendleri-ve-inovasyonlar.html" class="blog-read-more">Devamını Oku <i class="fa-solid fa-arrow-right"></i></a>
-                        </div>
-                    </article>
-
-                    <article class="blog-card reveal-up" data-category="hijyen">
-                        <div class="blog-img-wrap">
-                            <img src="https://degisimpack.com/images/blogs/blog4.jpg" alt="Zararlı Kimyasal İçermeyen (PFAS-Free) Gıda Ambalajlarında Küresel Büyüme" width="600" height="400" loading="lazy">
-                            <span class="blog-badge">hijyen</span>
-                        </div>
-                        <div class="blog-content">
-                            <div class="blog-meta">
-                                <span><i class="fa-regular fa-calendar"></i> 17 Ağustos 2026</span>
-                                <span><i class="fa-regular fa-user"></i> Kraften Ar-Ge</span>
-                            </div>
-                            <h3 class="blog-title"><a href="/blog/zararli-kimyasal-icermeyen-pfas-free-gida-ambalajlarinda-kuresel-buyume.html">Zararlı Kimyasal İçermeyen (PFAS-Free) Gıda Ambalajlarında Küresel Büyüme</a></h3>
-                            <p class="blog-summary">Fortune Business Insights araştırmasına göre gıda ile temasa uygun, zararlı kimyasal barındırmayan kağıt kapların pazar payı yıllık %6.54 büyüyor.</p>
-                            <a href="/blog/zararli-kimyasal-icermeyen-pfas-free-gida-ambalajlarinda-kuresel-buyume.html" class="blog-read-more">Devamını Oku <i class="fa-solid fa-arrow-right"></i></a>
-                        </div>
-                    </article>
-
-                    <article class="blog-card reveal-up" data-category="trendler">
-                        <div class="blog-img-wrap">
-                            <img src="https://degisimpack.com/images/blogs/blog1.jpg" alt="Çevre Dostu Geri Dönüşüm ve Kraft Ambalajın Geleceği" width="600" height="400" loading="lazy">
-                            <span class="blog-badge">trendler</span>
-                        </div>
-                        <div class="blog-content">
-                            <div class="blog-meta">
-                                <span><i class="fa-regular fa-calendar"></i> 14 Ağustos 2026</span>
-                                <span><i class="fa-regular fa-user"></i> Kraften Ambalaj</span>
-                            </div>
-                            <h3 class="blog-title"><a href="/blog/cevre-dostu-geri-donusum-ve-kraft-ambalajin-gelecegi.html">Çevre Dostu Geri Dönüşüm ve Kraft Ambalajın Geleceği</a></h3>
-                            <p class="blog-summary">Karton gıda kaplarımız %99 geri dönüştürülebilir yapısıyla atık miktarını en aza indirir. Gıda sektöründe kraft kullanımının avantajlarını keşfedin.</p>
-                            <a href="/blog/cevre-dostu-geri-donusum-ve-kraft-ambalajin-gelecegi.html" class="blog-read-more">Devamını Oku <i class="fa-solid fa-arrow-right"></i></a>
-                        </div>
-                    </article>
-
-                    <article class="blog-card reveal-up" data-category="surdurulebilirlik">
-                        <div class="blog-img-wrap">
-                            <img src="https://degisimpack.com/images/blogs/blog2.jpg" alt="Hızlı Biyolojik Çözünürlük ile Doğayı Koru" width="600" height="400" loading="lazy">
-                            <span class="blog-badge">surdurulebilirlik</span>
-                        </div>
-                        <div class="blog-content">
-                            <div class="blog-meta">
-                                <span><i class="fa-regular fa-calendar"></i> 02 Ağustos 2026</span>
-                                <span><i class="fa-regular fa-user"></i> Kraften Ambalaj</span>
-                            </div>
-                            <h3 class="blog-title"><a href="/blog/hizli-biyolojik-cozunurluk-ile-dogayi-koru.html">Hızlı Biyolojik Çözünürlük ile Doğayı Koru</a></h3>
-                            <p class="blog-summary">Doğada parça kalıntısı bırakmadan hızlıca yok olan kraft liflerinin ekolojik dengeye katkısı.</p>
-                            <a href="/blog/hizli-biyolojik-cozunurluk-ile-dogayi-koru.html" class="blog-read-more">Devamını Oku <i class="fa-solid fa-arrow-right"></i></a>
-                        </div>
-                    </article>
-
-                    <article class="blog-card reveal-up" data-category="hijyen">
-                        <div class="blog-img-wrap">
-                            <img src="https://degisimpack.com/images/blogs/blog4.jpg" alt="Gıda Ambalajında Uluslararası Hijyen Standartları" width="600" height="400" loading="lazy">
-                            <span class="blog-badge">hijyen</span>
-                        </div>
-                        <div class="blog-content">
-                            <div class="blog-meta">
-                                <span><i class="fa-regular fa-calendar"></i> 25 Temmuz 2026</span>
-                                <span><i class="fa-regular fa-user"></i> Kraften Ambalaj</span>
-                            </div>
-                            <h3 class="blog-title"><a href="/blog/gida-ambalajinda-uluslararasi-hijyen-standartlari.html">Gıda Ambalajında Uluslararası Hijyen Standartları</a></h3>
-                            <p class="blog-summary">Sıcak ve soğuk gıda temasında zararlı kanserojen madde içermeyen ISO 22000 onaylı hijyen koşulları.</p>
-                            <a href="/blog/gida-ambalajinda-uluslararasi-hijyen-standartlari.html" class="blog-read-more">Devamını Oku <i class="fa-solid fa-arrow-right"></i></a>
-                        </div>
-                    </article>
-
-                    <article class="blog-card reveal-up" data-category="trendler">
-                        <div class="blog-img-wrap">
-                            <img src="https://degisimpack.com/images/blogs/blog1.jpg" alt="Avrupa Birliği Tek Kullanımlık Plastik Yasağı ve Ambalaj Sektörü" width="600" height="400" loading="lazy">
-                            <span class="blog-badge">trendler</span>
-                        </div>
-                        <div class="blog-content">
-                            <div class="blog-meta">
-                                <span><i class="fa-regular fa-calendar"></i> 18 Temmuz 2026</span>
-                                <span><i class="fa-regular fa-user"></i> Kraften Ar-Ge</span>
-                            </div>
-                            <h3 class="blog-title"><a href="/blog/avrupa-birligi-tek-kullanimlik-plastik-yasagi-ve-ambalaj-sektoru.html">Avrupa Birliği Tek Kullanımlık Plastik Yasağı ve Ambalaj Sektörü</a></h3>
-                            <p class="blog-summary">AB çevre regülasyonlarının ihracatçı gıda firmalarına getirdiği yeni zorunluluklar ve kraft karton çözümleri.</p>
-                            <a href="/blog/avrupa-birligi-tek-kullanimlik-plastik-yasagi-ve-ambalaj-sektoru.html" class="blog-read-more">Devamını Oku <i class="fa-solid fa-arrow-right"></i></a>
-                        </div>
-                    </article>
-
-                    <article class="blog-card reveal-up" data-category="hijyen">
-                        <div class="blog-img-wrap">
-                            <img src="https://degisimpack.com/images/blogs/blog2.jpg" alt="Paket Serviste Sıcaklık ve Nem Dengesi Nasıl Korunur?" width="600" height="400" loading="lazy">
-                            <span class="blog-badge">hijyen</span>
-                        </div>
-                        <div class="blog-content">
-                            <div class="blog-meta">
-                                <span><i class="fa-regular fa-calendar"></i> 10 Temmuz 2026</span>
-                                <span><i class="fa-regular fa-user"></i> Kraften Akademi</span>
-                            </div>
-                            <h3 class="blog-title"><a href="/blog/paket-serviste-sicaklik-ve-nem-dengesi-nasil-korunur.html">Paket Serviste Sıcaklık ve Nem Dengesi Nasıl Korunur?</a></h3>
-                            <p class="blog-summary">Özel tasarlanmış buhar tahliye delikli kapaklar ve termos özellikli karton kaseler ile sipariş kalitesini artırın.</p>
-                            <a href="/blog/paket-serviste-sicaklik-ve-nem-dengesi-nasil-korunur.html" class="blog-read-more">Devamını Oku <i class="fa-solid fa-arrow-right"></i></a>
-                        </div>
-                    </article>
+                    <!-- Articles injected via JS -->
                 </div>
             </div>
         </section>
@@ -429,6 +211,6 @@
         <div class="wa-text" data-i18n="waWidgetText">Hızlı Teklif & WhatsApp</div>
     </a>
 
-    <script type="module" src="./js/blog.js?v=20260909"></script>
+    <script type="module" src="./js/blog.js?v=20260909_v4"></script>
 </body>
 </html>
