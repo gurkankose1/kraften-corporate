@@ -827,9 +827,9 @@ body {
 
 /* ================= RETAIL PRODUCT CARDS & LID TOGGLE ================= */
 .retail-shelf-sec {
-    margin-top: 70px;
-    border-top: 1px solid var(--border-glass);
-    padding-top: 50px;
+    max-width: 1400px;
+    margin: 50px auto 80px;
+    padding: 0 40px;
 }
 
 .retail-shelf-header {
@@ -1014,6 +1014,50 @@ body {
 .btn-card-add:hover {
     background: var(--gold-bright);
     box-shadow: 0 4px 15px var(--gold-glow);
+}
+
+.price-kdv-tag {
+    font-size: 0.72rem;
+    color: var(--gold-bright);
+    background: rgba(200, 169, 110, 0.12);
+    border: 1px solid rgba(200, 169, 110, 0.25);
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-weight: 600;
+    margin-left: 6px;
+}
+
+.btn-custom-print-wa {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    margin-top: 10px;
+    padding: 8px 10px;
+    background: rgba(45, 106, 79, 0.15);
+    border: 1px dashed rgba(45, 106, 79, 0.5);
+    border-radius: 8px;
+    color: #74C69D;
+    font-size: 0.76rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: var(--transition);
+    text-align: center;
+}
+
+.btn-custom-print-wa:hover {
+    background: rgba(45, 106, 79, 0.35);
+    border-color: #52B788;
+    color: #FFF;
+    transform: translateY(-2px);
+}
+
+.cart-summary-kdv {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.88rem;
+    color: var(--gold);
+    margin: 6px 0;
 }
 
 /* ================= CART DRAWER & CHECKOUT MODAL ================= */
