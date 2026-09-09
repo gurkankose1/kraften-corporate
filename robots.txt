@@ -1,3 +1,24 @@
 User-agent: *
 Allow: /
+Disallow: /scripts/
+Disallow: /imza.html
+Disallow: /generate_pdf.py
+Disallow: /pdf_img/
+Disallow: /emadmin
+Disallow: /emadmin.html
+
+
+# AI Bot Directives
+User-agent: GPTBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
 Sitemap: https://www.kraftenambalaj.com/sitemap.xml
