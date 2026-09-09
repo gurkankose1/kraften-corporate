@@ -76,7 +76,7 @@ const defaultNextgenProducts = [
         name: '12 OZ Soğuk Gıda & Bardak Kasesi',
         desc: 'Dondurma, donuk yoğurt, soğuk meze, meyve salatası ve soğuk içecekler için çift katmanlı soğuk bariyerli kase/bardak gövdesi. Dış yüzeyde terleme yapmaz, çıtçıtlı bombeli şeffaf kristal kapak seçeneği ile lezzeti taze tutar.',
         specs: ['2.000 Adet/Koli', 'Terleme Yapmaz', 'Soğuk Bariyer', 'Dondurma & Meze', 'Kristal Kapak Uyumlu'],
-        img: './images/prods/12oz_bowl_clean.webp',
+        img: './images/prods/bowls_12_14_16.jpg',
         category: 'yeni_kaseler',
         wholesaleBoxQty: 2000,
         hasLidOption: true,
@@ -92,7 +92,7 @@ const defaultNextgenProducts = [
         name: '14 OZ Karton Çorba Kasesi Seti (Kapak Dahil)',
         desc: 'Sıcak çorba, kuru fasulye, güveç ve sulu tencere yemekleri için tasarlanmış komple set ambalaj. Buhar tahliye kanallı şeffaf bombeli kapağı pakete dahildir; taşırken basınç yapmaz, sızdırmaz ve kapağı fırlamaz. 500 kase + 500 kapak hazır set standardı.',
         specs: ['500 Set/Koli', 'Buhar Tahliyeli Kapak Dahil', 'Sıcak Sulu Yemek', 'El Yakmaz Gövde', 'Klipsli Sızdırmaz'],
-        img: './images/prods/14oz_bowl_clean.webp',
+        img: './images/prods/bowls_12_14_16.jpg',
         category: 'yeni_kaseler',
         wholesaleBoxQty: 500,
         hasLidOption: false,
@@ -108,7 +108,7 @@ const defaultNextgenProducts = [
         name: '16 OZ Karton Çorba Kasesi Seti (Kapak Dahil)',
         desc: 'Daha büyük hacimli mercimek, kelle paça, işkembe ve sulu menüler için büyük boy çorba kasesi seti. Güçlendirilmiş alt taban kıvrımı ve ısı yalıtımlı gövde yapısı el yakmadan güvenli taşıma sağlar. Kristal buhar tahliyeli kapağıyla set halindedir.',
         specs: ['500 Set/Koli', 'Buhar Tahliyeli Kapak Dahil', '16 OZ (480 ml)', 'Yüksek Isı Yalıtımı', 'Hijyenik Ambalaj'],
-        img: './images/prods/16oz_bowl_clean.webp',
+        img: './images/prods/bowls_12_14_16.jpg',
         category: 'yeni_kaseler',
         wholesaleBoxQty: 500,
         hasLidOption: false,
@@ -126,7 +126,7 @@ const defaultNextgenProducts = [
         name: '4 OZ Karton Bardak (Kapaksız)',
         desc: 'Tek ve duble espresso shot servisleri, mağaza/şarküteri tadım ikramları ve numune dağıtımları için kompakt yüksek gramajlı mini karton bardak. Pürüzsüz dudak kıvrımı ile dökülmeden içim keyfi sunar.',
         specs: ['3.000 Adet/Koli', '62 mm Ağız Çapı', 'Espresso & Tadım', '118 ml Hacim', 'Sıvı Sızdırmaz'],
-        img: './images/prods/4oz_cup_clean.webp',
+        img: './images/prods/cups_series.jpg',
         category: 'bardaklar',
         wholesaleBoxQty: 3000,
         hasLidOption: false,
@@ -142,7 +142,7 @@ const defaultNextgenProducts = [
         name: '6 OZ Karton Bardak (Kapaksız)',
         desc: 'Türk çayı, su, meyve suyu ve flat white için en ideal orta-küçük hacimli ergonomik bardak. Dayanıklı saf selüloz yapısı sayesinde sıcak içeceklerde bardağın formu bozulmaz ve yumuşama yapmaz.',
         specs: ['3.000 Adet/Koli', '70 mm Ağız Çapı', 'Çay & Su Servisi', '175 ml Hacim', 'Kokusuz Karton'],
-        img: './images/prods/6oz_cup_clean.webp',
+        img: './images/prods/cups_series.jpg',
         category: 'bardaklar',
         wholesaleBoxQty: 3000,
         hasLidOption: false,
@@ -158,7 +158,7 @@ const defaultNextgenProducts = [
         name: '7 OZ Karton Bardak (Kapaksız)',
         desc: 'Otomat kahve makineleri, kurumsal ofisler, şantiyeler ve toplantı salonları için Türkiye standardı pürüzsüz karton bardak. Otomat raylarına tam uyumlu ölçüler ve sıkışma yapmayan kusursuz istif geometrisi.',
         specs: ['3.000 Adet/Koli', '73 mm Ağız Çapı', 'Otomat & Ofis Uyumlu', '200 ml Hacim', 'Sıkışma Yapmaz'],
-        img: './images/prods/7oz_cup_clean.webp',
+        img: './images/prods/cups_series.jpg',
         category: 'bardaklar',
         wholesaleBoxQty: 3000,
         hasLidOption: false,
@@ -174,7 +174,7 @@ const defaultNextgenProducts = [
         name: '8 OZ Karton Bardak (Kapaksız)',
         desc: '3. dalga kahve dükkanları, kafeler, pastaneler ve take-away servislerin amiral gemisi sıcak kahve bardağı. Filtre kahve, latte, cappuccino ve bitki çayları için el yakmayan yüksek yoğunluklu karton gövde.',
         specs: ['2.000 Adet/Koli', '80 mm Ağız Çapı', 'Filtre Kahve & Latte', '240 ml Hacim', 'El Yakmayan Gövde'],
-        img: './images/prods/8oz_cup_clean.webp',
+        img: './images/prods/cups_series.jpg',
         category: 'bardaklar',
         wholesaleBoxQty: 2000,
         hasLidOption: false,
@@ -192,7 +192,7 @@ const defaultNextgenProducts = [
         name: '550 CC Beyaz Salata Kasesi',
         desc: 'Saf beyaz gıda kartonundan üretilen lüks salata kasesi. Minimalist, modern ve temiz restoran konseptleri için leke tutmaz pürüzsüz dış yüzey. Soslu salatalar, makarna ve soğuk gurme mezelerde sıfır sızdırma sağlar.',
         specs: ['150 mm Çap', '500 Adet/Koli', 'Saf Beyaz Prestij', '%100 Sızdırmaz PE', 'Restoran Standardı'],
-        img: './images/prods/550_white_main.webp',
+        img: './images/550-white-kraften.webp',
         category: 'beyaz_kaseler',
         wholesaleBoxQty: 500,
         hasLidOption: true,
@@ -208,7 +208,7 @@ const defaultNextgenProducts = [
         name: '750 CC Beyaz Salata Kasesi',
         desc: 'Gurme restorasyon ve otel mutfakları için saf beyaz estetiğe sahip 750 cc salata kasesi. Ağır salata sosları, zeytinyağlılar ve sıcak menü sunumlarında yüksek mukavemet gösterir. Şeffaf PET kapakla vitrinde premium görünüm.',
         specs: ['150 mm Çap', '500 Adet/Koli', 'Gurme Menü Sunumu', 'Sıcak & Soğuk Dayanımı', 'Klipsli Kapak Uyumlu'],
-        img: './images/prods/750_white_main.webp',
+        img: './images/750-white-kraften.webp',
         category: 'beyaz_kaseler',
         wholesaleBoxQty: 500,
         hasLidOption: true,
@@ -240,7 +240,7 @@ class CatalogApp {
     loadProducts() {
         try {
             const VERSION_KEY = 'kraften_price_version';
-            const CURRENT_VERSION = '2026-09-09-v2';
+            const CURRENT_VERSION = '2026-09-10-v3';
             const currentVersion = localStorage.getItem(VERSION_KEY);
             if (currentVersion !== CURRENT_VERSION) {
                 localStorage.setItem(VERSION_KEY, CURRENT_VERSION);
