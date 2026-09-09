@@ -615,12 +615,12 @@ body {
 }
 
 /* ================= GRAND FINALE SALES GATEWAY (SAYFANIN SONU) ================= */
-.sales-hub-section {
+.sales-grand-section, .sales-hub-section {
     position: relative;
     z-index: 1;
     padding: 100px 36px 80px;
     border-top: 1px solid var(--border-glass);
-    background: linear-gradient(180deg, rgba(8, 16, 12, 0.6) 0%, rgba(14, 26, 20, 0.95) 100%);
+    background: linear-gradient(180deg, rgba(8, 16, 12, 0.7) 0%, rgba(14, 26, 20, 0.98) 100%);
 }
 
 .sales-hub-header {
@@ -637,7 +637,7 @@ body {
     margin: 0 auto;
 }
 
-.sales-hub-card {
+.sales-module-card, .sales-hub-card {
     background: var(--bg-card);
     border: 1px solid var(--border-glass);
     border-radius: var(--radius-lg);
@@ -649,51 +649,139 @@ body {
     transition: var(--transition);
 }
 
-.sales-hub-card:hover {
-    border-color: var(--gold);
-    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5), 0 0 35px var(--gold-glow);
+.sales-module-card:hover, .sales-hub-card:hover {
     transform: translateY(-6px);
 }
 
-.sales-hub-badge {
+.sales-module-card.wholesale, .sales-hub-card.wholesale {
+    border-color: rgba(200, 169, 110, 0.35);
+    background: radial-gradient(circle at top left, rgba(200, 169, 110, 0.08), transparent 70%), var(--bg-card);
+}
+
+.sales-module-card.wholesale:hover, .sales-hub-card.wholesale:hover {
+    border-color: var(--gold);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6), 0 0 40px rgba(200, 169, 110, 0.25);
+}
+
+.sales-module-card.retail, .sales-hub-card.retail {
+    border-color: rgba(64, 145, 108, 0.35);
+    background: radial-gradient(circle at top right, rgba(64, 145, 108, 0.08), transparent 70%), var(--bg-card);
+}
+
+.sales-module-card.retail:hover, .sales-hub-card.retail:hover {
+    border-color: #74C69D;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6), 0 0 40px rgba(64, 145, 108, 0.25);
+}
+
+.sales-badge-pill, .sales-hub-badge {
     display: inline-flex;
     align-items: center;
     gap: 8px;
-    padding: 6px 14px;
+    padding: 8px 18px;
     border-radius: var(--radius-full);
-    font-size: 0.75rem;
+    font-size: 0.78rem;
     font-weight: 800;
     text-transform: uppercase;
-    letter-spacing: 1px;
-    margin-bottom: 20px;
+    letter-spacing: 1.5px;
+    margin-bottom: 22px;
     align-self: flex-start;
 }
 
-.badge-b2b {
-    background: rgba(200, 169, 110, 0.2);
+.sales-badge-pill.wholesale, .badge-b2b {
+    background: rgba(200, 169, 110, 0.18);
     color: var(--gold);
-    border: 1px solid var(--border-glass);
+    border: 1px solid var(--gold);
 }
 
-.badge-b2c {
-    background: rgba(64, 145, 108, 0.25);
+.sales-badge-pill.retail, .badge-b2c {
+    background: rgba(64, 145, 108, 0.22);
     color: #74C69D;
-    border: 1px solid rgba(64, 145, 108, 0.4);
+    border: 1px solid rgba(64, 145, 108, 0.6);
 }
 
 .sales-card-title {
     font-family: var(--ff-serif);
-    font-size: 2.2rem;
-    font-weight: 700;
+    font-size: 2.1rem;
+    font-weight: 800;
     color: #FFF;
-    margin-bottom: 12px;
+    margin-bottom: 14px;
+    letter-spacing: 0.5px;
 }
 
-.sales-card-sub {
-    color: var(--text-muted);
-    font-size: 1rem;
-    line-height: 1.6;
+.sales-card-desc, .sales-card-sub {
+    color: var(--text-light);
+    font-size: 1.02rem;
+    line-height: 1.65;
     margin-bottom: 25px;
+}
+
+.sales-perks-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 35px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.sales-perks-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    font-size: 0.94rem;
+    color: var(--text-light);
+    line-height: 1.5;
+}
+
+.sales-perks-list li i {
+    color: var(--gold);
+    font-size: 1.05rem;
+    margin-top: 3px;
+    flex-shrink: 0;
+}
+
+.sales-module-card.retail .sales-perks-list li i {
+    color: #74C69D;
+}
+
+.btn-sales-primary {
+    width: 100%;
+    padding: 16px 24px;
+    border-radius: var(--radius-full);
+    font-size: 1rem;
+    font-weight: 800;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    transition: var(--transition);
+    cursor: pointer;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+}
+
+.btn-sales-primary.wholesale {
+    background: var(--gold);
+    color: #08100C;
+    border: none;
+}
+
+.btn-sales-primary.wholesale:hover {
+    background: var(--gold-bright);
+    box-shadow: 0 10px 30px var(--gold-glow);
+    transform: translateY(-3px);
+}
+
+.btn-sales-primary.retail {
+    background: #2D6A4F;
+    color: #FFF;
+    border: 1px solid #40916C;
+}
+
+.btn-sales-primary.retail:hover {
+    background: #40916C;
+    box-shadow: 0 10px 30px rgba(64, 145, 108, 0.4);
+    transform: translateY(-3px);
 }
 
 /* ================= RETAIL PRODUCT CARDS & LID TOGGLE ================= */
@@ -1162,17 +1250,17 @@ body {
 }
 
 /* ================= BENTO BLOG (SEO PRESERVATION) ================= */
-.blog-bento-sec {
+.bento-grid-sec, .blog-bento-sec {
     max-width: 1400px;
     margin: 0 auto;
-    padding: 70px 36px;
+    padding: 90px 36px 70px;
     border-top: 1px solid var(--border-glass);
 }
 
-.bento-grid-3 {
+.bento-grid, .bento-grid-3 {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 25px;
+    gap: 28px;
     margin-top: 30px;
 }
 
@@ -1180,30 +1268,64 @@ body {
     background: var(--bg-card);
     border: 1px solid var(--border-glass);
     border-radius: var(--radius-md);
-    overflow: hidden;
-    text-decoration: none;
-    color: inherit;
+    padding: 32px 28px;
+    backdrop-filter: blur(15px);
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
     transition: var(--transition);
+    position: relative;
 }
 
 .bento-card:hover {
     transform: translateY(-5px);
     border-color: var(--gold);
+    background: rgba(20, 36, 28, 0.95);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5), 0 0 25px rgba(200, 169, 110, 0.15);
 }
 
-.bento-card img {
-    width: 100%;
-    aspect-ratio: 16/9;
-    object-fit: cover;
+.bento-category {
+    display: inline-block;
+    font-size: 0.72rem;
+    font-weight: 800;
+    color: var(--gold);
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    margin-bottom: 14px;
 }
 
-.bento-card-body {
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    flex: 1;
+.bento-title {
+    font-family: var(--ff-serif);
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #FFF;
+    line-height: 1.4;
+    margin-bottom: 14px;
+}
+
+.bento-excerpt {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    line-height: 1.6;
+    margin-bottom: 24px;
+    flex-grow: 1;
+}
+
+.bento-link {
+    color: var(--gold-bright);
+    font-size: 0.88rem;
+    font-weight: 700;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    transition: var(--transition);
+    align-self: flex-start;
+}
+
+.bento-link:hover {
+    color: #FFF;
+    gap: 12px;
 }
 
 /* ================= RESPONSIVE ================= */
