@@ -358,8 +358,8 @@
             border-radius: 12px;
             padding: 20px 24px;
             display: grid;
-            grid-template-columns: 280px 1fr 1fr 1fr 160px;
-            gap: 20px;
+            grid-template-columns: 240px 1.1fr 1.1fr 1.1fr 130px;
+            gap: 18px;
             align-items: center;
             transition: 0.3s ease;
         }
@@ -581,9 +581,9 @@
             <!-- PRODUCT PRICE & LID LIST -->
             <div class="mgmt-header">
                 <div>
-                    <h2 class="mgmt-title">Perakende Fiyat &amp; Kapak Ayarları</h2>
+                    <h2 class="mgmt-title">Perakende Fiyat, Paket Adeti &amp; Kapak Yönetimi</h2>
                     <p style="font-size: 0.85rem; color: var(--text-muted); margin-top: 4px;">
-                        Tüm paket fiyatlarını ve kapak farklarını bu ekrandan dilediğiniz gibi güncelleyebilirsiniz.
+                        Her ürünün minimum sipariş adedini (1. paket), ara paketlerini ve fiyatlarını belirleyebilirsiniz. <strong style="color: var(--gold-bright);">Fiyatlar KDV Hariçtir</strong>; sistem sepette otomatik olarak <strong>+%20 KDV</strong> hesaplayacaktır.
                     </p>
                 </div>
                 <button id="btn-save-all-top" class="btn-save-all">
@@ -671,7 +671,7 @@
                 id: 'prod-12oz-bowl',
                 name: '12 OZ Soğuk Gıda Kasesi',
                 category: 'Yeni Kaseler',
-                img: './images/prods/bowls_12_14_16.jpg',
+                img: './images/prods/12oz_bowl_clean.webp',
                 hasLidOption: true,
                 lidPrice: 20,
                 packs: [
@@ -684,7 +684,7 @@
                 id: 'prod-14oz-bowl',
                 name: '14 OZ Karton Kase (Kapak Dahil)',
                 category: 'Yeni Kaseler (Set)',
-                img: './images/prods/bowls_12_14_16.jpg',
+                img: './images/prods/14oz_bowl_clean.webp',
                 hasLidOption: false,
                 lidPrice: 0,
                 packs: [
@@ -697,7 +697,7 @@
                 id: 'prod-16oz-bowl',
                 name: '16 OZ Karton Kase (Kapak Dahil)',
                 category: 'Yeni Kaseler (Set)',
-                img: './images/prods/bowls_12_14_16.jpg',
+                img: './images/prods/16oz_bowl_clean.webp',
                 hasLidOption: false,
                 lidPrice: 0,
                 packs: [
@@ -710,7 +710,7 @@
                 id: 'prod-4oz-cup',
                 name: '4 OZ Karton Bardak (Kapaksız)',
                 category: 'Karton Bardaklar',
-                img: './images/prods/cups_series.jpg',
+                img: './images/prods/4oz_cup_clean.webp',
                 hasLidOption: false,
                 lidPrice: 0,
                 packs: [
@@ -723,7 +723,7 @@
                 id: 'prod-6oz-cup',
                 name: '6 OZ Karton Bardak (Kapaksız)',
                 category: 'Karton Bardaklar',
-                img: './images/prods/cups_series.jpg',
+                img: './images/prods/6oz_cup_clean.webp',
                 hasLidOption: false,
                 lidPrice: 0,
                 packs: [
@@ -736,7 +736,7 @@
                 id: 'prod-7oz-cup',
                 name: '7 OZ Karton Bardak (Kapaksız)',
                 category: 'Karton Bardaklar',
-                img: './images/prods/cups_series.jpg',
+                img: './images/prods/7oz_cup_clean.webp',
                 hasLidOption: false,
                 lidPrice: 0,
                 packs: [
@@ -749,7 +749,7 @@
                 id: 'prod-8oz-cup',
                 name: '8 OZ Karton Bardak (Kapaksız)',
                 category: 'Karton Bardaklar',
-                img: './images/prods/cups_series.jpg',
+                img: './images/prods/8oz_cup_clean.webp',
                 hasLidOption: false,
                 lidPrice: 0,
                 packs: [
@@ -875,26 +875,44 @@
                         </div>
 
                         <div class="pack-input-group">
-                            <label class="pack-lbl">${prod.packs[0]?.count || 25}'li Paket Fiyatı</label>
-                            <div class="input-cur-wrap">
-                                <span class="cur-symbol">₺</span>
-                                <input type="number" step="0.5" class="input-p0" value="${prod.packs[0]?.price || 0}">
+                            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 4px;">
+                                <label class="pack-lbl">1. Paket (Min)</label>
+                                <span style="font-size: 0.65rem; color: var(--gold);">Adet / ₺</span>
+                            </div>
+                            <div style="display: flex; gap: 6px;">
+                                <input type="number" class="input-c0" value="${prod.packs[0]?.count || 25}" title="1. Paket Adeti (Min Sipariş)" placeholder="Adet" style="width: 58px; padding: 8px 4px; background: rgba(0,0,0,0.6); border: 1px solid var(--border-glass); border-radius: 6px; color: var(--gold-bright); font-weight: 700; text-align: center;">
+                                <div class="input-cur-wrap" style="flex: 1;">
+                                    <span class="cur-symbol">₺</span>
+                                    <input type="number" step="0.5" class="input-p0" value="${prod.packs[0]?.price || 0}" title="1. Paket Fiyatı (KDV Hariç)">
+                                </div>
                             </div>
                         </div>
 
                         <div class="pack-input-group">
-                            <label class="pack-lbl">${prod.packs[1]?.count || 50}'li Paket Fiyatı</label>
-                            <div class="input-cur-wrap">
-                                <span class="cur-symbol">₺</span>
-                                <input type="number" step="0.5" class="input-p1" value="${prod.packs[1]?.price || 0}">
+                            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 4px;">
+                                <label class="pack-lbl">2. Paket</label>
+                                <span style="font-size: 0.65rem; color: var(--gold);">Adet / ₺</span>
+                            </div>
+                            <div style="display: flex; gap: 6px;">
+                                <input type="number" class="input-c1" value="${prod.packs[1]?.count || 50}" title="2. Paket Adeti" placeholder="Adet" style="width: 58px; padding: 8px 4px; background: rgba(0,0,0,0.6); border: 1px solid var(--border-glass); border-radius: 6px; color: var(--gold-bright); font-weight: 700; text-align: center;">
+                                <div class="input-cur-wrap" style="flex: 1;">
+                                    <span class="cur-symbol">₺</span>
+                                    <input type="number" step="0.5" class="input-p1" value="${prod.packs[1]?.price || 0}" title="2. Paket Fiyatı (KDV Hariç)">
+                                </div>
                             </div>
                         </div>
 
                         <div class="pack-input-group">
-                            <label class="pack-lbl">${prod.packs[2]?.count || 100}'lü Paket Fiyatı</label>
-                            <div class="input-cur-wrap">
-                                <span class="cur-symbol">₺</span>
-                                <input type="number" step="0.5" class="input-p2" value="${prod.packs[2]?.price || 0}">
+                            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 4px;">
+                                <label class="pack-lbl">3. Paket</label>
+                                <span style="font-size: 0.65rem; color: var(--gold);">Adet / ₺</span>
+                            </div>
+                            <div style="display: flex; gap: 6px;">
+                                <input type="number" class="input-c2" value="${prod.packs[2]?.count || 100}" title="3. Paket Adeti" placeholder="Adet" style="width: 58px; padding: 8px 4px; background: rgba(0,0,0,0.6); border: 1px solid var(--border-glass); border-radius: 6px; color: var(--gold-bright); font-weight: 700; text-align: center;">
+                                <div class="input-cur-wrap" style="flex: 1;">
+                                    <span class="cur-symbol">₺</span>
+                                    <input type="number" step="0.5" class="input-p2" value="${prod.packs[2]?.price || 0}" title="3. Paket Fiyatı (KDV Hariç)">
+                                </div>
                             </div>
                         </div>
 
@@ -918,14 +936,20 @@
                     const id = row.dataset.id;
                     const prod = this.products.find(x => x.id === id);
                     if (prod) {
-                        const p0 = parseFloat(row.querySelector('.input-p0').value) || prod.packs[0].price;
-                        const p1 = parseFloat(row.querySelector('.input-p1').value) || (prod.packs[1]?.price || 0);
-                        const p2 = parseFloat(row.querySelector('.input-p2').value) || (prod.packs[2]?.price || 0);
-                        const lid = parseFloat(row.querySelector('.input-lid').value) || 0;
+                        const c0 = parseInt(row.querySelector('.input-c0')?.value) || (prod.packs[0]?.count || 25);
+                        const p0 = parseFloat(row.querySelector('.input-p0')?.value) || (prod.packs[0]?.price || 0);
+                        const c1 = parseInt(row.querySelector('.input-c1')?.value) || (prod.packs[1]?.count || 50);
+                        const p1 = parseFloat(row.querySelector('.input-p1')?.value) || (prod.packs[1]?.price || 0);
+                        const c2 = parseInt(row.querySelector('.input-c2')?.value) || (prod.packs[2]?.count || 100);
+                        const p2 = parseFloat(row.querySelector('.input-p2')?.value) || (prod.packs[2]?.price || 0);
+                        const lid = parseFloat(row.querySelector('.input-lid')?.value) || 0;
 
-                        if (prod.packs[0]) prod.packs[0].price = p0;
-                        if (prod.packs[1]) prod.packs[1].price = p1;
-                        if (prod.packs[2]) prod.packs[2].price = p2;
+                        prod.minQty = c0;
+                        prod.packs = [
+                            { count: c0, price: p0, oldPrice: Math.round(p0 * 1.25) },
+                            { count: c1, price: p1, oldPrice: Math.round(p1 * 1.25) },
+                            { count: c2, price: p2, oldPrice: Math.round(p2 * 1.25) }
+                        ];
                         if (prod.hasLidOption) prod.lidPrice = lid;
                     }
                 });
