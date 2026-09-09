@@ -192,6 +192,23 @@ export const certificates = [
   
 export const blogs = [
     {
+      "id": "autonews-biyopolimer-gida-ambalaji-2026-09-09",
+      "titleTr": "Meyve Yan Ürünlerinden Biyopolimer ve Sürdürülebilir Ambalaj Teknolojileri",
+      "titleEn": "Fruit Byproducts & Biopolymer Technologies in Sustainable Food Packaging",
+      "titleDe": "Fruchtnebenprodukte & Biopolymer-Technologien in Lebensmittelverpackungen",
+      "titleFr": "Sous-produits Fruités & Biopolymères dans l'Emballage Alimentaire",
+      "date": "09 Eylül 2026",
+      "author": "Kraften Ar-Ge",
+      "category": "surdurulebilirlik",
+      "img": "https://images.unsplash.com/photo-1610557892470-55d9e80c0bce?auto=format&fit=crop&w=800&q=80",
+      "summaryTr": "Meyve atıklarından elde edilen biyopolimer koruyucu kaplamalar, karton gıda kaplarında sızdırmazlığı artıran doğa dostu bir dönemi başlatıyor.",
+      "summaryEn": "Biopolymer coatings derived from fruit byproducts introduce an eco-friendly era in leak-proof paperboard food containers.",
+      "summaryDe": "Biopolymer-Beschichtungen aus Fruchtnebenprodukten leiten eine umweltfreundliche Ära auslaufsicherer Kartonbehälter ein.",
+      "summaryFr": "Les revêtements biopolymères issus de sous-produits fruités ouvrent une ère écologique pour les récipients étanches en carton.",
+      "contentTr": "Gıda ambalajı sektöründe meyve ve tarımsal bitki artıklarından elde edilen yenilikçi biyopolimer matriksler hızla ön plana çıkmaktadır. Restoranların, kafelerin ve catering firmalarının doğa dostu kağıt kaplara yönelimi hem çevre sağlığını korumakta hem de markaların müşteri memnuniyetini yükseltmektedir.\n\nÖzellikle meyve atıklarından sentezlenen doğal koruyucu bariyerler, gıda ile temasa %100 uygun olup sıcak yemeklerde ve soslu gıdalarda mükemmel sızdırmazlık sağlar. Bu teknoloji, tek kullanımlık plastik kaplamaların yerini alarak %99 geri dönüştürülebilir karton kaselerin geleceğini şekillendirmektedir.\n\nKraften Ambalaj olarak, gıda temasına uygun FSC sertifikalı kraft salata kaselerimiz ve yenilikçi Ar-Ge çalışmalarımızla sürdürülebilir gıda ambalajı dönüşümüne öncülük ediyoruz.",
+      "contentEn": "In the global food packaging sector, innovative biopolymer matrices derived from fruit and agricultural byproducts are rapidly coming to the forefront. The transition of restaurants towards paperboard containers protects the environment while boosting customer trust.\n\nIn particular, natural protective barrier linings synthesized from fruit waste are 100% food-contact safe and provide superior leak resistance for hot and saucy foods. This technology paves the way for 99% recyclable paper bowls.\n\nAt Kraften Packaging, we lead this sustainability transformation with certified paper bowls and leak-proof containers."
+    },
+    {
       "id": "autonews-u-yee-pack-builds-momentum-in-sustainabl",
       "titleTr": "Küresel Gıda Ambalajı Sektöründe Sürdürülebilir Masaüstü Ürün Trendleri",
       "titleEn": "Global Food Packaging Trends: Sustainable Tableware & Eco-Friendly Dining",
