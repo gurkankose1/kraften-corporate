@@ -322,13 +322,13 @@
     </section>
 
     <!-- TRUST STRIP -->
-    <div style="border-top: 1px solid var(--border-glass); border-bottom: 1px solid var(--border-glass); background: rgba(14, 26, 20, 0.7); padding: 18px 36px;">
-        <div style="max-width: 1400px; margin: 0 auto; display: flex; justify-content: space-around; flex-wrap: wrap; gap: 20px; font-size: 0.88rem; font-weight: 700; color: var(--gold-bright);">
-            <span><i class="fas fa-shield-alt"></i> ISO 22000 Gıda Temasına Tam Uygunluk</span>
-            <span><i class="fas fa-tree"></i> FSC Sertifikalı Doğal İskandinav Kraftı</span>
-            <span><i class="fas fa-recycle"></i> %99 Biyolojik Geri Dönüştürülebilir</span>
-            <span><i class="fas fa-truck-loading"></i> Fabrikadan Doğrudan Stok Sevk</span>
-            <span><i class="fas fa-award"></i> %100 Sıvı ve Sıcak Sos Sızdırmazlık</span>
+    <div class="trust-strip-sec">
+        <div class="trust-strip-inner">
+            <span><i class="fas fa-shield-alt"></i> ISO 22000 Gıda Temasına Uygunluk</span>
+            <span><i class="fas fa-tree"></i> FSC Sertifikalı Doğal Kraft</span>
+            <span><i class="fas fa-recycle"></i> %99 Geri Dönüştürülebilir</span>
+            <span><i class="fas fa-truck-loading"></i> Fabrikadan Doğrudan Sevk</span>
+            <span><i class="fas fa-award"></i> %100 Sıcak &amp; Sos Sızdırmazlık</span>
         </div>
     </div>
 
@@ -602,33 +602,33 @@
     <!-- ======================================================= -->
     <!-- COMPACT PRODUCTION FACILITY STRIP                       -->
     <!-- ======================================================= -->
-    <section id="facility" style="position: relative; z-index: 1; padding: 60px 36px; background: rgba(8, 16, 12, 0.95); border-top: 1px solid var(--border-glass); border-bottom: 1px solid var(--border-glass);">
-        <div style="max-width: 1400px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center;">
-            <div>
+    <section id="facility" class="facility-sec">
+        <div class="facility-grid">
+            <div class="facility-content">
                 <span class="catalog-eyebrow">✦ YÜKSEK HIZLI ÜRETİM PARKURU</span>
-                <h2 style="font-family: var(--ff-serif); font-size: 2.2rem; color: #FFF; margin-bottom: 16px;">
+                <h2 class="facility-title">
                     Endüstriyel Kapasite, Hijyenik Cleanroom
                 </h2>
-                <p style="color: var(--text-light); line-height: 1.7; margin-bottom: 24px; font-size: 0.98rem;">
+                <p class="facility-desc">
                     Kraften Ambalaj üretim tesisimizde, tam otomatik servo motorlu şekillendirme ve ultrasonik yapıştırma teknolojisiyle el değmeden imalat yapılmaktadır. Aylık 10+ milyon kase üretim kapasitesiyle Türkiye'nin en büyük gıda zincirlerine ve ihracat pazarlarına kesintisiz tedarik sağlıyoruz.
                 </p>
-                <div style="display: flex; gap: 20px; flex-wrap: wrap;">
-                    <div style="background: rgba(200, 169, 110, 0.1); border: 1px solid var(--border-glass); padding: 12px 20px; border-radius: 8px;">
-                        <strong style="color: var(--gold-bright); font-size: 1.4rem; display: block;">10M+</strong>
-                        <span style="font-size: 0.75rem; color: var(--text-muted);">Aylık Kase Üretimi</span>
+                <div class="facility-metrics-row">
+                    <div class="facility-metric-card">
+                        <strong class="facility-metric-val">10M+</strong>
+                        <span class="facility-metric-lbl">Aylık Kase Üretimi</span>
                     </div>
-                    <div style="background: rgba(200, 169, 110, 0.1); border: 1px solid var(--border-glass); padding: 12px 20px; border-radius: 8px;">
-                        <strong style="color: var(--gold-bright); font-size: 1.4rem; display: block;">%100</strong>
-                        <span style="font-size: 0.75rem; color: var(--text-muted);">Gıda Temas Güvenliği</span>
+                    <div class="facility-metric-card">
+                        <strong class="facility-metric-val">%100</strong>
+                        <span class="facility-metric-lbl">Gıda Temas Güvenliği</span>
                     </div>
-                    <div style="background: rgba(200, 169, 110, 0.1); border: 1px solid var(--border-glass); padding: 12px 20px; border-radius: 8px;">
-                        <strong style="color: var(--gold-bright); font-size: 1.4rem; display: block;">Aynı Gün</strong>
-                        <span style="font-size: 0.75rem; color: var(--text-muted);">Stoktan Fabrika Çıkışı</span>
+                    <div class="facility-metric-card">
+                        <strong class="facility-metric-val">Aynı Gün</strong>
+                        <span class="facility-metric-lbl">Stoktan Fabrika Çıkışı</span>
                     </div>
                 </div>
             </div>
-            <div style="border-radius: 16px; overflow: hidden; border: 1px solid var(--border-glass-bright); box-shadow: 0 10px 40px rgba(0,0,0,0.6);">
-                <img src="./images/catalog/factory_hero.jpg" alt="Kraften Ambalaj Fabrika Üretim Hattı" style="width: 100%; height: 360px; object-fit: cover; display: block;">
+            <div class="facility-img-card">
+                <img src="./images/catalog/factory_hero.jpg" alt="Kraften Ambalaj Fabrika Üretim Hattı">
             </div>
         </div>
     </section>
@@ -637,12 +637,12 @@
     <!-- 3. GRAND FINALE: TWO SALES CHANNELS (WHOLESALE & RETAIL) -->
     <!-- ======================================================= -->
     <section class="sales-grand-section">
-        <div style="text-align: center; max-width: 800px; margin: 0 auto 50px;">
+        <div class="sales-header">
             <span class="catalog-eyebrow">✦ SİPARİŞ &amp; SATIŞ KANALLARI</span>
-            <h2 style="font-family: var(--ff-serif); font-size: 2.8rem; color: #FFF; margin-bottom: 15px;">
+            <h2 class="sales-title">
                 İhtiyacınıza Uygun Satın Alma Modeli
             </h2>
-            <p style="color: var(--text-muted); font-size: 1.05rem;">
+            <p class="sales-desc">
                 İster restoran ve catering zinciriniz için konteyner / palet bazlı toptan alım yapın, ister kafeniz ve eviniz için küçük paketlerde perakende sipariş verin.
             </p>
         </div>
@@ -702,10 +702,10 @@
         </div>
 
         <!-- RETAIL E-COMMERCE SHELF (CANLI ÜRÜN SEPET SEÇİM ALANI) -->
-        <div id="retail-catalog-shelf" style="margin-top: 70px; border-top: 1px solid var(--border-glass); padding-top: 50px;">
-            <div style="text-align: center; margin-bottom: 35px;">
+        <div id="retail-catalog-shelf" class="retail-shelf-sec">
+            <div class="retail-shelf-header">
                 <span class="catalog-eyebrow">Perakende Ürün Vitrini</span>
-                <h3 style="font-family: var(--ff-serif); font-size: 2.2rem; color: #FFF;">Paketinizi Seçin, Sepete Ekleyin</h3>
+                <h3 class="retail-shelf-title">Paketinizi Seçin, Sepete Ekleyin</h3>
             </div>
 
             <div id="retail-showcase-grid" class="retail-showcase-grid">
@@ -805,12 +805,12 @@
     <!-- 4. GOOGLEBOT SEO & KNOWLEDGE BENTO GRID                 -->
     <!-- ======================================================= -->
     <section id="blog-bento" class="bento-grid-sec">
-        <div style="text-align: center; max-width: 800px; margin: 0 auto 40px;">
+        <div class="bento-header">
             <span class="catalog-eyebrow">✦ GÜNCEL BİLGİ MERKEZİ</span>
-            <h2 style="font-family: var(--ff-serif); font-size: 2.2rem; color: #FFF; margin-bottom: 12px;">
+            <h2 class="bento-sec-title">
                 Sektörel Trendler &amp; Gıda Ambalajı Rehberi
             </h2>
-            <p style="color: var(--text-muted); font-size: 0.95rem;">
+            <p class="bento-sec-desc">
                 Sürdürülebilir gıda ambalajı teknolojileri, gıda güvenliği standartları ve restoran operasyonlarına dair uzman analizleri.
             </p>
         </div>
@@ -852,25 +852,25 @@
     </section>
 
     <!-- MINIMAL CORPORATE FOOTER -->
-    <footer style="border-top: 1px solid var(--border-glass); padding: 50px 36px 30px; background: #050B08; text-align: center;">
-        <div style="max-width: 1200px; margin: 0 auto;">
-            <img src="./logo.png" alt="Kraften Logo" style="height: 42px; margin-bottom: 15px;">
-            <p style="color: var(--text-muted); font-size: 0.9rem; max-width: 600px; margin: 0 auto 20px;">
+    <footer class="site-footer">
+        <div class="footer-container">
+            <img src="./logo.png" alt="Kraften Logo" class="footer-logo">
+            <p class="footer-desc">
                 Kraften Ambalaj San. ve Tic. A.Ş. — Toptan kraft salata kasesi, sızdırmaz karton gıda kapları imalatı ve online perakende satış platformu.
             </p>
-            <div style="display: flex; justify-content: center; gap: 25px; color: var(--gold); font-size: 0.88rem; margin-bottom: 20px; flex-wrap: wrap;">
+            <div class="footer-contact-row">
                 <span><i class="fas fa-phone-alt"></i> 0541 501 94 78 (Emirhan KÖSE)</span>
                 <span><i class="fas fa-phone-alt"></i> 0532 274 49 60 (Nuri KÖSE)</span>
                 <span><i class="fas fa-envelope"></i> info@kraftenambalaj.com</span>
             </div>
-            <div style="display: flex; justify-content: center; gap: 20px; font-size: 0.82rem; color: var(--text-muted); margin-bottom: 20px;">
-                <a href="/blog.html" style="color: var(--text-muted); text-decoration: none;">Sektörel Blog</a>
+            <div class="footer-links-row">
+                <a href="/blog.html">Sektörel Blog</a>
                 <span>·</span>
-                <a href="/kraften_2026_katalog.pdf" target="_blank" style="color: var(--text-muted); text-decoration: none;">PDF Katalog</a>
+                <a href="/kraften_2026_katalog.pdf" target="_blank">PDF Katalog</a>
                 <span>·</span>
-                <a href="/sitemap.xml" style="color: var(--text-muted); text-decoration: none;">Site Haritası</a>
+                <a href="/sitemap.xml">Site Haritası</a>
             </div>
-            <div style="font-size: 0.8rem; color: #555; border-top: 1px solid rgba(255,255,255,0.05); padding-top: 20px;">
+            <div class="footer-copy">
                 © 2026 Kraften Ambalaj San. ve Tic. A.Ş. Tüm hakları saklıdır.
             </div>
         </div>
