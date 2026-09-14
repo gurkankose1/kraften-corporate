@@ -192,6 +192,23 @@ export const certificates = [
   
 export const blogs = [
     {
+      "id": "autonews-foodservice-packaging-trends-in-2026202",
+      "titleTr": "Küresel Gıda Ambalajı ve Sürdürülebilir Karton Kap Trendleri",
+      "titleEn": "Food Packaging Insights: Foodservice Packaging Trends in 2026–2027: Takeaway, Cost Control and Compliance - EIN News",
+      "titleDe": "Trends bei Lebensmittelverpackungen: Foodservice Packaging Trends in 2026–2027: Takeaway, Cost Control and Compliance - EIN News",
+      "titleFr": "Tendances de l'Emballage Alimentaire : Foodservice Packaging Trends in 2026–2027: Takeaway, Cost Control and Compliance - EIN News",
+      "date": "14 Eylül 2026",
+      "author": "Kraften Ar-Ge",
+      "category": "trendler",
+      "img": "https://images.unsplash.com/photo-1589939705384-5185137a7f0f?auto=format&fit=crop&w=800&q=80",
+      "summaryTr": "Gıda sektöründe çevre dostu karton kase ve sızdırmaz ambalaj çözümlerindeki en yeni uluslararası gelişmeler.",
+      "summaryEn": "Latest global food packaging insights and developments on Foodservice Packaging Trends in 2026–2027: Takeaway, Cost Control and Compliance - EIN News.",
+      "summaryDe": "Neueste globale Erkenntnisse und Entwicklungen im Bereich Lebensmittelverpackungen.",
+      "summaryFr": "Dernières informations et développements mondiaux sur l'emballage alimentaire.",
+      "contentTr": "Küresel gıda ambalajı sektöründe doğa dostu ve sürdürülebilir kap çözümleri hızla ön plana çıkmaktadır. Restoranların ve gıda üreticilerinin kağıt ham maddeli kaplara yönelimi hem çevreyi korumakta hem de marka güvenilirliğini artırmaktadır.\n\nSon dönemde yürürlüğe giren uluslararası çevre regülasyonları, tek kullanımlık plastiklerin yerine geri dönüştürülebilir ve gıdaya uygun sertifikalı karton kapların kullanılmasını şart koşmaktadır.\n\nKraften Ambalaj olarak, gıda temasına %100 uygun sertifikalı karton kaselerimiz ve sızdırmaz kaplarımızla işletmelerin bu sürdürülebilirlik dönüşümüne öncülük ediyoruz.",
+      "contentEn": "In the global food packaging sector, sustainable container solutions are rapidly coming to the forefront. The transition of restaurants towards eco-friendly paperboard containers protects the environment while boosting customer trust.\n\nRecent environmental regulations necessitate replacing single-use plastics with certified, recyclable paperboard raw materials.\n\nAt Kraften Packaging, we lead this sustainability transformation with 100% food-contact certified paper bowls and leak-proof containers."
+},
+    {
       "id": "autonews-fruit-byproducts-as-multifunctional-biop",
       "titleTr": "Küresel Gıda Ambalajı ve Sürdürülebilir Karton Kap Trendleri",
       "titleEn": "Food Packaging Insights: Fruit byproducts as multifunctional biopolymer matrices for active and sustainable food packaging",
