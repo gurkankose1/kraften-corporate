@@ -192,6 +192,23 @@ export const certificates = [
   
 export const blogs = [
     {
+      "id": "autonews-grease-and-oil-resistant-barrier-coating",
+      "titleTr": "Küresel Gıda Ambalajı ve Sürdürülebilir Karton Kap Trendleri",
+      "titleEn": "Food Packaging Insights: Grease and Oil Resistant Barrier Coatings Market To 2035: Sustainable Packaging and PFAS Shift Drive Growth - News and Statistics",
+      "titleDe": "Trends bei Lebensmittelverpackungen: Grease and Oil Resistant Barrier Coatings Market To 2035: Sustainable Packaging and PFAS Shift Drive Growth - News and Statistics",
+      "titleFr": "Tendances de l'Emballage Alimentaire : Grease and Oil Resistant Barrier Coatings Market To 2035: Sustainable Packaging and PFAS Shift Drive Growth - News and Statistics",
+      "date": "27 Eylül 2026",
+      "author": "Kraften Ar-Ge",
+      "category": "trendler",
+      "img": "https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?auto=format&fit=crop&w=800&q=80",
+      "summaryTr": "Gıda sektöründe çevre dostu karton kase ve sızdırmaz ambalaj çözümlerindeki en yeni uluslararası gelişmeler.",
+      "summaryEn": "Latest global food packaging insights and developments on Grease and Oil Resistant Barrier Coatings Market To 2035: Sustainable Packaging and PFAS Shift Drive Growth - News and Statistics.",
+      "summaryDe": "Neueste globale Erkenntnisse und Entwicklungen im Bereich Lebensmittelverpackungen.",
+      "summaryFr": "Dernières informations et développements mondiaux sur l'emballage alimentaire.",
+      "contentTr": "Küresel gıda ambalajı sektöründe doğa dostu ve sürdürülebilir kap çözümleri hızla ön plana çıkmaktadır. Restoranların ve gıda üreticilerinin kağıt ham maddeli kaplara yönelimi hem çevreyi korumakta hem de marka güvenilirliğini artırmaktadır.\n\nSon dönemde yürürlüğe giren uluslararası çevre regülasyonları, tek kullanımlık plastiklerin yerine geri dönüştürülebilir ve gıdaya uygun sertifikalı karton kapların kullanılmasını şart koşmaktadır.\n\nKraften Ambalaj olarak, gıda temasına %100 uygun sertifikalı karton kaselerimiz ve sızdırmaz kaplarımızla işletmelerin bu sürdürülebilirlik dönüşümüne öncülük ediyoruz.",
+      "contentEn": "In the global food packaging sector, sustainable container solutions are rapidly coming to the forefront. The transition of restaurants towards eco-friendly paperboard containers protects the environment while boosting customer trust.\n\nRecent environmental regulations necessitate replacing single-use plastics with certified, recyclable paperboard raw materials.\n\nAt Kraften Packaging, we lead this sustainability transformation with 100% food-contact certified paper bowls and leak-proof containers."
+},
+    {
       "id": "autonews-the-world-packaging-organisation-wpo-c",
       "titleTr": "Küresel Gıda Ambalajı ve Sürdürülebilir Karton Kap Trendleri",
       "titleEn": "Food Packaging Insights: The World Packaging Organisation (WPO) celebrates the International Day of Awareness of Food Loss and Waste on 29 September - Sustainable Packaging News",
